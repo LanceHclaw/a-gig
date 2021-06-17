@@ -75,6 +75,11 @@ public class BlackjackCardController : MonoBehaviour
 
             var (isSlotAligned, idx, sPosition) = blackjackManager.AlignToSlotIfExists(numericValue, gameObject.transform.position);
             if (isSlotAligned) {
+                if (isInSlot)
+                {
+                    blackjackManager.RemoveFromSlot(slotIdx);
+                    isInSlot = false;
+                }
                 isInSlot = true;
                 slotIdx = idx;
                 isMovingToSlot = true;
