@@ -131,8 +131,7 @@ public class EpilogueManager : MonoBehaviour
             createdConections = dataStorage.GetComponent<DataStorage>().GetFormattedCreatedConnections();
         }
 
-        // selectedText = GetMatchingEnding(createdConections).epilogueText;
-        selectedText = endings[2].epilogueText;
+        selectedText = GetMatchingEnding(createdConections).epilogueText;
     }
 
     void Update()
