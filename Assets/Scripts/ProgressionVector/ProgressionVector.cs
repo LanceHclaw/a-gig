@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading;
 
 namespace ProgressionVector
 {
@@ -67,6 +68,59 @@ namespace ProgressionVector
             else throw new ArgumentException("This action has not been completed before.");
         }
 
+        // Dictionary of all actions and their vector values can come from the class field itself
+        /// <summary>
+        /// Get outcome based on the given path.
+        /// </summary>
+        /// <param name="path">Vector of action-presence. Values of weights will be taken internally.</param>
+        /// <returns></returns>
+        public E GetPathOutput(Dictionary<IComparable<A>, bool> path)
+        {
+            var outcome = new int[endings.Count()];
+            foreach (var flag in path)
+            {
+                if (flag.Value == true) AddVectors(all_actions[flag.Key], outcome);
+            }
+
+            return GetEnding(outcome);
+        }
+
+        /// <summary>
+        /// Returns a dictionary [path, ending] that gives a list of all actions
+        /// that lead to the given outcome.
+        /// </summary>
+        /// <returns></returns>
+        public Dictionary<List<IComparable<A>>, E> GetAllPaths()
+        {
+            var pathOutputs = new Dictionary<List<IComparable<A>>, E>();
+            var paths = AllPermutations();
+
+            foreach (var item in paths)
+            {
+                var actions = from key in item.Keys.ToList() where item[key] == true select key;
+                var result = GetPathOutput(item);
+                pathOutputs.Add(actions.ToList(), result);
+            }
+
+            return pathOutputs;
+        }
+
+        public List<List<IComparable<A>>> AllPathsTo(E ending)
+        {
+            var output = new List<List<IComparable<A>>>();
+
+            foreach(var item in GetAllPaths())
+            {
+                if (item.Value.Equals(ending)) output.Add(item.Key);
+            }
+
+            return output;
+        }
+
+        /// <summary>
+        /// Get the ending based on all actions that were added (i.e. that the player completed).
+        /// </summary>
+        /// <returns></returns>
         public E GetEnding()
         {
             int max = -Int32.MaxValue;
@@ -84,6 +138,11 @@ namespace ProgressionVector
             return endings.ElementAt(maxIdx);
         }
 
+        /// <summary>
+        /// [Internal] Get Ending based on the given result vector.
+        /// </summary>
+        /// <param name="resultVector"></param>
+        /// <returns></returns>
         private E GetEnding(int[] resultVector)
         {
             int max = -Int32.MaxValue;
@@ -101,6 +160,10 @@ namespace ProgressionVector
             return endings.ElementAt(maxIdx);
         }
 
+        /// <summary>
+        /// [Internal] Add vector to the final output vector.
+        /// </summary>
+        /// <param name="vector">Vector to be added.</param>
         private void AddToOutput(IEnumerable<int> vector)
         {
             if (vector.Count() != outputVector.Length) throw new ArgumentException("Vector to be added is not of the same length as the output vector.");
@@ -113,6 +176,10 @@ namespace ProgressionVector
             }
         }
 
+        /// <summary>
+        /// [Internal] Subtract vector from the final output vector.
+        /// </summary>
+        /// <param name="vector">Vector to be subtracted.</param>
         private void SubtractFromOutput(IEnumerable<int> vector)
         {
             if (vector.Count() != outputVector.Length) throw new ArgumentException("Vector to be subtracted is not of the same length as the output vector.");
@@ -125,6 +192,12 @@ namespace ProgressionVector
             }
         }
 
+        /// <summary>
+        /// [Internal] Addition of two int arrays.
+        /// </summary>
+        /// <param name="inV"> Vector to be added.</param>
+        /// <param name="baseV"> Base vector to have values added to.</param>
+        /// <returns></returns>
         private IEnumerable<int> AddVectors(IEnumerable<int> inV, int[] baseV)
         {
             if (inV.Count() != baseV.Length) throw new ArgumentException("Vector to be added is not of the same length as the output vector.");
@@ -140,40 +213,17 @@ namespace ProgressionVector
             return outV;
         }
 
-        // dictionary of all actions and their vector values can come from the class field itself
-        public E GetPathOutput(Dictionary<IComparable<A>, bool> path)
-        {
-            var outcome = new int[endings.Count()];
-            foreach (var flag in path)
-            {
-                if (flag.Value == true) AddVectors(all_actions[flag.Key], outcome);
-            }
-
-            return GetEnding(outcome);
-        }
-
-        public Dictionary<List<IComparable<A>>, E> GetAllPaths()
-        {
-            var pathOutputs = new Dictionary<List<IComparable<A>>, E>();
-            var paths = AllPermutations();
-
-            foreach(var item in paths)
-            {
-                var actions = from key in item.Keys.ToList() where item[key] == true select key;
-                var result = GetPathOutput(item);
-                pathOutputs.Add(actions.ToList(), result);
-            }
-
-            return pathOutputs;
-        }
-
+        /// <summary>
+        /// [Internal] Generates a list of all permutations of flags of actions.
+        /// </summary>
+        /// <returns>List of Dictionaries [action, isPresent?]</returns>
         private List<Dictionary<IComparable<A>, bool>> AllPermutations()
         {
             var binary = new int[all_actions.Count];
             var binaryList = new List<int[]>();
 
             // works with ref of binList and adds new permutations into it
-            GenerateAllBinaryStrings(all_actions.Count, binary, 0, ref binaryList);
+            GenerateAllBinaryVectors(all_actions.Count, binary, 0, ref binaryList);
 
             var output = new List<Dictionary<IComparable<A>, bool>>();
 
@@ -192,18 +242,27 @@ namespace ProgressionVector
             return output;
         }
 
-        private static void GenerateAllBinaryStrings(int n, int[] arr, int i, ref List<int[]> output)
+        /// <summary>
+        /// [Internal] [Helper] Generates all permutations of a binary vector of length = |actions|.
+        /// Used to generate all permutations of action vector.
+        /// </summary>
+        /// <param name="n"></param>
+        /// <param name="arr"></param>
+        /// <param name="i"></param>
+        /// <param name="output"></param>
+        private static void GenerateAllBinaryVectors(int n, int[] arr, int i, ref List<int[]> output)
         {
             if (i == n)
             {
+                // need to cast to create a new copy, otw all members of output get overwritten with each iteration
                 output.Add(arr.ToArray());
                 return;
             }
 
             arr[i] = 0;
-            GenerateAllBinaryStrings(n, arr, i + 1, ref output);
+            GenerateAllBinaryVectors(n, arr, i + 1, ref output);
             arr[i] = 1;
-            GenerateAllBinaryStrings(n, arr, i + 1, ref output);
+            GenerateAllBinaryVectors(n, arr, i + 1, ref output);
         }
     }
 }

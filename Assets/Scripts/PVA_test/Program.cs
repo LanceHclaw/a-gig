@@ -24,6 +24,15 @@ namespace PVA_test
             //Console.WriteLine(classSelection.GetEnding().ToString());
 
             WriteAllEndings(classSelection.GetAllPaths());
+            Console.WriteLine("-------------------------");
+            foreach(var path in classSelection.AllPathsTo(Endings.ranged))
+            {
+                foreach (var action in path)
+                {
+                    Console.Write(action.ToString() + " ");
+                }
+                Console.WriteLine();
+            }       
         }
 
         private static void WriteAllEndings(Dictionary<List<IComparable<string>>, Endings> paths)
