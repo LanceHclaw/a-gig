@@ -76,13 +76,7 @@ namespace ProgressionVector
         /// <returns></returns>
         public E GetPathOutput(Dictionary<IComparable<A>, bool> path)
         {
-            var outcome = new int[endings.Count()];
-            foreach (var flag in path)
-            {
-                if (flag.Value == true) AddVectors(all_actions[flag.Key], outcome);
-            }
-
-            return GetEnding(outcome);
+            return GetEnding(GetOutputVector(path));
         }
 
         /// <summary>
@@ -105,6 +99,56 @@ namespace ProgressionVector
             return pathOutputs;
         }
 
+        /// <summary>
+        /// Returns the number of paths that lead to each ending.
+        /// </summary>
+        /// <returns>Dictionary [ending, #times]</returns>
+        public Dictionary<E, int> GetEndingFrequencies()
+        {
+            var allPaths = GetAllPaths();
+            var outDict = new Dictionary<E, int>();
+            foreach (var end in endings)
+            {
+                outDict.Add(end, 0);
+            }
+
+            foreach(var path in allPaths)
+            {
+                outDict[path.Value] += 1;
+            }
+
+            return outDict;
+        }
+
+        /// <summary>
+        /// Use to retrieve all paths that can result in multiple endings.
+        /// </summary>
+        /// <returns>Dictionary [path, endings].</returns>
+        public Dictionary<List<IComparable<A>>, List<E>> GetOverlaps()
+        {
+            var pathOutputs = GetAllOutputVectors();
+            var outDict = new Dictionary<List<IComparable<A>>, List<E>>();
+
+            foreach(var item in pathOutputs)
+            {
+                var indList = FindEqualMaxValues(item.Value);
+                if (indList.Count > 1)
+                {
+                    var elist = new List<E>();
+                    foreach (var idx in indList) elist.Add(endings.ElementAt(idx));
+
+                    outDict.Add(item.Key, elist);
+                }
+            }
+
+            return outDict;
+        }
+
+        /// <summary>
+        /// Produces a list of all paths that lead to the specified ending.
+        /// </summary>
+        /// <param name="ending"></param>
+        /// <returns>List of List of actions.</returns>
         public List<List<IComparable<A>>> AllPathsTo(E ending)
         {
             var output = new List<List<IComparable<A>>>();
@@ -263,6 +307,69 @@ namespace ProgressionVector
             GenerateAllBinaryVectors(n, arr, i + 1, ref output);
             arr[i] = 1;
             GenerateAllBinaryVectors(n, arr, i + 1, ref output);
+        }
+
+        /// <summary>
+        /// [Internal] Returns an output vector based on the dictionary of flags.
+        /// </summary>
+        /// <param name="path">Dictionary of [action, isCompleted?].</param>
+        /// <returns></returns>
+        private int[] GetOutputVector(Dictionary<IComparable<A>, bool> path)
+        {
+            var outcome = new int[endings.Count()];
+            foreach (var flag in path)
+            {
+                if (flag.Value == true) AddVectors(all_actions[flag.Key], outcome);
+            }
+
+            return outcome;
+        }
+
+        /// <summary>
+        /// [Internal] Searches all paths and returns output vectors corresponding to each of them.
+        /// </summary>
+        /// <returns></returns>
+        private Dictionary<List<IComparable<A>>, int[]> GetAllOutputVectors()
+        {
+            var pathOutputs = new Dictionary<List<IComparable<A>>, int[]>();
+            var paths = AllPermutations();
+
+            foreach (var item in paths)
+            {
+                var actions = from key in item.Keys.ToList() where item[key] == true select key;
+                var result = GetOutputVector(item);
+                pathOutputs.Add(actions.ToList(), result);
+            }
+
+            return pathOutputs;
+        }
+
+        /// <summary>
+        /// [Internal] Returns a list of indices of all maximum values of the given vector.
+        /// </summary>
+        /// <param name="vector"></param>
+        /// <returns>List of indices of max values of the vector.</returns>
+        private List<int> FindEqualMaxValues(int[] vector)
+        {
+            var indices = new List<int>();
+            var max = vector[0];
+            indices.Add(0);
+
+            for(var i = 1; i < vector.Length; i++)
+            {
+                if (vector[i] > max)
+                {
+                    max = vector[i];
+                    indices.Clear();
+                    indices.Add(i);
+                }
+                else if (vector[i] == max)
+                {
+                    indices.Add(i);
+                }
+            }
+
+            return indices;
         }
     }
 }

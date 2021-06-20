@@ -32,7 +32,16 @@ namespace PVA_test
                     Console.Write(action.ToString() + " ");
                 }
                 Console.WriteLine();
-            }       
+            }
+
+            Console.WriteLine("--------------------------");
+            WriteAllOverlaps(classSelection.GetOverlaps());
+
+            Console.WriteLine("-------------------------");
+            foreach(var end in classSelection.GetEndingFrequencies())
+            {
+                Console.WriteLine(end.Key.ToString() + " " + end.Value);
+            }
         }
 
         private static void WriteAllEndings(Dictionary<List<IComparable<string>>, Endings> paths)
@@ -44,6 +53,23 @@ namespace PVA_test
                     Console.Write(act.ToString() + " ");
                 }
                 Console.WriteLine(path.Value);
+            }
+        }
+
+        private static void WriteAllOverlaps(Dictionary<List<IComparable<string>>, List<Endings>> paths)
+        {
+            foreach (var path in paths)
+            {
+                foreach (var act in path.Key)
+                {
+                    Console.Write(act.ToString() + " ");
+                }
+                Console.Write(" || ");
+                foreach (var end in path.Value)
+                {
+                    Console.Write(end + " ");
+                }
+                Console.WriteLine();
             }
         }
     }
