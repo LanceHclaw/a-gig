@@ -59,6 +59,12 @@ namespace ProgressionVector
             return outDict;
         }
 
+        /// <summary>
+        /// Shows the ratio of the given action present in paths to each ending over all 
+        /// paths containing this action.
+        /// </summary>
+        /// <param name="action"></param>
+        /// <returns></returns>
         public Dictionary<E, float> GetActionDirection(IComparable<A> action)
         {
             var pathsWithA = from x in GetAllPaths() where x.Key.Contains(action) select x;
