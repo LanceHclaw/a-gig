@@ -36,6 +36,24 @@ namespace ProgressionVector
             this.endings = endings;
         }
 
+        public Dictionary<IComparable<A>, float> GetActionWeightForEnding(E outcome)
+        {
+            var allPaths = AllPathsTo(outcome);
+            var total = allPaths.Count;
+
+            var outDict = new Dictionary<IComparable<A>, float>();
+            foreach (var act in all_actions) outDict.Add(act.Key, 0f);
+
+            foreach(var path in allPaths)
+            {
+                foreach (var action in path) outDict[action] += 1f;
+            }
+
+            foreach (var act in all_actions) outDict[act.Key] = outDict[act.Key] / total;
+
+            return outDict;
+        }
+
         /// <summary>
         /// Use to indicate the completion of some action by the player and modify the output vector.
         /// </summary>

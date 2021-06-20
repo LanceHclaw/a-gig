@@ -42,6 +42,12 @@ namespace PVA_test
             {
                 Console.WriteLine(end.Key.ToString() + " " + end.Value);
             }
+
+            Console.WriteLine("-------------------------");
+            foreach (var act in classSelection.GetActionWeightForEnding(Endings.ranged))
+            {
+                Console.WriteLine(act.Key.ToString() + " " + act.Value);
+            }
         }
 
         private static void WriteAllEndings(Dictionary<List<IComparable<string>>, Endings> paths)
