@@ -36,6 +36,11 @@ namespace ProgressionVector
             this.endings = endings;
         }
 
+        /// <summary>
+        /// Calculates the ratio of each action to the number of all actions that lead to the given ending.
+        /// </summary>
+        /// <param name="outcome"></param>
+        /// <returns></returns>
         public Dictionary<IComparable<A>, float> GetActionWeightForEnding(E outcome)
         {
             var allPaths = AllPathsTo(outcome);
@@ -50,6 +55,26 @@ namespace ProgressionVector
             }
 
             foreach (var act in all_actions) outDict[act.Key] = outDict[act.Key] / total;
+
+            return outDict;
+        }
+
+        public Dictionary<E, float> GetActionDirection(IComparable<A> action)
+        {
+            var pathsWithA = from x in GetAllPaths() where x.Key.Contains(action) select x;
+
+            var total = 0f;
+
+            var outDict = new Dictionary<E, float>();
+            foreach (var end in endings) outDict[end] = 0;
+
+            foreach(var path in pathsWithA)
+            {
+                total++;
+                outDict[path.Value] += 1f;
+            }
+
+            if (total != 0) foreach (var end in endings) outDict[end] = outDict[end] / total;
 
             return outDict;
         }

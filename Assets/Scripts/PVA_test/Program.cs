@@ -48,6 +48,12 @@ namespace PVA_test
             {
                 Console.WriteLine(act.Key.ToString() + " " + act.Value);
             }
+
+            Console.WriteLine("-------------------------");
+            foreach (var end in classSelection.GetActionDirection("dagger"))
+            {
+                Console.WriteLine(end.Key.ToString() + " " + end.Value);
+            }
         }
 
         private static void WriteAllEndings(Dictionary<List<IComparable<string>>, Endings> paths)
