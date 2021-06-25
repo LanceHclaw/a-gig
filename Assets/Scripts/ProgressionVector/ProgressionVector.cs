@@ -6,7 +6,9 @@ using System.Threading;
 
 namespace ProgressionVector
 {
-    public class ProgressionVector<A, E>
+    public class ProgressionVector<A, E> 
+        where A : IComparable 
+        where E : IComparable
     {
         public IEnumerable<E> endings;
         public Dictionary<IComparable<A>, IEnumerable<int>> all_actions;
@@ -14,6 +16,7 @@ namespace ProgressionVector
         private Dictionary<IComparable<A>, bool> playerActions;
         private int[] outputVector;
 
+        #region Public API
         /// <summary>
         /// Provide all the data to set up a progression vector algorithm for a given quest.
         /// </summary>
@@ -231,6 +234,10 @@ namespace ProgressionVector
             return endings.ElementAt(maxIdx);
         }
 
+        #endregion
+
+        #region Private Functions
+
         /// <summary>
         /// [Internal] Get Ending based on the given result vector.
         /// </summary>
@@ -420,5 +427,7 @@ namespace ProgressionVector
 
             return indices;
         }
+
+        #endregion
     }
 }
