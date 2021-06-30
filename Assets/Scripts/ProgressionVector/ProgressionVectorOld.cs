@@ -1,4 +1,4 @@
-﻿using System;
+﻿/*using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -39,55 +39,9 @@ namespace ProgressionVector
             this.endings = endings;
         }
 
-        /// <summary>
-        /// Calculates the ratio of each action to the number of all actions that lead to the given ending.
-        /// </summary>
-        /// <param name="outcome"></param>
-        /// <returns></returns>
-        public Dictionary<A, float> GetActionWeightForEnding(E outcome)
-        {
-            var allPaths = AllPathsTo(outcome);
-            var total = allPaths.Count;
+        
 
-            var outDict = new Dictionary<A, float>();
-            foreach (var act in all_actions) outDict.Add(act.Key, 0f);
-
-            foreach(var path in allPaths)
-            {
-                foreach (var action in path) outDict[action] += 1f;
-            }
-
-            foreach (var act in all_actions) outDict[act.Key] = outDict[act.Key] / total;
-
-            return outDict;
-        }
-
-        /// <summary>
-        /// Shows the ratio of the given action present in paths to each ending over all 
-        /// paths containing this action.
-        /// </summary>
-        /// <param name="action"></param>
-        /// <returns></returns>
-        public Dictionary<E, float> GetActionDirection(A action)
-        {
-            var pathsWithA = from x in GetAllPaths() where x.Key.Contains(action) select x;
-
-            var total = 0f;
-
-            var outDict = new Dictionary<E, float>();
-            foreach (var end in endings) outDict[end] = 0;
-
-            foreach(var path in pathsWithA)
-            {
-                total++;
-                outDict[path.Value] += 1f;
-            }
-
-            if (total != 0) foreach (var end in endings) outDict[end] = outDict[end] / total;
-
-            return outDict;
-        }
-
+        
         /// <summary>
         /// Use to indicate the completion of some action by the player and modify the output vector.
         /// </summary>
@@ -125,67 +79,10 @@ namespace ProgressionVector
 
        
 
-        /// <summary>
-        /// Returns the number of paths that lead to each ending.
-        /// </summary>
-        /// <returns>Dictionary [ending, #times]</returns>
-        public Dictionary<E, int> GetEndingFrequencies()
-        {
-            var allPaths = GetAllPaths();
-            var outDict = new Dictionary<E, int>();
-            foreach (var end in endings)
-            {
-                outDict.Add(end, 0);
-            }
+     
+        
 
-            foreach(var path in allPaths)
-            {
-                outDict[path.Value] += 1;
-            }
-
-            return outDict;
-        }
-
-        /// <summary>
-        /// Use to retrieve all paths that can result in multiple endings.
-        /// </summary>
-        /// <returns>Dictionary [path, endings].</returns>
-        public Dictionary<List<A>, List<E>> GetOverlaps()
-        {
-            var pathOutputs = GetAllOutputVectors();
-            var outDict = new Dictionary<List<A>, List<E>>();
-
-            foreach(var item in pathOutputs)
-            {
-                var indList = FindEqualMaxValues(item.Value);
-                if (indList.Count > 1)
-                {
-                    var elist = new List<E>();
-                    foreach (var idx in indList) elist.Add(endings.ElementAt(idx));
-
-                    outDict.Add(item.Key, elist);
-                }
-            }
-
-            return outDict;
-        }
-
-        /// <summary>
-        /// Produces a list of all paths that lead to the specified ending.
-        /// </summary>
-        /// <param name="ending"></param>
-        /// <returns>List of List of actions.</returns>
-        public List<List<A>> AllPathsTo(E ending)
-        {
-            var output = new List<List<A>>();
-
-            foreach(var item in GetAllPaths())
-            {
-                if (item.Value.Equals(ending)) output.Add(item.Key);
-            }
-
-            return output;
-        }
+      
 
         /// <summary>
         /// Get the ending based on all actions that were added (i.e. that the player completed).
@@ -256,34 +153,9 @@ namespace ProgressionVector
 
        
 
-        /// <summary>
-        /// [Internal] Returns a list of indices of all maximum values of the given vector.
-        /// </summary>
-        /// <param name="vector"></param>
-        /// <returns>List of indices of max values of the vector.</returns>
-        private List<int> FindEqualMaxValues(int[] vector)
-        {
-            var indices = new List<int>();
-            var max = vector[0];
-            indices.Add(0);
-
-            for(var i = 1; i < vector.Length; i++)
-            {
-                if (vector[i] > max)
-                {
-                    max = vector[i];
-                    indices.Clear();
-                    indices.Add(i);
-                }
-                else if (vector[i] == max)
-                {
-                    indices.Add(i);
-                }
-            }
-
-            return indices;
-        }
+        
 
         #endregion
     }
 }
+*/

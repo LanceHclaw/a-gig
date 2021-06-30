@@ -29,6 +29,68 @@ namespace ProgressionVector
         #region Public API
 
         /// <summary>
+        /// Produces a list of all paths that lead to the specified ending.
+        /// </summary>
+        /// <param name="ending"></param>
+        /// <returns>List of List of actions.</returns>
+        public List<List<PV_Action<E>>> AllPathsTo(E ending)
+        {
+            var output = new List<List<PV_Action<E>>>();
+
+            foreach (var item in GetAllPaths())
+            {
+                if (item.Value.Equals(ending)) output.Add(item.Key);
+            }
+
+            return output;
+        }
+
+        /// <summary>
+        /// Shows the ratio of the given action present in paths to each ending over all 
+        /// paths containing this action.
+        /// </summary>
+        /// <param name="action"></param>
+        /// <returns></returns>
+        public Dictionary<E, float> GetActionDirection(PV_Action<E> action)
+        {
+            var pathsWithA = from x in GetAllPaths() where x.Key.Contains(action) select x;
+            var total = pathsWithA.Count();
+            if (total == 0) return new Dictionary<E, float>();
+
+            var outDict = new Dictionary<E, float>();
+
+            foreach (var ending in questData.all_endings) outDict[ending] = 0;
+            foreach (var path in pathsWithA) outDict[path.Value] += 1f;
+            foreach (var key in outDict.Keys) outDict[key] = outDict[key] / total;
+
+            return outDict;
+        }
+
+        /// <summary>
+        /// Calculates the ratio of each action to the number of all actions that lead to the given ending.
+        /// </summary>
+        /// <param name="outcome"></param>
+        /// <returns></returns>
+        public Dictionary<PV_Action<E>, float> GetActionFrequenciesForEnding(E ending)
+        {
+            var allPaths = AllPathsTo(ending);
+            var total = allPaths.Count;
+            var outDict = new Dictionary<PV_Action<E>, float>();
+
+
+            foreach (var action in questData.all_actions) outDict.Add(action, 0f);
+
+            foreach (var path in allPaths)
+            {
+                foreach (var action in path) outDict[action] += 1f;
+            }
+
+            foreach (var action in questData.all_actions) outDict[action] = outDict[action] / total;
+
+            return outDict;
+        }
+
+        /// <summary>
         /// Returns a dictionary [path, ending] that gives a list of all actions
         /// that lead to the given outcome.
         /// </summary>
@@ -50,6 +112,45 @@ namespace ProgressionVector
         }
 
         /// <summary>
+        /// Returns the number of paths that lead to each ending.
+        /// </summary>
+        /// <returns>Dictionary [ending, #times]</returns>
+        public Dictionary<E, int> GetEndingFrequencies()
+        {
+            var allPaths = GetAllPaths();
+            var outDict = new Dictionary<E, int>();
+            foreach (var end in questData.all_endings)
+            {
+                outDict.Add(end, 0);
+            }
+
+            foreach (var path in allPaths)
+            {
+                outDict[path.Value] += 1;
+            }
+
+            return outDict;
+        }
+
+        /// <summary>
+        /// Use to retrieve all paths that can result in multiple endings.
+        /// </summary>
+        /// <returns>Dictionary [path, endings].</returns>
+        public Dictionary<List<PV_Action<E>>, List<E>> GetOverlaps()
+        {
+            var pathOutputs = GetAllOutputVectors();
+            var outDict = new Dictionary<List<PV_Action<E>>, List<E>>();
+
+            foreach (var item in pathOutputs)
+            {
+                var eList = FindEqualMaxValues(item.Value);
+                if (eList.Count > 1)
+                    outDict.Add(item.Key, eList);
+            }
+            return outDict;
+        }
+
+        /// <summary>
         /// Get outcome based on the given path.
         /// </summary>
         /// <param name="path">Vector of action-presence. Values of weights will be taken internally.</param>
@@ -57,6 +158,17 @@ namespace ProgressionVector
         public E GetPathOutput(Dictionary<PV_Action<E>, bool> path)
         {
             return GetEnding(GetOutputVector(path));
+        }
+
+        /// <summary>
+        /// Get final evaluation of player progress
+        /// </summary>
+        /// <param name="playerProgress"></param>
+        /// <param name="questData"></param>
+        /// <returns></returns>
+        public E ProduceFinalEnding()
+        {
+            return GetPathOutput(playerProgress.actionFlags);
         }
 
         #endregion
@@ -183,6 +295,30 @@ namespace ProgressionVector
             GenerateAllBinaryVectors(n, arr, i + 1, ref output);
             arr[i] = 1;
             GenerateAllBinaryVectors(n, arr, i + 1, ref output);
+        }
+
+        /// <summary>
+        /// [Internal] Returns a list of indices of all maximum values of the given vector.
+        /// </summary>
+        /// <param name="vector"></param>
+        /// <returns>List of indices of max values of the vector.</returns>
+        private List<E> FindEqualMaxValues(PV_OutputVector<E> vector)
+        {
+            var keys = new List<E>();
+            var max = -Int32.MaxValue;
+            
+            foreach (var weight in vector.weights)
+            {
+                if (weight.Value > max)
+                {
+                    max = weight.Value;
+                    keys.Clear();
+                    keys.Add(weight.Key);
+                }
+                else if (weight.Value == max) keys.Add(weight.Key);
+            }
+
+            return keys;
         }
 
         #endregion
