@@ -33,9 +33,9 @@ namespace ProgressionVector
         public void RemoveAction(PV_Action<E> action)
         {
             if (actionFlags.Keys.Contains(action) &&
-                actionFlags[action] == false)
+                actionFlags[action] == true)
             {
-                actionFlags.Remove(action);
+                actionFlags[action] = false;
             }
             else throw new ArgumentException("This action has not been completed earlier or does not belong to this quest.");
         }

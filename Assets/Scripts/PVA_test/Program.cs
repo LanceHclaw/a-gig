@@ -73,6 +73,26 @@ namespace PVA_test
             Console.WriteLine("\nmyQuest_PV.GetAllPaths()-----------------------------------");
             PrintDictionaryList(myQuest_PV.GetAllPaths());
 
+            Console.WriteLine("\nmyQuest_PV.GetAllPathsFrom(MyActions.axe, MyActions.bow)-----------------------------------");
+            PrintDictionaryList(myQuest_PV.GetAllPathsFrom(new List<PV_Action<Ending>> { MyActions.axe, MyActions.bow }));
+
+            Console.WriteLine("\nmyQuest_PV.GetAllPathsFrom(playerProgressVersion)(MyActions.axe, MyActions.bow)-----------------------------------");
+            myPlayerProgress.ActionCompleted(MyActions.axe);
+            myPlayerProgress.ActionCompleted(MyActions.bow);
+            PrintDictionaryList(myQuest_PV.GetAllPathsFrom(myPlayerProgress));
+            myPlayerProgress.RemoveAction(MyActions.axe);
+            myPlayerProgress.RemoveAction(MyActions.bow);
+
+            Console.WriteLine("\nmyQuest_PV.GetAllPathsFromTo(axe, bow, RANGED)-----------------------------------");
+            PrintDictionaryList(myQuest_PV.GetAllPathsFromTo(new List<PV_Action<Ending>> { MyActions.axe, MyActions.bow }, MyEndings.ranged));
+
+            Console.WriteLine("\nmyQuest_PV.GetAllPathsFrom(playerProgressVersion)(axe, bow, RANGED)-----------------------------------");
+            myPlayerProgress.ActionCompleted(MyActions.axe);
+            myPlayerProgress.ActionCompleted(MyActions.bow);
+            PrintDictionaryList(myQuest_PV.GetAllPathsFromTo(myPlayerProgress, MyEndings.ranged));
+            myPlayerProgress.RemoveAction(MyActions.axe);
+            myPlayerProgress.RemoveAction(MyActions.bow);
+
             Console.WriteLine("\nGetActionFrequenciesForEnding(MyEndings.versatile)-----------------------------------");
             PrintDictionary(myQuest_PV.GetActionFrequenciesForEnding(MyEndings.versatile));
 
@@ -93,6 +113,13 @@ namespace PVA_test
             };
             Console.WriteLine(myQuest_PV.GetPathOutput(MyPath).ToString());
 
+            Console.WriteLine("\nProduceFinalEnding(empty player progress)-----------------------------------");
+            Console.WriteLine(myQuest_PV.ProduceFinalEnding().ToString());
+
+            Console.WriteLine("\nProduceFinalEnding(bow, pistol)-----------------------------------");
+            myPlayerProgress.ActionCompleted(MyActions.bow);
+            myPlayerProgress.ActionCompleted(MyActions.pistol);
+            Console.WriteLine(myQuest_PV.ProduceFinalEnding().ToString());
         }
 
         public static void PrintDictionary<T, N>(Dictionary<T, N> incDict)

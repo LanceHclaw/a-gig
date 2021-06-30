@@ -112,6 +112,60 @@ namespace ProgressionVector
         }
 
         /// <summary>
+        /// Returns all paths achievable from the already completed set of actions.
+        /// </summary>
+        /// <param name="path"></param>
+        /// <returns></returns>
+        public Dictionary<List<PV_Action<E>>, E> GetAllPathsFrom(IEnumerable<PV_Action<E>> path)
+        {
+            var allPaths = GetAllPaths();
+            var outPaths = from pAll in allPaths where path.All(a => pAll.Key.Contains(a)) select pAll;
+
+            return outPaths.ToDictionary(x => x.Key, x => x.Value);
+        }
+
+        /// <summary>
+        /// Returns all paths achievable from the given player progress.
+        /// </summary>
+        /// <param name="path"></param>
+        /// <returns></returns>
+        public Dictionary<List<PV_Action<E>>, E> GetAllPathsFrom(PV_PlayerProgress<E> playerProgress)
+        {
+            var allPaths = GetAllPaths();
+            var playerActions = playerProgress.actionFlags.Where(a => a.Value == true).Select(a => a.Key);
+            var outPaths = from pAll in allPaths where playerActions.All(a => pAll.Key.Contains(a)) select pAll;
+
+            return outPaths.ToDictionary(x => x.Key, x => x.Value);
+        }
+
+        /// <summary>
+        /// Returns all paths that lead from the already completed set of actions to the given ending.
+        /// </summary>
+        /// <param name="path"></param>
+        /// <returns></returns>
+        public Dictionary<List<PV_Action<E>>, E> GetAllPathsFromTo(IEnumerable<PV_Action<E>> path, E ending)
+        {
+            var allPaths = GetAllPaths();
+            var outPaths = from pAll in allPaths where pAll.Value.Equals(ending) && path.All(a => pAll.Key.Contains(a)) select pAll;
+
+            return outPaths.ToDictionary(x => x.Key, x => x.Value);
+        }
+
+        /// <summary>
+        /// Returns all paths that lead from the given player progress to the given ending.
+        /// </summary>
+        /// <param name="path"></param>
+        /// <returns></returns>
+        public Dictionary<List<PV_Action<E>>, E> GetAllPathsFromTo(PV_PlayerProgress<E> playerProgress, E ending)
+        {
+            var allPaths = GetAllPaths();
+            var playerActions = playerProgress.actionFlags.Where(a => a.Value == true).Select(a => a.Key);
+            var outPaths = from pAll in allPaths where pAll.Value.Equals(ending) && playerActions.All(a => pAll.Key.Contains(a)) select pAll;
+
+            return outPaths.ToDictionary(x => x.Key, x => x.Value);
+        }
+
+        /// <summary>
         /// Returns the number of paths that lead to each ending.
         /// </summary>
         /// <returns>Dictionary [ending, #times]</returns>
