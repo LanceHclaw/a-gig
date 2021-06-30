@@ -6,22 +6,38 @@ namespace PVA_test
 {
     class Program
     {
+        class TestClass : PV_Action<Endings>
+        {
+            string boop;
+
+            public TestClass() : base(new List<(Endings, int)> { (Endings.melee, 1), (Endings.ranged, 2) } ) 
+            {
+                boop = "boop";
+            }
+        }
+
         static void Main(string[] args)
         {
-            Dictionary<IComparable<string>, IEnumerable<int>> actions = new Dictionary<IComparable<string>, IEnumerable<int>> {
+            Dictionary<string, IEnumerable<int>> actions = new Dictionary<string, IEnumerable<int>> {
                 { "pistol", new int[] { 0, 4, 1 } },
                 { "dagger", new int[] { 3, 1, 4 } },
                 { "axe", new int[] { 4, 1, 1 } },
-                { "bow", new int[] { 1, 3, 2 } }
+                { "bow", new int[] { 1, 3, 2 } },
+                { "small_stone", new int[] { 0, 3, 0 } }
             };
             List<Endings> endings = new List<Endings> { Endings.melee, Endings.ranged, Endings.versatile };
 
-            var classSelection = new ProgressionVector<string, Endings>(endings, actions);
+            var classSelection = new ProgressionVector<Endings>(endings, actions);
             classSelection.ActionCompleted("pistol");
             classSelection.ActionCompleted("dagger");
             classSelection.ActionCompleted("axe");
             classSelection.ActionCompleted("bow");
+            classSelection.ActionCompleted("small_stone");
             //Console.WriteLine(classSelection.GetEnding().ToString());
+
+
+            var test = new TestClass();
+            var testQuest = new PV_QuestData<Endings>(endings, new List<PV_Action<Endings>> { test } );
 
             WriteAllEndings(classSelection.GetAllPaths());
             Console.WriteLine("-------------------------");
@@ -56,7 +72,7 @@ namespace PVA_test
             }
         }
 
-        private static void WriteAllEndings(Dictionary<List<IComparable<string>>, Endings> paths)
+        private static void WriteAllEndings(Dictionary<List<string>, Endings> paths)
         {
             foreach(var path in paths)
             {
@@ -68,7 +84,7 @@ namespace PVA_test
             }
         }
 
-        private static void WriteAllOverlaps(Dictionary<List<IComparable<string>>, List<Endings>> paths)
+        private static void WriteAllOverlaps(Dictionary<List<string>, List<Endings>> paths)
         {
             foreach (var path in paths)
             {
