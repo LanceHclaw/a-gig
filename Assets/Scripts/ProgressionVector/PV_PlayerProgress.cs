@@ -14,7 +14,7 @@ namespace ProgressionVector
         public PV_PlayerProgress(PV_QuestData<E> questData)
         {
             actionFlags = new Dictionary<PV_Action<E>, bool>();
-            foreach(var action in questData.all_actions) 
+            foreach(var action in questData.all_majorActions) 
             {
                 actionFlags.Add(action, false);
             }
@@ -42,7 +42,7 @@ namespace ProgressionVector
 
         public E FinishQuest(PV_QuestData<E> questData)
         {
-            return questData.GetPathOutput(actionFlags);
+            return questData.FinishQuest(this);
         }
     }
 }

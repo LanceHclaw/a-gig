@@ -12,17 +12,47 @@ namespace ProgressionVector
     {
         public string PV_name; // optional
         public List<E> all_endings { get; private set; }
-        public List<PV_Action<E>> all_actions { get; private set; }
+        public List<PV_Action<E>> all_majorActions { get; private set; }
+        public List<PV_Action<E>> all_minorActions { get; private set; }
+        public Dictionary<E, List<Func<E, PV_PlayerProgress<E>, bool>>> all_extraConditions { get; private set; }
+        public E defaultEnding { get; private set; }
+        public Dictionary<E, int> thresholds { get; private set; }
 
         // optional field, does not exist if not in debug mode
         private List<Dictionary<PV_Action<E>, bool>> all_permutations;
 
-
-        public PV_QuestData(IEnumerable<E> endings, IEnumerable<PV_Action<E>> actions, string name = "", bool DEBUG = false)
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="endings">All meaningful endings of the game</param>
+        /// <param name="majorActions">All actions directly impacting the outcome of the quest.</param>
+        /// <param name="minor_actions">All actions that do NOT directly impact the outcome of the quest.</param>
+        /// <param name="extra_conditions">Extra conditions that will help determine the outcome of the quest.</param>
+        /// <param name="defaultEnding">Ending to be output in case the player doesn't get enough progress for any other ending. 
+        /// Returns default(E) if not specified. Can be set externally using DefineZeroSpace method.</param>
+        /// <param name="globalThreshold">Threshold of progress to be bypassed with action weights in any path. Defaults to 0.</param>
+        /// <param name="name">Optional name of the quest.</param>
+        /// <param name="DEBUG">Set to TRUE if you plan to run multiple debug methods on the instance. Consumes memory but improves performance for debugging.</param>
+        public PV_QuestData(
+            IEnumerable<E> endings, 
+            IEnumerable<PV_Action<E>> majorActions,
+            IEnumerable<PV_Action<E>> minor_actions = null,
+            Dictionary<E, List<Func<E, PV_PlayerProgress<E>, bool>>> extra_conditions = null,
+            E defaultEnding = default, 
+            int globalThreshold = -Int32.MaxValue,
+            string name = "", 
+            bool DEBUG = false)
         {
-            this.all_endings = new List<E>(endings);
+            if ((defaultEnding == null || defaultEnding.Equals(default(E))) && globalThreshold != -Int32.MaxValue)
+                throw new ArgumentNullException("You cannot specify the threshold without defining the zero space. Check that your default ending is not equal to default(E).");
 
-            foreach (var action in actions)
+            this.all_endings = new List<E>(endings);
+            this.thresholds = new Dictionary<E, int>();
+            foreach (E ending in endings)
+                thresholds.Add(ending, globalThreshold);
+            this.defaultEnding = defaultEnding;
+
+            foreach (var action in majorActions)
             {
                 foreach (var endKey in action.weights.Keys)
                 {
@@ -30,7 +60,17 @@ namespace ProgressionVector
                 }
             }
 
-            this.all_actions = new List<PV_Action<E>>(actions);
+            this.all_majorActions = new List<PV_Action<E>>(majorActions);
+
+            all_minorActions = minor_actions == null ? new List<PV_Action<E>>() : new List<PV_Action<E>>(minor_actions);
+
+            if (extra_conditions == null)
+            {
+                this.all_extraConditions = new Dictionary<E, List<Func<E, PV_PlayerProgress<E>, bool>>>();
+                foreach (var ending in endings)
+                    all_extraConditions[ending] = new List<Func<E, PV_PlayerProgress<E>, bool>>();
+            }
+            else this.all_extraConditions = extra_conditions;      
 
             PV_name = name;
             if (DEBUG)
@@ -39,20 +79,97 @@ namespace ProgressionVector
             }
         }
 
-        #region Public API
+        public override string ToString()
+        {
+            return PV_name;
+        }
+
+        #region Control Functions
+
+        public void AddExtraCondition(E ending, Func<E, PV_PlayerProgress<E>, bool> condition)
+        {
+            this.all_extraConditions[ending].Add(condition);
+        }
+
+        /// <summary>
+        /// Defines which ending should be returned if the output vector doesn't pass extra conditions.
+        /// </summary>
+        /// <param name="ending">Ending to be considered "default".</param>
+        /// /// <param name="threshold">Global threshold on all endings to be bypassed. Defaults to 0.</param>
+        public void DefineZeroSpace(E ending, int threshold = 0)
+        {
+            this.defaultEnding = ending;
+            foreach (var item in thresholds) thresholds[item.Key] = threshold;
+        }
+
+        /// <summary>
+        /// Set distinct thresholds for each specified ending. You may only specify endings whose thresholds you want to differ from the default value.
+        /// </summary>
+        /// <param name="thresholds"></param>
+        public void DefineIndividualThresholds (Dictionary<E, int> thresholds)
+        {
+            foreach (var item in thresholds)
+                this.thresholds[item.Key] = item.Value;
+        }
+
+        /// <summary>
+        /// Get output based on weights and extra conditions, including thresholds.
+        /// </summary>
+        /// <param name="path"></param>
+        /// <returns></returns>
+        public E FinishQuest(PV_PlayerProgress<E> playerProgress)
+        {
+            var weights = GetOutputVector(playerProgress.actionFlags).weights;
+            foreach (var weight in weights)
+            {
+                if (!CheckThreshold(weight)) weights.Remove(weight.Key);
+            }
+
+            RunExtraConditions(ref weights, playerProgress);
+
+            var sortedVector =  weights.OrderByDescending(x => x.Value);
+            if (sortedVector.Count() == 0)
+                return defaultEnding;
+
+            return sortedVector.First().Key;
+        }
+
+        private bool CheckThreshold(KeyValuePair<E, int> endingWeight)
+        {
+            return thresholds[endingWeight.Key] <= endingWeight.Value;
+        }
+
+        private void RunExtraConditions(ref Dictionary<E, int> endWeights, PV_PlayerProgress<E> playerProgress)
+        {
+            foreach (var weight in endWeights)
+            {
+                foreach (var condition in all_extraConditions[weight.Key])
+                {
+                    if (!condition(weight.Key, playerProgress))
+                    {
+                        endWeights.Remove(weight.Key);
+                        break;
+                    }
+                }
+            }
+        }
+
+        #endregion
+
+        #region Debug Functions
 
         /// <summary>
         /// Produces a list of all paths that lead to the specified ending.
         /// </summary>
         /// <param name="ending"></param>
         /// <returns>List of List of actions.</returns>
-        public List<List<PV_Action<E>>> AllPathsTo(E ending)
+        public List<List<PV_Action<E>>> Debug_AllPathsTo(E ending)
         {
             if (!all_endings.Contains(ending)) throw new ArgumentException($"Ending {ending} is not part of this quest");
 
             var output = new List<List<PV_Action<E>>>();
 
-            foreach (var item in GetAllPaths())
+            foreach (var item in Debug_GetAllPaths())
             {
                 if (item.Value.Equals(ending)) output.Add(item.Key);
             }
@@ -66,11 +183,11 @@ namespace ProgressionVector
         /// </summary>
         /// <param name="action"></param>
         /// <returns></returns>
-        public Dictionary<E, float> GetActionDirection(PV_Action<E> action)
+        public Dictionary<E, float> Debug_GetActionDirection(PV_Action<E> action)
         {
-            if (!all_actions.Contains(action)) throw new ArgumentException($"Action {action} is not part of this quest.");
+            if (!all_majorActions.Contains(action)) throw new ArgumentException($"Action {action} is not part of this quest.");
 
-            var pathsWithA = from x in GetAllPaths() where x.Key.Contains(action) select x;
+            var pathsWithA = from x in Debug_GetAllPaths() where x.Key.Contains(action) select x;
             var total = pathsWithA.Count();
             if (total == 0) return new Dictionary<E, float>();
 
@@ -88,23 +205,23 @@ namespace ProgressionVector
         /// </summary>
         /// <param name="outcome"></param>
         /// <returns></returns>
-        public Dictionary<PV_Action<E>, float> GetActionFrequenciesForEnding(E ending)
+        public Dictionary<PV_Action<E>, float> Debug_GetActionFrequenciesForEnding(E ending)
         {
             if (!all_endings.Contains(ending)) throw new ArgumentException($"Ending {ending} is not part of this quest");
 
-            var allPaths = AllPathsTo(ending);
+            var allPaths = Debug_AllPathsTo(ending);
             var total = allPaths.Count;
             var outDict = new Dictionary<PV_Action<E>, float>();
 
 
-            foreach (var action in all_actions) outDict.Add(action, 0f);
+            foreach (var action in all_majorActions) outDict.Add(action, 0f);
 
             foreach (var path in allPaths)
             {
                 foreach (var action in path) outDict[action] += 1f;
             }
 
-            foreach (var action in all_actions) outDict[action] = outDict[action] / total;
+            foreach (var action in all_majorActions) outDict[action] = outDict[action] / total;
 
             return outDict;
         }
@@ -114,7 +231,7 @@ namespace ProgressionVector
         /// that lead to the given outcome.
         /// </summary>
         /// <returns></returns>
-        public Dictionary<List<PV_Action<E>>, E> GetAllPaths()
+        public Dictionary<List<PV_Action<E>>, E> Debug_GetAllPaths()
         {
             var pathOutputs = new Dictionary<List<PV_Action<E>>, E>();
             var paths = all_permutations ?? AllPermutations();
@@ -122,7 +239,7 @@ namespace ProgressionVector
             foreach (var path in paths)
             {
                 var actions = from key in path.Keys.ToList() where path[key] == true select key;
-                var result = GetPathOutput(path);
+                var result = Debug_GetPathOutput(path);
                 pathOutputs.Add(actions.ToList(), result);
             }
 
@@ -134,13 +251,13 @@ namespace ProgressionVector
         /// </summary>
         /// <param name="path"></param>
         /// <returns></returns>
-        public Dictionary<List<PV_Action<E>>, E> GetAllPathsFrom(IEnumerable<PV_Action<E>> path)
+        public Dictionary<List<PV_Action<E>>, E> Debug_GetAllPathsFrom(IEnumerable<PV_Action<E>> path)
         {
             foreach (var action in path)
-                if (!all_actions.Contains(action)) 
+                if (!all_majorActions.Contains(action)) 
                     throw new ArgumentException($"Action {action} is not part of this quest.");
 
-            var allPaths = GetAllPaths();
+            var allPaths = Debug_GetAllPaths();
             var outPaths = from pAll in allPaths where path.All(a => pAll.Key.Contains(a)) select pAll;
 
             return outPaths.ToDictionary(x => x.Key, x => x.Value);
@@ -151,13 +268,13 @@ namespace ProgressionVector
         /// </summary>
         /// <param name="path"></param>
         /// <returns></returns>
-        public Dictionary<List<PV_Action<E>>, E> GetAllPathsFrom(PV_PlayerProgress<E> playerProgress)
+        public Dictionary<List<PV_Action<E>>, E> Debug_GetAllPathsFrom(PV_PlayerProgress<E> playerProgress)
         {
             foreach (var action in playerProgress.actionFlags)
-                if (!all_actions.Contains(action.Key))
+                if (!all_majorActions.Contains(action.Key))
                     throw new ArgumentException($"Action {action} is not part of this quest.");
 
-            var allPaths = GetAllPaths();
+            var allPaths = Debug_GetAllPaths();
             var playerActions = playerProgress.actionFlags.Where(a => a.Value == true).Select(a => a.Key);
             var outPaths = from pAll in allPaths where playerActions.All(a => pAll.Key.Contains(a)) select pAll;
 
@@ -169,15 +286,15 @@ namespace ProgressionVector
         /// </summary>
         /// <param name="path"></param>
         /// <returns></returns>
-        public Dictionary<List<PV_Action<E>>, E> GetAllPathsFromTo(IEnumerable<PV_Action<E>> path, E ending)
+        public Dictionary<List<PV_Action<E>>, E> Debug_GetAllPathsFromTo(IEnumerable<PV_Action<E>> path, E ending)
         {
             foreach (var action in path)
-                if (!all_actions.Contains(action))
+                if (!all_majorActions.Contains(action))
                     throw new ArgumentException($"Action {action} is not part of this quest.");
             if (!all_endings.Contains(ending)) 
                 throw new ArgumentException($"Ending {ending} is not part of this quest");
 
-            var allPaths = GetAllPaths();
+            var allPaths = Debug_GetAllPaths();
             var outPaths = from pAll in allPaths where pAll.Value.Equals(ending) && path.All(a => pAll.Key.Contains(a)) select pAll;
 
             return outPaths.ToDictionary(x => x.Key, x => x.Value);
@@ -188,15 +305,15 @@ namespace ProgressionVector
         /// </summary>
         /// <param name="path"></param>
         /// <returns></returns>
-        public Dictionary<List<PV_Action<E>>, E> GetAllPathsFromTo(PV_PlayerProgress<E> playerProgress, E ending)
+        public Dictionary<List<PV_Action<E>>, E> Debug_GetAllPathsFromTo(PV_PlayerProgress<E> playerProgress, E ending)
         {
             foreach (var action in playerProgress.actionFlags)
-                if (!all_actions.Contains(action.Key))
+                if (!all_majorActions.Contains(action.Key))
                     throw new ArgumentException($"Action {action} is not part of this quest.");
             if (!all_endings.Contains(ending))
                 throw new ArgumentException($"Ending {ending} is not part of this quest");
 
-            var allPaths = GetAllPaths();
+            var allPaths = Debug_GetAllPaths();
             var playerActions = playerProgress.actionFlags.Where(a => a.Value == true).Select(a => a.Key);
             var outPaths = from pAll in allPaths where pAll.Value.Equals(ending) && playerActions.All(a => pAll.Key.Contains(a)) select pAll;
 
@@ -207,9 +324,9 @@ namespace ProgressionVector
         /// Returns the number of paths that lead to each ending.
         /// </summary>
         /// <returns>Dictionary [ending, #times]</returns>
-        public Dictionary<E, int> GetEndingFrequencies()
+        public Dictionary<E, int> Debug_GetEndingFrequencies()
         {
-            var allPaths = GetAllPaths();
+            var allPaths = Debug_GetAllPaths();
             var outDict = new Dictionary<E, int>();
             foreach (var end in all_endings)
             {
@@ -228,7 +345,7 @@ namespace ProgressionVector
         /// Use to retrieve all paths that can result in multiple endings.
         /// </summary>
         /// <returns>Dictionary [path, endings].</returns>
-        public Dictionary<List<PV_Action<E>>, List<E>> GetOverlaps()
+        public Dictionary<List<PV_Action<E>>, List<E>> Debug_GetOverlaps()
         {
             var pathOutputs = GetAllOutputVectors();
             var outDict = new Dictionary<List<PV_Action<E>>, List<E>>();
@@ -247,18 +364,13 @@ namespace ProgressionVector
         /// </summary>
         /// <param name="path">Vector of action-presence. Values of weights will be taken internally.</param>
         /// <returns></returns>
-        public E GetPathOutput(Dictionary<PV_Action<E>, bool> path)
+        public E Debug_GetPathOutput(Dictionary<PV_Action<E>, bool> path)
         {
             foreach (var action in path)
-                if (!all_actions.Contains(action.Key))
+                if (!all_majorActions.Contains(action.Key))
                     throw new ArgumentException($"Action {action} is not part of this quest.");
 
             return GetEnding(GetOutputVector(path));
-        }
-
-        public override string ToString()
-        {
-            return PV_name;
         }
 
         #endregion
@@ -351,7 +463,7 @@ namespace ProgressionVector
             {
                 var path = new Dictionary<PV_Action<E>, bool>();
                 int idx = 0;
-                foreach (var action in all_actions)
+                foreach (var action in all_majorActions)
                 {
                     path.Add(action, perm[idx] == 0 ? false : true);
                     idx++;
@@ -363,16 +475,16 @@ namespace ProgressionVector
         }
 
         /// <summary>
-        /// [Internal] [Wrapper] Decides whether to use multithreaded approach or single-threaded and returns all binary strings of length all_actions.
+        /// [Internal] [Wrapper] Decides whether to use multithreaded approach or single-threaded and returns all binary strings of length all_majorActions.
         /// </summary>
         /// <returns></returns>
         private List<int[]> GenerateAllBinaryVectors()
         {
-            if (all_actions.Count >= 25) return GenerateAllBinaryVectorsThreaded();
+            if (all_majorActions.Count >= 25) return GenerateAllBinaryVectorsThreaded();
             else
             {
                 var list = new List<int[]>();
-                GenerateAllBinaryVectorsLinear(all_actions.Count, new int[all_actions.Count], 0, ref list);
+                GenerateAllBinaryVectorsLinear(all_majorActions.Count, new int[all_majorActions.Count], 0, ref list);
                 return list;
             }
         }
@@ -393,10 +505,10 @@ namespace ProgressionVector
             for (var i = 0; i < threadCount; i++)
             {
                 var set = startingSets[i];
-                var arr = new int[all_actions.Count];
+                var arr = new int[all_majorActions.Count];
                 set.CopyTo(arr, 0);
 
-                threads[i] = new Thread(() => GenerateAllBinaryVectorsLinear(all_actions.Count, arr, set.Length, ref outList));
+                threads[i] = new Thread(() => GenerateAllBinaryVectorsLinear(all_majorActions.Count, arr, set.Length, ref outList));
                 threads[i].Start();
             }
             

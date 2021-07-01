@@ -13,6 +13,11 @@ namespace ProgressionVector
 
         public Dictionary<E, int> weights { get; protected set; }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="weights"></param>
+        /// <param name="name">ToString() will return this parameter which is empty by default.</param>
         public PV_Action(IEnumerable<(E, int)> weights, string name = "")
         {
             this.weights = new Dictionary<E, int>();
@@ -24,6 +29,11 @@ namespace ProgressionVector
             PV_name = name;
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="weights"></param>
+        /// <param name="name">ToString() will return this parameter which is empty by default.</param>
         public PV_Action(Dictionary<E, int> weights, string name = "")
         {
             this.weights = weights;
@@ -31,7 +41,11 @@ namespace ProgressionVector
             PV_name = name;
         }
 
-        protected PV_Action(string name = "") { PV_name = name; }
+        /// <summary>
+        /// Only use this for minor actions to avoid null-reference errors
+        /// </summary>
+        /// <param name="name">ToString() will return this parameter which is empty by default.</param>
+        public PV_Action(string name = "") { PV_name = name; }
 
         public override string ToString()
         {

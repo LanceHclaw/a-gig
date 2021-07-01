@@ -60,6 +60,7 @@ namespace PVA_test
             public static readonly Ending melee = new Ending("melee");
             public static readonly Ending ranged = new Ending("ranged");
             public static readonly Ending versatile = new Ending("versatile");
+            public static readonly Ending notReady = new Ending("notReady");
 
             public static IEnumerable<Ending> GetAllEndings()
             {
@@ -73,39 +74,39 @@ namespace PVA_test
             PV_PlayerProgress<Ending> myPlayerProgress = new PV_PlayerProgress<Ending>(myQuest);
           
             Console.WriteLine("\nmyQuest.GetAllPaths()-----------------------------------");
-            PrintDictionaryList(myQuest.GetAllPaths());
+            PrintDictionaryList(myQuest.Debug_GetAllPaths());
 
             Console.WriteLine("\nmyQuest.GetAllPathsFrom(MyActions.axe, MyActions.bow)-----------------------------------");
-            PrintDictionaryList(myQuest.GetAllPathsFrom(new List<PV_Action<Ending>> { MyActions.axe, MyActions.bow }));
+            PrintDictionaryList(myQuest.Debug_GetAllPathsFrom(new List<PV_Action<Ending>> { MyActions.axe, MyActions.bow }));
 
             Console.WriteLine("\nmyQuest.GetAllPathsFrom(playerProgressVersion)(MyActions.axe, MyActions.bow)-----------------------------------");
             myPlayerProgress.ActionCompleted(MyActions.axe);
             myPlayerProgress.ActionCompleted(MyActions.bow);
-            PrintDictionaryList(myQuest.GetAllPathsFrom(myPlayerProgress));
+            PrintDictionaryList(myQuest.Debug_GetAllPathsFrom(myPlayerProgress));
             myPlayerProgress.RemoveAction(MyActions.axe);
             myPlayerProgress.RemoveAction(MyActions.bow);
 
             Console.WriteLine("\nmyQuest.GetAllPathsFromTo(axe, bow, RANGED)-----------------------------------");
-            PrintDictionaryList(myQuest.GetAllPathsFromTo(new List<PV_Action<Ending>> { MyActions.axe, MyActions.bow }, MyEndings.ranged));
+            PrintDictionaryList(myQuest.Debug_GetAllPathsFromTo(new List<PV_Action<Ending>> { MyActions.axe, MyActions.bow }, MyEndings.ranged));
 
             Console.WriteLine("\nmyQuest_PV.GetAllPathsFrom(playerProgressVersion)(axe, bow, RANGED)-----------------------------------");
             myPlayerProgress.ActionCompleted(MyActions.axe);
             myPlayerProgress.ActionCompleted(MyActions.bow);
-            PrintDictionaryList(myQuest.GetAllPathsFromTo(myPlayerProgress, MyEndings.ranged));
+            PrintDictionaryList(myQuest.Debug_GetAllPathsFromTo(myPlayerProgress, MyEndings.ranged));
             myPlayerProgress.RemoveAction(MyActions.axe);
             myPlayerProgress.RemoveAction(MyActions.bow);
 
             Console.WriteLine("\nGetActionFrequenciesForEnding(MyEndings.versatile)-----------------------------------");
-            PrintDictionary(myQuest.GetActionFrequenciesForEnding(MyEndings.versatile));
+            PrintDictionary(myQuest.Debug_GetActionFrequenciesForEnding(MyEndings.versatile));
 
             Console.WriteLine("\nGetActionDirection(MyActions.axe)-----------------------------------");
-            PrintDictionary(myQuest.GetActionDirection(MyActions.axe));
+            PrintDictionary(myQuest.Debug_GetActionDirection(MyActions.axe));
 
             Console.WriteLine("\nAllPathsTo(MyEndings.versatile)-----------------------------------");
-            PrintListOfList(myQuest.AllPathsTo(MyEndings.versatile));
+            PrintListOfList(myQuest.Debug_AllPathsTo(MyEndings.versatile));
 
             Console.WriteLine("\nGetOverlaps()-----------------------------------");
-            PrintDictionaryListList(myQuest.GetOverlaps());
+            PrintDictionaryListList(myQuest.Debug_GetOverlaps());
 
             Console.WriteLine("\nGetPathOutput(MyPath {bow, dagger})-----------------------------------");
             var MyPath = new Dictionary<PV_Action<Ending>, bool>
@@ -113,16 +114,39 @@ namespace PVA_test
                 {MyActions.bow, true },
                 {MyActions.dagger, true }
             };
-            Console.WriteLine(myQuest.GetPathOutput(MyPath).ToString());
+            Console.WriteLine(myQuest.Debug_GetPathOutput(MyPath).ToString());
 
-            Console.WriteLine("\nProduceFinalEnding(empty player progress)-----------------------------------");
+            myQuest.DefineZeroSpace(MyEndings.notReady, 3);
+
+            Console.WriteLine("\nProduceFinalEnding(empty player progress) threshold 3 -----------------------------------");
             Console.WriteLine(myPlayerProgress.FinishQuest(myQuest).ToString());
 
-            Console.WriteLine("\nProduceFinalEnding(bow, pistol)-----------------------------------");
+            Console.WriteLine("\nProduceFinalEnding(bow, pistol) threshold 3 -----------------------------------");
             myPlayerProgress.ActionCompleted(MyActions.bow);
             myPlayerProgress.ActionCompleted(MyActions.pistol);
             Console.WriteLine(myPlayerProgress.FinishQuest(myQuest).ToString());
+
+            Console.WriteLine("\nProduceFinalEnding(small_stone) threshold 3 -----------------------------------");
+            myPlayerProgress.RemoveAction(MyActions.bow);
+            myPlayerProgress.RemoveAction(MyActions.pistol);
+            myPlayerProgress.ActionCompleted(MyActions.small_stone);
+            Console.WriteLine(myPlayerProgress.FinishQuest(myQuest).ToString());
+
+            Console.WriteLine("\nProduceFinalEnding(small_stone) WITH melee threshold = 0; globalThreshold = 3 -----------------------------------");
+            myQuest.DefineIndividualThresholds(new Dictionary<Ending, int> { { MyEndings.melee, 0 } });
+            Console.WriteLine(myPlayerProgress.FinishQuest(myQuest).ToString());
+
             
+            Console.WriteLine("\nProduceFinalEnding(small_stone) WITH extra condition on axe and melee threshold = 0; globalThreshold = 3 -----------------------------------");
+            myQuest.AddExtraCondition(MyEndings.melee, (ending, progress) =>
+            {
+                return progress.actionFlags[MyActions.axe];
+            });
+            Console.WriteLine(myPlayerProgress.FinishQuest(myQuest).ToString());
+
+            Console.WriteLine("\nProduceFinalEnding(small_stone, axe) WITH extra condition on axe and melee threshold = 0; globalThreshold = 3 -----------------------------------");
+            myPlayerProgress.ActionCompleted(MyActions.axe);
+            Console.WriteLine(myPlayerProgress.FinishQuest(myQuest).ToString());
         }
 
         public static void PrintDictionary<T, N>(Dictionary<T, N> incDict)
