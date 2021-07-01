@@ -39,5 +39,10 @@ namespace ProgressionVector
             }
             else throw new ArgumentException("This action has not been completed earlier or does not belong to this quest.");
         }
+
+        public E FinishQuest(PV_QuestData<E> questData)
+        {
+            return questData.GetPathOutput(actionFlags);
+        }
     }
 }

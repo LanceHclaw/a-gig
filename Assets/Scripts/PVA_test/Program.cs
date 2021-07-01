@@ -1,5 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
+using System.Linq;
+using System.Threading;
 using ProgressionVector;
 
 namespace PVA_test
@@ -66,44 +69,43 @@ namespace PVA_test
 
         static void Main(string[] args)
         {
-            PV_QuestData<Ending> myQuest = new PV_QuestData<Ending>(MyEndings.GetAllEndings(), MyActions.GetAllActions());
+            PV_QuestData<Ending> myQuest = new PV_QuestData<Ending>(MyEndings.GetAllEndings(), MyActions.GetAllActions(), DEBUG: true);
             PV_PlayerProgress<Ending> myPlayerProgress = new PV_PlayerProgress<Ending>(myQuest);
-            ProgressionVector<Ending> myQuest_PV = new ProgressionVector<Ending>(myPlayerProgress, myQuest, DEBUG: true);
+          
+            Console.WriteLine("\nmyQuest.GetAllPaths()-----------------------------------");
+            PrintDictionaryList(myQuest.GetAllPaths());
 
-            Console.WriteLine("\nmyQuest_PV.GetAllPaths()-----------------------------------");
-            PrintDictionaryList(myQuest_PV.GetAllPaths());
+            Console.WriteLine("\nmyQuest.GetAllPathsFrom(MyActions.axe, MyActions.bow)-----------------------------------");
+            PrintDictionaryList(myQuest.GetAllPathsFrom(new List<PV_Action<Ending>> { MyActions.axe, MyActions.bow }));
 
-            Console.WriteLine("\nmyQuest_PV.GetAllPathsFrom(MyActions.axe, MyActions.bow)-----------------------------------");
-            PrintDictionaryList(myQuest_PV.GetAllPathsFrom(new List<PV_Action<Ending>> { MyActions.axe, MyActions.bow }));
-
-            Console.WriteLine("\nmyQuest_PV.GetAllPathsFrom(playerProgressVersion)(MyActions.axe, MyActions.bow)-----------------------------------");
+            Console.WriteLine("\nmyQuest.GetAllPathsFrom(playerProgressVersion)(MyActions.axe, MyActions.bow)-----------------------------------");
             myPlayerProgress.ActionCompleted(MyActions.axe);
             myPlayerProgress.ActionCompleted(MyActions.bow);
-            PrintDictionaryList(myQuest_PV.GetAllPathsFrom(myPlayerProgress));
+            PrintDictionaryList(myQuest.GetAllPathsFrom(myPlayerProgress));
             myPlayerProgress.RemoveAction(MyActions.axe);
             myPlayerProgress.RemoveAction(MyActions.bow);
 
-            Console.WriteLine("\nmyQuest_PV.GetAllPathsFromTo(axe, bow, RANGED)-----------------------------------");
-            PrintDictionaryList(myQuest_PV.GetAllPathsFromTo(new List<PV_Action<Ending>> { MyActions.axe, MyActions.bow }, MyEndings.ranged));
+            Console.WriteLine("\nmyQuest.GetAllPathsFromTo(axe, bow, RANGED)-----------------------------------");
+            PrintDictionaryList(myQuest.GetAllPathsFromTo(new List<PV_Action<Ending>> { MyActions.axe, MyActions.bow }, MyEndings.ranged));
 
             Console.WriteLine("\nmyQuest_PV.GetAllPathsFrom(playerProgressVersion)(axe, bow, RANGED)-----------------------------------");
             myPlayerProgress.ActionCompleted(MyActions.axe);
             myPlayerProgress.ActionCompleted(MyActions.bow);
-            PrintDictionaryList(myQuest_PV.GetAllPathsFromTo(myPlayerProgress, MyEndings.ranged));
+            PrintDictionaryList(myQuest.GetAllPathsFromTo(myPlayerProgress, MyEndings.ranged));
             myPlayerProgress.RemoveAction(MyActions.axe);
             myPlayerProgress.RemoveAction(MyActions.bow);
 
             Console.WriteLine("\nGetActionFrequenciesForEnding(MyEndings.versatile)-----------------------------------");
-            PrintDictionary(myQuest_PV.GetActionFrequenciesForEnding(MyEndings.versatile));
+            PrintDictionary(myQuest.GetActionFrequenciesForEnding(MyEndings.versatile));
 
             Console.WriteLine("\nGetActionDirection(MyActions.axe)-----------------------------------");
-            PrintDictionary(myQuest_PV.GetActionDirection(MyActions.axe));
+            PrintDictionary(myQuest.GetActionDirection(MyActions.axe));
 
             Console.WriteLine("\nAllPathsTo(MyEndings.versatile)-----------------------------------");
-            PrintListOfList(myQuest_PV.AllPathsTo(MyEndings.versatile));
+            PrintListOfList(myQuest.AllPathsTo(MyEndings.versatile));
 
             Console.WriteLine("\nGetOverlaps()-----------------------------------");
-            PrintDictionaryListList(myQuest_PV.GetOverlaps());
+            PrintDictionaryListList(myQuest.GetOverlaps());
 
             Console.WriteLine("\nGetPathOutput(MyPath {bow, dagger})-----------------------------------");
             var MyPath = new Dictionary<PV_Action<Ending>, bool>
@@ -111,15 +113,16 @@ namespace PVA_test
                 {MyActions.bow, true },
                 {MyActions.dagger, true }
             };
-            Console.WriteLine(myQuest_PV.GetPathOutput(MyPath).ToString());
+            Console.WriteLine(myQuest.GetPathOutput(MyPath).ToString());
 
             Console.WriteLine("\nProduceFinalEnding(empty player progress)-----------------------------------");
-            Console.WriteLine(myQuest_PV.ProduceFinalEnding().ToString());
+            Console.WriteLine(myPlayerProgress.FinishQuest(myQuest).ToString());
 
             Console.WriteLine("\nProduceFinalEnding(bow, pistol)-----------------------------------");
             myPlayerProgress.ActionCompleted(MyActions.bow);
             myPlayerProgress.ActionCompleted(MyActions.pistol);
-            Console.WriteLine(myQuest_PV.ProduceFinalEnding().ToString());
+            Console.WriteLine(myPlayerProgress.FinishQuest(myQuest).ToString());
+            
         }
 
         public static void PrintDictionary<T, N>(Dictionary<T, N> incDict)
