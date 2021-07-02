@@ -72,7 +72,13 @@ namespace PVA_test
         {
             PV_QuestData<Ending> myQuest = new PV_QuestData<Ending>(MyEndings.GetAllEndings(), MyActions.GetAllActions(), DEBUG: true);
             PV_PlayerProgress<Ending> myPlayerProgress = new PV_PlayerProgress<Ending>(myQuest);
-          
+
+            myQuest.DefineZeroSpace(MyEndings.notReady, 3);
+            myQuest.AddExtraCondition(MyEndings.melee, (ending, progress) =>
+            {
+                return progress.actionFlags[MyActions.axe];
+            });
+
             Console.WriteLine("\nmyQuest.GetAllPaths()-----------------------------------");
             PrintDictionaryList(myQuest.Debug_GetAllPaths());
 
