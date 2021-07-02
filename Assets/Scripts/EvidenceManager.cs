@@ -307,9 +307,10 @@ public class EvidenceManager : MonoBehaviour
 
         isThreadConnectionPending = false;
 
-        if ((connectionPendingToName == "Knife" && currentThreadComingFrom == ".44 Magnum") || (connectionPendingToName == ".44 Magnum" && currentThreadComingFrom == "Knife")) {
+        if (((connectionPendingToName == "Knife" && currentThreadComingFrom == ".44 Magnum") || (connectionPendingToName == ".44 Magnum" && currentThreadComingFrom == "Knife")) && (!dataStorage.IsEvidenceCollected("Bullet in the Body"))) {
             flashManager.PhotoFlash();
             evidenceCollectedController.ShowPhoto("Bullet in the Body");
+
             AddEvidence("Bullet in the Body");
         }
     }

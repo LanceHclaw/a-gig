@@ -15,11 +15,11 @@ D:/Unity/Projects/Thesis Gig/a-gig
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-51455
+64703
 Successfully changed project path to: D:/Unity/Projects/Thesis Gig/a-gig
 D:/Unity/Projects/Thesis Gig/a-gig
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 29.29 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 27.25 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2020.2.0b13 (655e1a328b90)
 [Subsystems] Discovering subsystems at path D:/Unity/2020.2.0b13/Editor/Data/Resources/UnitySubsystems
@@ -35,102 +35,28 @@ Initialize mono
 Mono path[0] = 'D:/Unity/2020.2.0b13/Editor/Data/Managed'
 Mono path[1] = 'D:/Unity/2020.2.0b13/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
 Mono config path = 'D:/Unity/2020.2.0b13/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56892
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56748
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: D:/Unity/2020.2.0b13/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
 Register platform support module: D:/Unity/2020.2.0b13/Editor/Data/PlaybackEngines/MacStandaloneSupport/UnityEditor.OSXStandalone.Extensions.dll
 Register platform support module: D:/Unity/2020.2.0b13/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
 Register platform support module: D:/Unity/2020.2.0b13/Editor/Data/PlaybackEngines/LinuxStandaloneSupport/UnityEditor.LinuxStandalone.Extensions.dll
-Registered in 0.001692 seconds.
+Registered in 0.001855 seconds.
 Native extension for LinuxStandalone target not found
 Native extension for WindowsStandalone target not found
 Native extension for OSXStandalone target not found
 Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 27.38 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 25.27 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.960 seconds
+- Completed reload, in  0.993 seconds
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.001637 seconds.
-Begin MonoManager ReloadAssembly
-Failed loading assembly 'Assets/Scripts/PVA_test/obj/Debug/net5.0/ref/PVA_test.dll' reason: File does not contain a valid CIL image
-Loading assembly failed: "Assets/Scripts/PVA_test/obj/Debug/net5.0/ref/PVA_test.dll" reason: File does not contain a valid CIL image
-
-Symbol file LoadedFromMemory doesn't match image D:\Unity\Projects\Thesis Gig\a-gig\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
-Error: Could not load signature of ProgressionVector.PV_Action`1[E]:.ctor due to: Could not resolve type with token 01000013 (from typeref, class/assembly System.ValueTuple`2, System.Runtime, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a) assembly:System.Runtime, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a type:System.ValueTuple`2 member:(null) signature:<none>
-
-Error: Could not load signature of ProgressionVector.PV_Action`1[E]:.ctor due to: Could not resolve type with token 01000013 (from typeref, class/assembly System.ValueTuple`2, System.Runtime, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a) assembly:System.Runtime, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a type:System.ValueTuple`2 member:(null) signature:<none>
-
-Unloading broken assembly Assets/Scripts/ProgressionVector/obj/Debug/net5.0/ref/ProgressionVector.dll, this assembly can cause crashes in the runtime
-
-Unloading broken assembly Assets/Scripts/ProgressionVector/obj/Debug/net5.0/ProgressionVector.dll, this assembly can cause crashes in the runtime
-
-Native extension for LinuxStandalone target not found
-Native extension for WindowsStandalone target not found
-Native extension for OSXStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 0.24 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.875 seconds
-Platform modules already initialized, skipping
-Assertion failed on expression: 'reloadOk'
-
-========================================================================
-Worker process is ready to serve import requests
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.05 seconds
-Refreshing native plugins compatible for Editor in 0.49 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1184 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 61.5 MB.
-System memory in use after: 61.6 MB.
-
-Unloading 17 unused Assets to reduce memory usage. Loaded Objects now: 1626.
-Total: 2.710200 ms (FindLiveObjects: 0.172500 ms CreateObjectMapping: 0.274900 ms MarkObjects: 2.180100 ms  DeleteObjects: 0.081200 ms)
-
-========================================================================
-Received Import Request.
-  path: Assets/Scripts/PVA_test
-  artifactKey: Guid(b6161f7fa95fc714c8376063cef1e115) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/PVA_test using Guid(b6161f7fa95fc714c8376063cef1e115) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ef9f32480bb5581769fec672d51e00e7') in 0.019061 seconds
-  Import took 0.021238 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 1.398467 seconds.
-  path: Assets/Scripts/ProgressionVector/obj
-  artifactKey: Guid(373ace300ce4b6d46a9ad5ace393300a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/ProgressionVector/obj using Guid(373ace300ce4b6d46a9ad5ace393300a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cf87bb2f86b324ed9650c36287a128f7') in 0.007436 seconds
-  Import took 0.009706 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 3.346919 seconds.
-  path: Assets/Scripts/ProgressionVector/obj/ProgressionVector.csproj.nuget.dgspec.json
-  artifactKey: Guid(cc519da6faf71bd43a05c53dd3b07ea0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/ProgressionVector/obj/ProgressionVector.csproj.nuget.dgspec.json using Guid(cc519da6faf71bd43a05c53dd3b07ea0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a3206a097a774c03fb57f9fab64b55a0') in 0.145737 seconds
-  Import took 0.148265 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 3.037504 seconds.
-  path: Assets/Scripts/ProgressionVector/obj/Debug
-  artifactKey: Guid(b23dce740f390ff43b970f3aacb9c837) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/ProgressionVector/obj/Debug using Guid(b23dce740f390ff43b970f3aacb9c837) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b0841f6198accab5650974ef75d2775b') in 0.008833 seconds
-  Import took 0.010850 seconds .
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.000609 seconds.
+Registered in 0.000676 seconds.
 Begin MonoManager ReloadAssembly
 Symbol file LoadedFromMemory doesn't match image D:\Unity\Projects\Thesis Gig\a-gig\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
 Native extension for LinuxStandalone target not found
@@ -143,61 +69,7 @@ Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.813 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.23 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1161 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 60.6 MB.
-System memory in use after: 60.7 MB.
-
-Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 1628.
-Total: 1.923900 ms (FindLiveObjects: 0.123900 ms CreateObjectMapping: 0.036900 ms MarkObjects: 1.712200 ms  DeleteObjects: 0.049700 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 65.054467 seconds.
-  path: Assets/Scripts/ProgressionVector
-  artifactKey: Guid(8bc6dd3bc490ba64a8c8f93442c4df15) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/ProgressionVector using Guid(8bc6dd3bc490ba64a8c8f93442c4df15) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '238248c3bc18327a0443cf78162ed1b7') in 0.008210 seconds
-  Import took 0.010251 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.005425 seconds.
-  path: Assets/Scripts/ProgressionVector
-  artifactKey: Guid(8bc6dd3bc490ba64a8c8f93442c4df15) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/ProgressionVector using Guid(8bc6dd3bc490ba64a8c8f93442c4df15) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '238248c3bc18327a0443cf78162ed1b7') in 0.002386 seconds
-  Import took 0.004963 seconds .
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.002104 seconds.
-Begin MonoManager ReloadAssembly
-Symbol file LoadedFromMemory doesn't match image D:\Unity\Projects\Thesis Gig\a-gig\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
-Failed loading assembly 'Assets/Scripts/ProgressionVector/bin/Debug/net5.0/ref/ProgressionVector.dll' reason: File does not contain a valid CIL image
-Loading assembly failed: "Assets/Scripts/ProgressionVector/bin/Debug/net5.0/ref/ProgressionVector.dll" reason: File does not contain a valid CIL image
-
-Error: Could not load signature of ProgressionVector.PV_Action`1[E]:.ctor due to: Could not resolve type with token 01000013 (from typeref, class/assembly System.ValueTuple`2, System.Runtime, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a) assembly:System.Runtime, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a type:System.ValueTuple`2 member:(null) signature:<none>
-
-Error: Could not load signature of ProgressionVector.PV_Action`1[E]:.ctor due to: Could not resolve type with token 01000013 (from typeref, class/assembly System.ValueTuple`2, System.Runtime, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a) assembly:System.Runtime, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a type:System.ValueTuple`2 member:(null) signature:<none>
-
-Unloading broken assembly Assets/Scripts/PVA_test/bin/Debug/net5.0/ProgressionVector.dll, this assembly can cause crashes in the runtime
-
-Unloading broken assembly Assets/Scripts/ProgressionVector/bin/Debug/net5.0/ProgressionVector.dll, this assembly can cause crashes in the runtime
-
-Native extension for LinuxStandalone target not found
-Native extension for WindowsStandalone target not found
-Native extension for OSXStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 0.29 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.822 seconds
+- Completed reload, in  0.858 seconds
 Platform modules already initialized, skipping
 Assertion failed on expression: 'reloadOk'
 
@@ -211,171 +83,102 @@ Unloading 9 unused Assets to reduce memory usage. Loaded Objects now: 1634.
 Total: 1.771400 ms (FindLiveObjects: 0.179900 ms CreateObjectMapping: 0.038300 ms MarkObjects: 1.537900 ms  DeleteObjects: 0.014200 ms)
 
 ========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.002095 seconds.
-Begin MonoManager ReloadAssembly
-Symbol file LoadedFromMemory doesn't match image D:\Unity\Projects\Thesis Gig\a-gig\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
-Failed loading assembly 'Assets/Scripts/ProgressionVector/bin/Debug/net5.0/ref/ProgressionVector.dll' reason: File does not contain a valid CIL image
-Loading assembly failed: "Assets/Scripts/ProgressionVector/bin/Debug/net5.0/ref/ProgressionVector.dll" reason: File does not contain a valid CIL image
-
-Error: Could not load signature of ProgressionVector.PV_Action`1[E]:.ctor due to: Could not resolve type with token 01000013 (from typeref, class/assembly System.ValueTuple`2, System.Runtime, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a) assembly:System.Runtime, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a type:System.ValueTuple`2 member:(null) signature:<none>
-
-Error: Could not load signature of ProgressionVector.PV_Action`1[E]:.ctor due to: Could not resolve type with token 01000013 (from typeref, class/assembly System.ValueTuple`2, System.Runtime, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a) assembly:System.Runtime, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a type:System.ValueTuple`2 member:(null) signature:<none>
-
-Unloading broken assembly Assets/Scripts/PVA_test/bin/Debug/net5.0/ProgressionVector.dll, this assembly can cause crashes in the runtime
-
-Unloading broken assembly Assets/Scripts/ProgressionVector/bin/Debug/net5.0/ProgressionVector.dll, this assembly can cause crashes in the runtime
-
-Native extension for LinuxStandalone target not found
-Native extension for WindowsStandalone target not found
-Native extension for OSXStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 0.55 ms, found 0 plugins.
+Worker process is ready to serve import requests
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.09 seconds
+Refreshing native plugins compatible for Editor in 0.26 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.834 seconds
-Platform modules already initialized, skipping
-Assertion failed on expression: 'reloadOk'
-
-Refreshing native plugins compatible for Editor in 0.24 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1170 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 1178 Unused Serialized files (Serialized files now loaded: 0)
 System memory in use before: 61.2 MB.
 System memory in use after: 61.3 MB.
 
-Unloading 9 unused Assets to reduce memory usage. Loaded Objects now: 1636.
-Total: 2.258800 ms (FindLiveObjects: 0.180000 ms CreateObjectMapping: 0.038600 ms MarkObjects: 2.004700 ms  DeleteObjects: 0.034000 ms)
+Unloading 13 unused Assets to reduce memory usage. Loaded Objects now: 1624.
+Total: 2.245700 ms (FindLiveObjects: 0.212600 ms CreateObjectMapping: 0.082500 ms MarkObjects: 1.866600 ms  DeleteObjects: 0.083000 ms)
 
 ========================================================================
 Received Import Request.
-  Time since last request: 339.089463 seconds.
-  path: Assets/Scripts/PVA_test
-  artifactKey: Guid(b6161f7fa95fc714c8376063cef1e115) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/PVA_test using Guid(b6161f7fa95fc714c8376063cef1e115) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3d0335ea0d29b9cca7c8e7f11633a629') in 0.005343 seconds
-  Import took 0.007875 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 4.256616 seconds.
-  path: Assets/Scripts/ProgressionVector/obj
-  artifactKey: Guid(373ace300ce4b6d46a9ad5ace393300a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/ProgressionVector/obj using Guid(373ace300ce4b6d46a9ad5ace393300a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0c0aa1f4bae9e3faed377b4bfb4dc35c') in 0.007772 seconds
-  Import took 0.010048 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 2.731238 seconds.
-  path: Assets/Scripts/ProgressionVector/bin
-  artifactKey: Guid(6c480ed4dbde5dd46a343cb9959af0e9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/ProgressionVector/bin using Guid(6c480ed4dbde5dd46a343cb9959af0e9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fdb25cd2e947623f335d86af5b25efb0') in 0.008893 seconds
-  Import took 0.011184 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 1.129552 seconds.
-  path: Assets/Scripts/ProgressionVector/bin/Debug
-  artifactKey: Guid(102ec0b10c44e304d965b903e7f20637) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/ProgressionVector/bin/Debug using Guid(102ec0b10c44e304d965b903e7f20637) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f394d311aa40ce5fdda093bb47521460') in 0.007347 seconds
-  Import took 0.009950 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.551785 seconds.
-  path: Assets/Scripts/ProgressionVector/bin/Debug/net5.0
-  artifactKey: Guid(488fcd0b9384660498720acc06371d24) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/ProgressionVector/bin/Debug/net5.0 using Guid(488fcd0b9384660498720acc06371d24) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '934680d59fbd30ead880ca3160e479dd') in 0.009170 seconds
-  Import took 0.011626 seconds .
+  path: Assets/Scripts/EpilogueManager.cs
+  artifactKey: Guid(3720c9fc765f372468971631a31a3f29) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/EpilogueManager.cs using Guid(3720c9fc765f372468971631a31a3f29) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ab2e04fa609164d9bb3d19b7d22cb82b') in 0.123815 seconds
+  Import took 0.163168 seconds .
 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.000549 seconds.
+Registered in 0.000592 seconds.
 Begin MonoManager ReloadAssembly
 Symbol file LoadedFromMemory doesn't match image D:\Unity\Projects\Thesis Gig\a-gig\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
 Native extension for LinuxStandalone target not found
 Native extension for WindowsStandalone target not found
 Native extension for OSXStandalone target not found
 Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 0.21 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 0.33 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.820 seconds
+- Completed reload, in  0.856 seconds
 Platform modules already initialized, skipping
 Refreshing native plugins compatible for Editor in 0.21 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 1161 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 61.1 MB.
-System memory in use after: 61.2 MB.
+System memory in use before: 60.4 MB.
+System memory in use after: 60.5 MB.
 
-Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 1638.
-Total: 2.049900 ms (FindLiveObjects: 0.215900 ms CreateObjectMapping: 0.109400 ms MarkObjects: 1.708200 ms  DeleteObjects: 0.015000 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 839.012533 seconds.
-  path: Assets/Scenes
-  artifactKey: Guid(f15502bf95f9fdb42ac62b0457fad4d4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes using Guid(f15502bf95f9fdb42ac62b0457fad4d4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7ae31d8a5adea0590be48292c217e2dc') in 0.009801 seconds
-  Import took 0.012057 seconds .
+Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 1626.
+Total: 2.007800 ms (FindLiveObjects: 0.207800 ms CreateObjectMapping: 0.054300 ms MarkObjects: 1.730400 ms  DeleteObjects: 0.014100 ms)
 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.000559 seconds.
+Registered in 0.000668 seconds.
 Begin MonoManager ReloadAssembly
 Symbol file LoadedFromMemory doesn't match image D:\Unity\Projects\Thesis Gig\a-gig\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
 Native extension for LinuxStandalone target not found
 Native extension for WindowsStandalone target not found
 Native extension for OSXStandalone target not found
 Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 0.34 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 0.24 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.795 seconds
+- Completed reload, in  0.956 seconds
 Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.22 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 0.24 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 1161 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 61.3 MB.
-System memory in use after: 61.4 MB.
+System memory in use before: 60.6 MB.
+System memory in use after: 60.7 MB.
 
-Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 1640.
-Total: 2.014700 ms (FindLiveObjects: 0.252800 ms CreateObjectMapping: 0.064000 ms MarkObjects: 1.681300 ms  DeleteObjects: 0.015200 ms)
+Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 1628.
+Total: 2.062000 ms (FindLiveObjects: 0.165000 ms CreateObjectMapping: 0.042300 ms MarkObjects: 1.836300 ms  DeleteObjects: 0.017000 ms)
 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.000600 seconds.
+Registered in 0.001074 seconds.
 Begin MonoManager ReloadAssembly
 Symbol file LoadedFromMemory doesn't match image D:\Unity\Projects\Thesis Gig\a-gig\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
 Native extension for LinuxStandalone target not found
 Native extension for WindowsStandalone target not found
 Native extension for OSXStandalone target not found
 Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 0.21 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 0.36 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.841 seconds
+- Completed reload, in  1.171 seconds
 Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.22 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 0.26 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 1161 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 61.4 MB.
-System memory in use after: 61.5 MB.
+System memory in use before: 60.7 MB.
+System memory in use after: 60.8 MB.
 
-Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 1642.
-Total: 1.801200 ms (FindLiveObjects: 0.143800 ms CreateObjectMapping: 0.037900 ms MarkObjects: 1.602700 ms  DeleteObjects: 0.015200 ms)
+Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 1630.
+Total: 2.043900 ms (FindLiveObjects: 0.165900 ms CreateObjectMapping: 0.070400 ms MarkObjects: 1.788400 ms  DeleteObjects: 0.017700 ms)
 
