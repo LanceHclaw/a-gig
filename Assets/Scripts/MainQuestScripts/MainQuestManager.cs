@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using ProgressionVector;
 using UnityEngine;
 
-class MainQuestManager
+public class MainQuestManager : MonoBehaviour
 {
     PV_PlayerProgress<Ending> playerProgress;
     PV_QuestData<Ending> questData;
@@ -14,6 +14,9 @@ class MainQuestManager
     public bool restricted;
 
     public string fileName;
+
+    public AllEvidence evidence;
+    //public AllEndings endings;
 
     public MainQuestManager(PV_PlayerProgress<Ending> playerProgress, 
         PV_QuestData<Ending> questData,
@@ -23,6 +26,11 @@ class MainQuestManager
         this.questData = questData;
 
         fileName = restricted ? "DataRestricted.json" : "DataUnrestricted.json";
+    }
+
+    void Awake()
+    {
+        evidence = new AllEvidence();
     }
 }
 

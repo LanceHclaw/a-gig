@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using ProgressionVector;
@@ -9,6 +10,9 @@ using UnityEngine;
 
 public class Evidence
 {
+    static int currId = 0;
+
+    public int id;
     public Sprite sprite;
 
     public string name;
@@ -16,9 +20,15 @@ public class Evidence
 
     public Evidence(string name)
     {
+        this.id = currId++;/*
         JToken obj = JObject.Parse(File.ReadAllText(FileDirectory.EvidenceJsonFile))[name];
+        var p = JObject.Parse(File.ReadAllText(FileDirectory.EvidenceJsonFile)).Properties().Select(x => x.Name).ToList();
+        //var tmp = new List<Evidence>();
+        foreach (var i in p)
+            Debug.Log(i);
+            //tmp.Add(JsonConvert.DeserializeObject<Evidence>(i));
         this.name = obj["name"].ToString();
-        this.description = obj["description"].ToString();
+        this.description = obj["description"].ToString();*/
     }
 }
 public class Ending : IComparable
@@ -33,6 +43,7 @@ public class Ending : IComparable
 
     public Ending(string name)
     {
+        //add proper parsint + add indexing for parsing weights array from connections
         this.name = name;
         JToken obj = JObject.Parse(File.ReadAllText(FileDirectory.EpiloguesFile))[name];
         this.epilogue = obj["epilogue"].ToString();
@@ -40,17 +51,12 @@ public class Ending : IComparable
 }
 public class Connection
 {
-    Evidence left;
-    Evidence right;
-
     public string commonDescription;
 
     Dictionary<Option, bool> options;
 
-    public Connection(Evidence left, Evidence right)
+    public Connection()
     {
-        this.left = left;
-        this.right = right;
     }
 }
 

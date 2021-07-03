@@ -8,15 +8,19 @@ public class MQ_Test : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        foreach(var field in AllEvidence.GetAllEvidence())
+        AllConnections ac = new AllConnections(FileDirectory.ConnectionsRestrictedJsonFile);
+        /*foreach (var field in AllEvidence.GetAllEvidence())
         {
-            Debug.Log(field.name + "\n" + field.description + "\n");
-        }
+            Debug.Log(field.id);
+            //Debug.Log(field.name + "\n" + field.description + "\n");
+        }*/
 
-        foreach(var end in AllEndings.GetAllEndings())
+        /*foreach(var end in AllEndings.GetAllEndings())
         {
             Debug.Log(end.name + "\n" + end.epilogue);
-        }
+        }*/
+
+        
     }
 
     // Update is called once per frame
