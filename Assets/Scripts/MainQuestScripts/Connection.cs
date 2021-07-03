@@ -23,11 +23,19 @@ public class Evidence
 }
 public class Ending : IComparable
 {
+    public string name;
     public string epilogue;
     public int CompareTo(object obj)
     {
         if (obj == null) return 1;
         else return CompareTo(obj);
+    }
+
+    public Ending(string name)
+    {
+        this.name = name;
+        JToken obj = JObject.Parse(File.ReadAllText(FileDirectory.EpiloguesFile))[name];
+        this.epilogue = obj["epilogue"].ToString();
     }
 }
 public class Connection

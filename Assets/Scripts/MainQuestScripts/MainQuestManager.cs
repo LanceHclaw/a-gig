@@ -34,6 +34,8 @@ public static class FileDirectory
 
     public static readonly string EvidenceJsonFile = GameFolder + "/Scripts/MainQuestScripts/DataEvidence.json";
 
+    public static readonly string EpiloguesFile = GameFolder + "/Scripts/MainQuestScripts/Endings.json";
+
     public static readonly string ConnectionsRestrictedJsonFile = GameFolder + "/Scripts/MainQuestScripts/DataConnectionsRestricted.json";
 
     public static readonly string ConnectionsUnrestrictedJsonFile = GameFolder + "/Scripts/MainQuestScripts/DataConnectionsUnrestricted.json";

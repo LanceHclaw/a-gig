@@ -12,6 +12,11 @@ public class MQ_Test : MonoBehaviour
         {
             Debug.Log(field.name + "\n" + field.description + "\n");
         }
+
+        foreach(var end in AllEndings.GetAllEndings())
+        {
+            Debug.Log(end.name + "\n" + end.epilogue);
+        }
     }
 
     // Update is called once per frame
