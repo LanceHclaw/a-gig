@@ -8,15 +8,16 @@ using UnityEngine;
 
 public class MainQuestManager : MonoBehaviour
 {
-    PV_PlayerProgress<Ending> playerProgress;
-    PV_QuestData<Ending> questData;
+    public PV_PlayerProgress<Ending> playerProgress;
+    public PV_QuestData<Ending> questData;
 
     public bool restricted;
 
     public string fileName;
 
     public MQEvidence evidence;
-    //public AllEndings endings;
+    public MQEndings endings;
+    public MQConnections connections;
 
     public MainQuestManager(PV_PlayerProgress<Ending> playerProgress, 
         PV_QuestData<Ending> questData,
@@ -31,6 +32,7 @@ public class MainQuestManager : MonoBehaviour
     void Awake()
     {
         evidence = new MQEvidence();
+        endings = new MQEndings();
     }
 }
 
@@ -38,7 +40,7 @@ public static class FileDirectory
 {
     public static readonly string GameFolder = Application.dataPath;
 
-    public static readonly string SpritesFolder = GameFolder + "/Images/UI/Items";
+    //public static readonly string SpritesFolder = GameFolder + "/Images/EvidenceSprites/Resources";
 
     public static readonly string EvidenceJsonFile = GameFolder + "/Scripts/MainQuestScripts/DataEvidence.json";
 

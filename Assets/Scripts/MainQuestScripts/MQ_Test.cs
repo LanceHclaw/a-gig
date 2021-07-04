@@ -8,6 +8,7 @@ public class MQ_Test : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        /*
         MQEndings ae = new MQEndings();
         MQConnections ac = new MQConnections(FileDirectory.ConnectionsRestrictedJsonFile, ae);
 
@@ -19,7 +20,7 @@ public class MQ_Test : MonoBehaviour
         foreach(var cc in ac.ConnectionsByID)
         {
             Debug.Log(cc.Key + " " + cc.Value.id + " " + cc.Value.commonDescription + " " + cc.Value.options.Count);
-        }
+        }*/
         /*foreach (var field in AllEvidence.GetAllEvidence())
         {
             Debug.Log(field.id);

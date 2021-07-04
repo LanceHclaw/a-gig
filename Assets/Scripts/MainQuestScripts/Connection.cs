@@ -20,15 +20,7 @@ public class Evidence
 
     public Evidence()
     {
-        this.id = currId++;/*
-        JToken obj = JObject.Parse(File.ReadAllText(FileDirectory.EvidenceJsonFile))[name];
-        var p = JObject.Parse(File.ReadAllText(FileDirectory.EvidenceJsonFile)).Properties().Select(x => x.Name).ToList();
-        //var tmp = new List<Evidence>();
-        foreach (var i in p)
-            Debug.Log(i);
-            //tmp.Add(JsonConvert.DeserializeObject<Evidence>(i));
-        this.name = obj["name"].ToString();
-        this.description = obj["description"].ToString();*/
+        this.id = currId++;
     }
 }
 public class Ending : IComparable
@@ -48,10 +40,6 @@ public class Ending : IComparable
     public Ending()
     {
         id = currID++;
-        /*add proper parsint + add indexing for parsing weights array from connections
-        this.name = name;
-        JToken obj = JObject.Parse(File.ReadAllText(FileDirectory.EpiloguesFile))[name];
-        this.epilogue = obj["epilogue"].ToString();*/
     }
 }
 public class Connection
