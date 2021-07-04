@@ -2,12 +2,35 @@
   "Connections":
   [
     {
-      "evidence1": "pook",
-      "evidence2": "srak",
-      "description": "",
+      "evidence1ID": 0,
+      "evidence2ID": 1,
+      "description": "pook",
       "options": [
         {
-          "desc": "desc",
+          "name": "bullet-knife-stupid",
+          "description": "desc",
+          "weights": [ 1, 2, 3, 4, 5, 6, 7, 8, 9 ]
+        },
+        {
+          "name": "bullet-knife-smort",
+          "description": "desc1",
+          "weights": [ 1, 2, 3, 4, 5, 6, 7, 8, 9 ]
+        },
+        {
+          "name": "bullet-knife-doesntmakesense",
+          "description": "desc1",
+          "weights": [ 1, 2, 3, 4, 5, 6, 7, 8, 9 ]
+        }
+      ]
+    },
+    {
+      "evidence1ID": 2,
+      "evidence2ID": 4,
+      "description": "srak",
+      "options": [
+        {
+          "name": "knife-poopa-stupid",
+          "description": "desc",
           "weights": [ 1, 2, 3, 4, 5, 6, 7, 8, 9 ]
         }
       ]

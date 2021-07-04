@@ -8,7 +8,18 @@ public class MQ_Test : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        AllConnections ac = new AllConnections(FileDirectory.ConnectionsRestrictedJsonFile);
+        MQEndings ae = new MQEndings();
+        MQConnections ac = new MQConnections(FileDirectory.ConnectionsRestrictedJsonFile, ae);
+
+        foreach (var ending in ae.endingsById)
+        {
+            Debug.Log(ending.Key + " " + ending.Value.id + " " + ending.Value.name + " " + ending.Value.epilogue);
+        }
+
+        foreach(var cc in ac.ConnectionsByID)
+        {
+            Debug.Log(cc.Key + " " + cc.Value.id + " " + cc.Value.commonDescription + " " + cc.Value.options.Count);
+        }
         /*foreach (var field in AllEvidence.GetAllEvidence())
         {
             Debug.Log(field.id);

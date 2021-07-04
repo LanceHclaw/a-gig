@@ -15,7 +15,7 @@ public class MainQuestManager : MonoBehaviour
 
     public string fileName;
 
-    public AllEvidence evidence;
+    public MQEvidence evidence;
     //public AllEndings endings;
 
     public MainQuestManager(PV_PlayerProgress<Ending> playerProgress, 
@@ -30,7 +30,7 @@ public class MainQuestManager : MonoBehaviour
 
     void Awake()
     {
-        evidence = new AllEvidence();
+        evidence = new MQEvidence();
     }
 }
 
