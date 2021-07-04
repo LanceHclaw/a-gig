@@ -49,9 +49,17 @@ public class MQConnections
     public int[,] connectionMatrix;
     public Dictionary<int, Connection> ConnectionsByID = new Dictionary<int, Connection>();
 
+    public static readonly Connection defaultConnection = new Connection();
+
     public MQConnections(string filename, MQEndings mqEndings)
     {
-        connectionMatrix = new int[mqEndings.endingsById.Count, mqEndings.endingsById.Count];
+        var endingsCount = mqEndings.endingsById.Count;
+
+        connectionMatrix = new int[endingsCount, endingsCount];
+        for (var i = 0; i < endingsCount; i++)
+            for (var j = 0; j < endingsCount; j++) {
+                connectionMatrix[i,j] = defaultConnection.id;
+            }
 
         var jobject = JObject.Parse(File.ReadAllText(filename)).Properties();
         var jcvalues = jobject.Select(x => x.Value).ToList()[0];

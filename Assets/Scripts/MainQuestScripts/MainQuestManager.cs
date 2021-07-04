@@ -11,9 +11,7 @@ public class MainQuestManager : MonoBehaviour
     public PV_PlayerProgress<Ending> playerProgress;
     public PV_QuestData<Ending> questData;
 
-    public bool restricted;
-
-    public string fileName;
+    private string fileName;
 
     public MQEvidence evidence;
     public MQEndings endings;
@@ -29,18 +27,51 @@ public class MainQuestManager : MonoBehaviour
         fileName = restricted ? "DataRestricted.json" : "DataUnrestricted.json";
     }
 
-    void Awake()
+    public void Instantiate(bool restricted)
     {
+        fileName = restricted ? FileDirectory.ConnectionsRestrictedJsonFile : FileDirectory.ConnectionsUnrestrictedJsonFile;
+
         evidence = new MQEvidence();
         endings = new MQEndings();
+        connections = new MQConnections(fileName, endings);
+
+
+
+        questData = new PV_QuestData<Ending>(
+            endings: endings.endingsById.Values,
+            majorActions: GetMajorActions(connections),
+            minor_actions: GetMinorActions(connections),
+            defaultEnding: GetDefaultEnding(endings),
+            globalThreshold: 5,
+            name: "MainQuest",
+            DEBUG: false
+            );
+
+        playerProgress = new PV_PlayerProgress<Ending>(questData);
+    }
+
+    private IEnumerable<PV_Action<Ending>> GetMajorActions(MQConnections connections)
+    {
+        return connections.ConnectionsByID.SelectMany(x => x.Value.options.Keys).ToList().Where(y => !HasZeroWeights(y));
+    }
+    private IEnumerable<PV_Action<Ending>> GetMinorActions(MQConnections connections)
+    {
+        return connections.ConnectionsByID.SelectMany(x => x.Value.options.Keys).ToList().Where(y => HasZeroWeights(y));
+    }
+
+    private Ending GetDefaultEnding(MQEndings endings)
+    {
+        return endings.endingsById.Select(x => x.Value).Where(y => y.name == "Worst").First();
+    }
+
+    private bool HasZeroWeights(Option option) {
+        return option.weights.Count == 0 || option.weights.All(x => x.Value == 0);
     }
 }
 
 public static class FileDirectory
 {
     public static readonly string GameFolder = Application.dataPath;
-
-    //public static readonly string SpritesFolder = GameFolder + "/Images/EvidenceSprites/Resources";
 
     public static readonly string EvidenceJsonFile = GameFolder + "/Scripts/MainQuestScripts/DataEvidence.json";
 

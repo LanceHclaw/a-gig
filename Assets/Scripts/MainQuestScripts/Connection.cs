@@ -69,6 +69,16 @@ public class Connection
             options.Add(new Option(joption, mqEndings), false);
         }
     }
+
+    /// <summary>
+    /// Creates default "makes no sense" connection.
+    /// </summary>
+    public Connection()
+    {
+        this.commonDescription = "I don't see a connection here.";
+        this.id = currID++;
+        this.options = new Dictionary<Option, bool>();
+    }
 }
 
 public class Option : PV_Action<Ending>
