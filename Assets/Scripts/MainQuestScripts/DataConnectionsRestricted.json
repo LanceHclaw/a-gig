@@ -1,36 +1,39 @@
 {
-  "Connections":
-  [
+  "Connections": [
     {
       "evidence1ID": 0,
-      "evidence2ID": 1,
-      "description": "pook",
+      "evidence2ID": 2,
+      "description": "",
       "options": [
         {
-          "name": "bullet-knife-stupid",
-          "description": "desc",
+          "name": "gun-pillow-B4/1",
+          "choiceDescription": "Frank may have been testing muffling the gun shots.",
+          "snippet": "Frank tested muffling gunshots.",
           "weights": [ 1, 2, 3, 4, 5, 6, 7, 8, 9 ]
         },
         {
-          "name": "bullet-knife-smort",
-          "description": "desc1",
-          "weights": [ 1, 2, 3, 4, 5, 6, 7, 8, 9 ]
-        },
-        {
-          "name": "bullet-knife-doesntmakesense",
-          "description": "desc1",
+          "name": "gun-pillow-B4/2",
+          "choiceDescription": "The murderer must have muffled the gun shot with the pillow.",
+          "snippet": "The murderer muffled the gunshot.",
           "weights": [ 1, 2, 3, 4, 5, 6, 7, 8, 9 ]
         }
       ]
     },
     {
-      "evidence1ID": 2,
-      "evidence2ID": 4,
-      "description": "srak",
+      "evidence1ID": 0,
+      "evidence2ID": 3,
+      "description": "The shell fits the pistol.",
       "options": [
         {
-          "name": "knife-poopa-stupid",
-          "description": "desc",
+          "name": "gun-pillow-B4/1",
+          "choiceDescription": "Frank must be using .44 Magnum when practicing.",
+          "snippet": "Frank used .44 for practice.",
+          "weights": [ 1, 2, 3, 4, 5, 6, 7, 8, 9 ]
+        },
+        {
+          "name": "gun-pillow-B4/2",
+          "choiceDescription": "It’s the most common caliber, everyone could be using it. Even the murderer.",
+          "snippet": "Murderer used .44 caliber.",
           "weights": [ 1, 2, 3, 4, 5, 6, 7, 8, 9 ]
         }
       ]

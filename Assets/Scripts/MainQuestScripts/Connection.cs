@@ -83,7 +83,8 @@ public class Connection
 
 public class Option : PV_Action<Ending>
 {
-    public string description;
+    public string choiceDescription;
+    public string snippet;
 
     public Option(Dictionary<Ending, int> weights) : base(weights)
     { }
@@ -91,7 +92,8 @@ public class Option : PV_Action<Ending>
     public Option (JsonOption joption, MQEndings mQEndings) : base()
     {
         this.weights = new Dictionary<Ending, int>();
-        this.description = joption.description;
+        this.choiceDescription = joption.choiceDescription;
+        this.snippet = joption.snippet;
         this.PV_name = joption.name;
         for (var i = 0; i < joption.weights.Length; i++)
         {
@@ -111,6 +113,7 @@ public class JsonConnection
 public class JsonOption
 {
     public string name;
-    public string description;
+    public string choiceDescription;
+    public string snippet;
     public int[] weights;
 }
