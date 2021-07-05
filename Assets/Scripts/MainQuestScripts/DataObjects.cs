@@ -10,7 +10,7 @@ using UnityEngine;
 
 public class MQEvidence
 {
-    public static readonly Dictionary<int, Evidence> all_evidence = new Dictionary<int, Evidence>(); 
+    public Dictionary<int, Evidence> evidenceByID = new Dictionary<int, Evidence>(); 
 
     public MQEvidence()
     {
@@ -20,8 +20,9 @@ public class MQEvidence
         foreach (var tuple in tuples)
         {
             Evidence e = JsonConvert.DeserializeObject<Evidence>(tuple.Item2);
+            e.PV_name = e.name;
             e.sprite = Resources.Load<Sprite>(tuple.Name);
-            all_evidence.Add(e.id, e);
+            evidenceByID.Add(e.id, e);
         }
     }
 }
@@ -51,13 +52,13 @@ public class MQConnections
 
     public static readonly Connection defaultConnection = new Connection();
 
-    public MQConnections(string filename, MQEndings mqEndings)
+    public MQConnections(string filename, MQEvidence mqEvidence, MQEndings mqEndings)
     {
-        var endingsCount = mqEndings.endingsById.Count;
+        var evidenceCount = mqEvidence.evidenceByID.Count;
 
-        connectionMatrix = new int[endingsCount, endingsCount];
-        for (var i = 0; i < endingsCount; i++)
-            for (var j = 0; j < endingsCount; j++) {
+        connectionMatrix = new int[evidenceCount, evidenceCount];
+        for (var i = 0; i < evidenceCount; i++)
+            for (var j = 0; j < evidenceCount; j++) {
                 connectionMatrix[i,j] = defaultConnection.id;
             }
 
@@ -68,6 +69,7 @@ public class MQConnections
         {
             var jconnection = JsonConvert.DeserializeObject<JsonConnection>(jcstring.ToString());
             var connection = new Connection(jconnection, mqEndings);
+
             connectionMatrix[connection.evidence1ID, connection.evidence2ID] = connection.id;
             connectionMatrix[connection.evidence2ID, connection.evidence1ID] = connection.id;
 

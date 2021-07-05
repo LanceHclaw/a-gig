@@ -8,7 +8,7 @@ using Newtonsoft.Json.Linq;
 using ProgressionVector;
 using UnityEngine;
 
-public class Evidence
+public class Evidence : PV_Action<Ending>
 {
     static int currId = 0;
 

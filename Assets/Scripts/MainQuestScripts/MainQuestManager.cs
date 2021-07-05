@@ -33,14 +33,12 @@ public class MainQuestManager : MonoBehaviour
 
         evidence = new MQEvidence();
         endings = new MQEndings();
-        connections = new MQConnections(fileName, endings);
-
-
+        connections = new MQConnections(fileName, evidence, endings);
 
         questData = new PV_QuestData<Ending>(
             endings: endings.endingsById.Values,
             majorActions: GetMajorActions(connections),
-            minor_actions: GetMinorActions(connections),
+            minor_actions: evidence.evidenceByID.Values.Concat(GetMinorActions(connections)),
             defaultEnding: GetDefaultEnding(endings),
             globalThreshold: 5,
             name: "MainQuest",
@@ -48,6 +46,16 @@ public class MainQuestManager : MonoBehaviour
             );
 
         playerProgress = new PV_PlayerProgress<Ending>(questData);
+
+        foreach(var action in questData.all_majorActions)
+        {
+            Debug.Log(action.ToString());
+        }
+
+        foreach (var action in questData.all_minorActions)
+        {
+            Debug.LogWarning(action.ToString());
+        }
     }
 
     private IEnumerable<PV_Action<Ending>> GetMajorActions(MQConnections connections)
