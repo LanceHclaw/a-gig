@@ -46,16 +46,6 @@ public class MainQuestManager : MonoBehaviour
             );
 
         playerProgress = new PV_PlayerProgress<Ending>(questData);
-
-        foreach(var action in questData.all_majorActions)
-        {
-            Debug.Log(action.ToString());
-        }
-
-        foreach (var action in questData.all_minorActions)
-        {
-            Debug.LogWarning(action.ToString());
-        }
     }
 
     private IEnumerable<PV_Action<Ending>> GetMajorActions(MQConnections connections)
