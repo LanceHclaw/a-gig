@@ -469,7 +469,30 @@ public class EvidenceManager : MonoBehaviour
     {
         var newPosition = photo.transform.Find("PinArea").position;
 
-        foreach (var (from, to, thread, threadDesc) in mqManager.madeConnections.Where(x =>
+        for (int i = 0; i < mqManager.madeConnections.Count; i++)
+        {
+            var (from, to, thread, threadDesc) = mqManager.madeConnections[i];
+            if (from == evidence.id || to == evidence.id)
+            {
+                if (from == evidence.id)
+                {
+                    thread.GetComponent<LineRenderer>().SetPosition(0, newPosition);
+                }
+                if (to == evidence.id)
+                {
+                    thread.GetComponent<LineRenderer>().SetPosition(1, newPosition);
+                }
+
+                bool shouldSwapDirection = SwapThreadPositionsIfNeeded(thread);
+                if (shouldSwapDirection)
+                {
+                    mqManager.madeConnections[i] = (to, from, thread, threadDesc);
+                }
+
+                AlignTextToThread(threadDesc, thread);
+            }
+        }
+        /*foreach (var (from, to, thread, threadDesc) in mqManager.madeConnections.Where(x =>
             x.Item1 == evidence.id || 
             x.Item2 == evidence.id))
         {
@@ -489,7 +512,7 @@ public class EvidenceManager : MonoBehaviour
             }
 
             AlignTextToThread(threadDesc, thread);
-        }
+        }*/
     }
     /*
     void UpdateThreadsFor(string name, GameObject photo) {
