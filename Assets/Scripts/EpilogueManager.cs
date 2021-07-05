@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using ProgressionVector;
 using TMPro;
 
 public struct EndingItem {
