@@ -6,6 +6,9 @@ public class EvidenceCollectedController : MonoBehaviour
 {
     public bool isShown = false;
 
+    private MainQuestManager mqManager;
+    private int pendingID;
+
     private CanvasGroup canvasGroup;
     private DataStorage dataStorage;
     private GameManager gameManager;
@@ -25,6 +28,8 @@ public class EvidenceCollectedController : MonoBehaviour
 
     void Start()
     {
+        mqManager = GameObject.Find("GameManager").GetComponent<MainQuestManager>();
+
         dataStorage = GameObject.Find("DataStorage").GetComponent<DataStorage>();
         gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
         canvasGroup = gameObject.GetComponent<CanvasGroup>();
@@ -39,7 +44,7 @@ public class EvidenceCollectedController : MonoBehaviour
     void Update()
     {
         if (showPending && (Time.time - showPendingStartedAt) > showPendingDuration) {
-            ShowPhoto(pendingName, 0);
+            ShowPhoto(pendingID, 0);
         }
 
         if (isHiding) {
@@ -59,7 +64,30 @@ public class EvidenceCollectedController : MonoBehaviour
         }
     }
 
-    public void ShowPhoto(string name, float delay = 0.11f) {
+    public void ShowPhoto(int evidenceID, float delay = 0.11f)
+    {
+        var evidence = mqManager.GetEvidenceByID(evidenceID);
+
+        if (delay == 0)
+        {
+            showPending = false;
+
+            SetCanvasIsActive(true);
+
+            text.text = evidence.description;
+            title.text = evidence.name;
+            img.sprite = evidence.sprite;
+        }
+        else
+        {
+            showPending = true;
+            showPendingStartedAt = Time.time;
+            showPendingDuration = delay;
+            pendingID = evidenceID;
+        }
+    }
+
+    /*public void ShowPhoto(string name, float delay = 0.11f) {
         if (delay == 0) {
             showPending = false;
 
@@ -74,7 +102,7 @@ public class EvidenceCollectedController : MonoBehaviour
             showPendingDuration = delay;
             pendingName = name;
         }
-    }
+    }*/
 
     public void Hide() {
         if (!isHiding) {

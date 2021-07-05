@@ -8,6 +8,8 @@ using UnityEngine;
 
 public class MainQuestManager : MonoBehaviour
 {
+    //public bool initialized = false;
+
     public PV_PlayerProgress<Ending> playerProgress;
     public PV_QuestData<Ending> questData;
 
@@ -16,6 +18,8 @@ public class MainQuestManager : MonoBehaviour
     public MQEvidence evidence;
     public MQEndings endings;
     public MQConnections connections;
+
+    public List<Evidence> collectedEvidence;
 
     public MainQuestManager(PV_PlayerProgress<Ending> playerProgress, 
         PV_QuestData<Ending> questData,
@@ -35,6 +39,8 @@ public class MainQuestManager : MonoBehaviour
         endings = new MQEndings();
         connections = new MQConnections(fileName, evidence, endings);
 
+        collectedEvidence = new List<Evidence>();
+
         questData = new PV_QuestData<Ending>(
             endings: endings.endingsById.Values,
             majorActions: GetMajorActions(connections),
@@ -46,6 +52,36 @@ public class MainQuestManager : MonoBehaviour
             );
 
         playerProgress = new PV_PlayerProgress<Ending>(questData);
+
+        //initialized = true;
+    }
+
+    public void CollectEvidence(int evidenceID)
+    {
+        var evidence = GetEvidenceByID(evidenceID);
+
+        if (!playerProgress.minorActionFlags[evidence])
+        {
+            collectedEvidence.Add(evidence);
+            playerProgress.MinorActionCompleted(evidence);
+        }
+    }
+
+    public Evidence GetEvidenceByID(int id)
+    {
+        return evidence.evidenceByID[id];
+    }
+
+    public bool IsEvidenceCollected(int evidenceID)
+    {
+        return playerProgress.minorActionFlags[evidence.evidenceByID[evidenceID]];
+    }
+
+
+
+    void Awake()
+    {
+        Instantiate(GlobalVersionControl.restricted);
     }
 
     private IEnumerable<PV_Action<Ending>> GetMajorActions(MQConnections connections)

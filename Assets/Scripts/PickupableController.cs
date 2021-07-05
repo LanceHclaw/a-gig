@@ -4,6 +4,9 @@ public class PickupableController : MonoBehaviour
 {
     public string evidenceName;
 
+    public int evidenceID;
+    private MainQuestManager mqManager;
+
     private DataStorage dataStorage;
     private GameManager gameManager;
     private EvidenceManager evidenceManager;
@@ -14,6 +17,8 @@ public class PickupableController : MonoBehaviour
 
     void Start()
     {
+        mqManager = GameObject.Find("GameManager").GetComponent<MainQuestManager>();
+
         dataStorage = GameObject.Find("DataStorage").GetComponent<DataStorage>();
         gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
         evidenceManager = GameObject.Find("UI/Journal/EvidenceCanvas/Evidence").GetComponent<EvidenceManager>();
@@ -23,32 +28,39 @@ public class PickupableController : MonoBehaviour
 
     void Update()
     {
-        if (dataStorage.IsEvidenceCollected(evidenceName) || !gameManager.IsParentSceneActive(gameObject)) {
+        if (mqManager.IsEvidenceCollected(evidenceID) || !gameManager.IsParentSceneActive(gameObject))
+        {
             isMouseOnObject = false;
             return;
         }
+        /*if (dataStorage.IsEvidenceCollected(evidenceName) || !gameManager.IsParentSceneActive(gameObject)) {
+            isMouseOnObject = false;
+            return;
+        }*/
 
         if (Input.GetMouseButtonDown(0) && isMouseOnObject) {
             flashManager.PhotoFlash();
-            evidenceCollectedController.ShowPhoto(evidenceName);
+            evidenceCollectedController.ShowPhoto(evidenceID);
             gameManager.SetCursor("default");
-            evidenceManager.AddEvidence(evidenceName);
+            evidenceManager.AddEvidence(evidenceID);
         }
     }
 
     void OnMouseOver()
     {
-        if (dataStorage.IsEvidenceCollected(evidenceName) || !gameManager.IsParentSceneActive(gameObject)) {
+        if (mqManager.IsEvidenceCollected(evidenceID) || !gameManager.IsParentSceneActive(gameObject)) return; 
+        /*if (dataStorage.IsEvidenceCollected(evidenceName) || !gameManager.IsParentSceneActive(gameObject)) {
             return;
-        }
+        }*/
         gameManager.SetCursor("camera");
         isMouseOnObject = true;
     }
     void OnMouseExit()
     {
-        if (dataStorage.IsEvidenceCollected(evidenceName) || !gameManager.IsParentSceneActive(gameObject)) {
+        if (mqManager.IsEvidenceCollected(evidenceID) || !gameManager.IsParentSceneActive(gameObject)) return;
+        /*if (dataStorage.IsEvidenceCollected(evidenceName) || !gameManager.IsParentSceneActive(gameObject)) {
             return;
-        }
+        }*/
         gameManager.SetCursor("default");
         isMouseOnObject = false;
     }

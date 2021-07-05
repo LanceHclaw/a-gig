@@ -9,6 +9,8 @@ public class EvidenceManager : MonoBehaviour
     public GameObject threadPrefab;
     public GameObject threadDescriptionTextPrefab;
 
+    private MainQuestManager mqManager;
+
     private bool isInit = false;
 
     private float xmin = -5.6f;
@@ -59,6 +61,8 @@ public class EvidenceManager : MonoBehaviour
             return;
         }
         isInit = true;
+
+        mqManager = GameObject.Find("GameManager").GetComponent<MainQuestManager>();
 
         dataStorage = GameObject.Find("DataStorage").GetComponent<DataStorage>();
         gameSceneManager = GameObject.Find("GameSceneManager").GetComponent<GameSceneManager>();
@@ -143,7 +147,29 @@ public class EvidenceManager : MonoBehaviour
         }
     }
 
-    public void AddEvidence(string name) {
+    public void AddEvidence(int evidenceID)
+    {
+        Init();
+        var evidence = mqManager.GetEvidenceByID(evidenceID);
+
+        var pictureInstance = Instantiate(polaroidPhotoPrefab);
+        pictureInstance.transform.Find("Text").GetComponent<TextMeshProUGUI>().text = evidence.name;
+        pictureInstance.transform.Find("ItemImage").GetComponent<Image>().sprite = evidence.sprite;
+        pictureInstance.transform.SetParent(photos.transform, false);
+
+        pictureInstance.transform.localPosition = new Vector3(
+            // xmin + polaroidPhotoPrefab.GetComponent<RectTransform>().rect.width / 2 + (collectedEvidence.Count * 2.1f),
+            // ymax - polaroidPhotoPrefab.GetComponent<RectTransform>().rect.height / 2 - 2 - (collectedEvidence.Count * 0.1f),
+            xmin + polaroidPhotoPrefab.GetComponent<RectTransform>().rect.width / 2 + 1.2f + (mqManager.collectedEvidence.Count * 0.1f),
+            ymax - polaroidPhotoPrefab.GetComponent<RectTransform>().rect.height / 2 - (mqManager.collectedEvidence.Count * 0.1f),
+            0
+        );
+
+        mqManager.CollectEvidence(evidenceID);
+        //dataStorage.collectedEvidence.Add((name, pictureInstance));
+    }
+
+    /*public void AddEvidence(string name) {
         Init();
 
         var pictureInstance = Instantiate(polaroidPhotoPrefab);
@@ -160,7 +186,7 @@ public class EvidenceManager : MonoBehaviour
         );
 
         dataStorage.collectedEvidence.Add((name, pictureInstance));
-    }
+    }*/
 
     (GameObject, GameObject, string) GetObjectUnderCursor(bool createThreads) {
         for (int i = dataStorage.collectedEvidence.Count - 1; i >= 0; --i) {
@@ -309,9 +335,11 @@ public class EvidenceManager : MonoBehaviour
 
         if (((connectionPendingToName == "Knife" && currentThreadComingFrom == ".44 Magnum") || (connectionPendingToName == ".44 Magnum" && currentThreadComingFrom == "Knife")) && (!dataStorage.IsEvidenceCollected("Bullet in the Body"))) {
             flashManager.PhotoFlash();
-            evidenceCollectedController.ShowPhoto("Bullet in the Body");
+            //evidenceCollectedController.ShowPhoto("Bullet in the Body");
+            evidenceCollectedController.ShowPhoto(10);
 
-            AddEvidence("Bullet in the Body");
+            //AddEvidence("Bullet in the Body");
+            AddEvidence(10);
         }
     }
 
