@@ -21,7 +21,7 @@
   },
   "FloorMop": {
     "name": "Floor Mop",
-    "description": "Given the tidiness of the floor here, I wonder why it would be still in the kitchen. Don’t people keep mops in the hallways or the storage room? Still slightly wet though."
+    "description": "Given the tidiness of the floor here, I wonder why it would be still in the kitchen. Don't people keep mops in the hallways or the storage room? Still slightly wet though."
   },
   "CleanFloor": {
     "name": "Clean Floor",
@@ -29,7 +29,7 @@
   },
   "OpenWindow": {
     "name": "Open Window",
-    "description": "The weather has not been the best for keeping the windows open. Either it’s Allen’s habit or it wasn’t him who opened it."
+    "description": "The weather has not been the best for keeping the windows open. Either it's Allen's habit or it wasn't him who opened it."
   },
   "Dummy": {
     "name": "Dummy",
@@ -49,6 +49,6 @@
   },
   "Knife": {
     "name": "Knife",
-    "description": "A bloodied kitchen knife sticking out of Frank’s chest. No fingerprints on it."
+    "description": "A bloodied kitchen knife sticking out of Frank's chest. No fingerprints on it."
   }
 }

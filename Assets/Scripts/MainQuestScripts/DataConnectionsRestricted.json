@@ -32,7 +32,7 @@
         },
         {
           "name": "shell-gun-B5/2",
-          "choiceDescription": "It’s the most common caliber, everyone could be using it. Even the murderer.",
+          "choiceDescription": "It's the most common caliber, everyone could be using it. Even the murderer.",
           "snippet": "Murderer used .44 caliber.",
           "weights": [ 1, 2, 3, 4, 5, 6, 7, 8, 9 ]
         }
@@ -70,8 +70,8 @@
         },
         {
           "name": "shell-dummy-B10/2",
-          "choiceDescription": "Even though the holes may have been left by bullets of this caliber, it’s hard to believe a sane man would shoot in his own house.",
-          "snippet": "F.Allen wouldn’t shoot at home.",
+          "choiceDescription": "Even though the holes may have been left by bullets of this caliber, it's hard to believe a sane man would shoot in his own house.",
+          "snippet": "F.Allen wouldn't shoot at home.",
           "weights": [ 1, 2, 3, 4, 5, 6, 7, 8, 9 ]
         }
       ]
@@ -83,7 +83,7 @@
       "options": [
         {
           "name": "shell-bInb-B12/1",
-          "choiceDescription": "I can’t believe he would shoot himself...",
+          "choiceDescription": "I can't believe he would shoot himself...",
           "snippet": "F.Allen shot himself?",
           "weights": [ 1, 2, 3, 4, 5, 6, 7, 8, 9 ]
         },
@@ -102,7 +102,7 @@
       "options": [
         {
           "name": "shell-knife-B14",
-          "choiceDescription": "Hold on.. This bullet is out of place. What if I remove that knife… Hah. Either smart or desperately stupid. There’s a puncture wound… Or rather - a bullet one.",
+          "choiceDescription": "Hold on.. This bullet is out of place. What if I remove that knife… Hah. Either smart or desperately stupid. There's a puncture wound… Or rather - a bullet one.",
           "snippet": "Knife hid a bullet wound.",
           "weights": [ 1, 2, 3, 4, 5, 6, 7, 8, 9 ]
         }
@@ -115,7 +115,7 @@
       "options": [
         {
           "name": "letter-gun-C5/1",
-          "choiceDescription": "Shooting while writing? I guess he was making noise indeed. That thing ain’t quiet.",
+          "choiceDescription": "Shooting while writing? I guess he was making noise indeed. That thing ain't quiet.",
           "snippet": "Frank was a noisy weirdo.",
           "weights": [ 1, 2, 3, 4, 5, 6, 7, 8, 9 ]
         },
@@ -134,7 +134,7 @@
       "options": [
         {
           "name": "letter-cigarette-C6",
-          "choiceDescription": "He probably was just smoking and writing this when the murderer came. Must’ve gone to see what was going on.",
+          "choiceDescription": "He probably was just smoking and writing this when the murderer came. Must've gone to see what was going on.",
           "snippet": "Was smoking when writing this.",
           "weights": [ 1, 2, 3, 4, 5, 6, 7, 8, 9 ]
         }
@@ -153,14 +153,14 @@
         },
         {
           "name": "letter-journal-C13/2",
-          "choiceDescription": "He must’ve been about to start that case when the murder happened.",
-          "snippet": "F.Allen didn’t start his most recent case.",
+          "choiceDescription": "He must've been about to start that case when the murder happened.",
+          "snippet": "F.Allen didn't start his most recent case.",
           "weights": [ 1, 2, 3, 4, 5, 6, 7, 8, 9 ]
         },
         {
           "name": "letter-journal-C13/3",
           "choiceDescription": "He must have been writing in a different journal or keeping it in his head. He seems to have not been himself lately.",
-          "snippet": "F.Allen wasn’t keeping notes of the latest case.",
+          "snippet": "F.Allen wasn't keeping notes of the latest case.",
           "weights": [ 1, 2, 3, 4, 5, 6, 7, 8, 9 ]
         }
       ]
@@ -185,7 +185,7 @@
       "options": [
         {
           "name": "pillow-cigarette-D6",
-          "choiceDescription": "Allen used to smoke. Maybe at some point he did it in bed? Should’ve been lucky to not burn the house down.",
+          "choiceDescription": "Allen used to smoke. Maybe at some point he did it in bed? Should've been lucky to not burn the house down.",
           "snippet": "Allen nearly burnt himself once.",
           "weights": [ 1, 2, 3, 4, 5, 6, 7, 8, 9 ]
         }
@@ -252,7 +252,7 @@
     {
       "evidence1ID": 3,
       "evidence2ID": 10,
-      "description": "The bullet wound looks like it could’ve been caused by this weapon.",
+      "description": "The bullet wound looks like it could've been caused by this weapon.",
       "options": [
         {
           "name": "gun-knife-E12/1",
@@ -320,13 +320,13 @@
       "options": [
         {
           "name": "cigarette-knife-F14/1",
-          "choiceDescription": "The murderer wanted something in the house and didn’t want fire to destroy it.",
+          "choiceDescription": "The murderer wanted something in the house and didn't want fire to destroy it.",
           "snippet": "Murderer was looking for something.",
           "weights": [ 1, 2, 3, 4, 5, 6, 7, 8, 9 ]
         },
         {
           "name": "cigarette-knife-F14/2",
-          "choiceDescription": "The murderer lives in the same building and didn’t want to burn it down.",
+          "choiceDescription": "The murderer lives in the same building and didn't want to burn it down.",
           "snippet": "Murderer lives in the same building.",
           "weights": [ 1, 2, 3, 4, 5, 6, 7, 8, 9 ]
         }
@@ -345,7 +345,7 @@
         },
         {
           "name": "mop-floor-G8/2",
-          "choiceDescription": "The murderer lives in the same building and didn’t want to burn it down.",
+          "choiceDescription": "The murderer lives in the same building and didn't want to burn it down.",
           "snippet": "Murderer used the mop recently.",
           "weights": [ 1, 2, 3, 4, 5, 6, 7, 8, 9 ]
         }
@@ -367,18 +367,18 @@
     {
       "evidence1ID": 6,
       "evidence2ID": 7,
-      "description": "If you keep the windows open, the floor ain’t gonna be clean for long.",
+      "description": "If you keep the windows open, the floor ain't gonna be clean for long.",
       "options": [
         {
           "name": "floor-window-H9/1",
-          "choiceDescription": "Maybe that’s why Frank is weirdly tidy about certain things?",
+          "choiceDescription": "Maybe that's why Frank is weirdly tidy about certain things?",
           "snippet": "Open windows made Allen clean up often.",
           "weights": [ 1, 2, 3, 4, 5, 6, 7, 8, 9 ]
         },
         {
           "name": "floor-window-H9/2",
-          "choiceDescription": "Maybe Frank didn’t open the windows much?",
-          "snippet": "Frank didn’t open the windows often.",
+          "choiceDescription": "Maybe Frank didn't open the windows much?",
+          "snippet": "Frank didn't open the windows often.",
           "weights": [ 1, 2, 3, 4, 5, 6, 7, 8, 9 ]
         }
       ]
@@ -390,8 +390,8 @@
       "options": [
         {
           "name": "window-packOfCigs-I9",
-          "choiceDescription": "I mean… If you smoke at home frequently, opening the windows makes sense if you don’t want to suffocate.",
-          "snippet": "Open windows ventilate cigarettes’ smoke.",
+          "choiceDescription": "I mean… If you smoke at home frequently, opening the windows makes sense if you don't want to suffocate.",
+          "snippet": "Open windows ventilate cigarettes' smoke.",
           "weights": [ 1, 2, 3, 4, 5, 6, 7, 8, 9 ]
         }
       ]
@@ -403,7 +403,7 @@
       "options": [
         {
           "name": "window-knife-I14",
-          "choiceDescription": "Frank has a gun. If the killer knew it, they could try to sneak up to him and into his house. What’s a better way to do it than through a window? Then they could also be wearing gloves to leave no fingerprints…",
+          "choiceDescription": "Frank has a gun. If the killer knew it, they could try to sneak up to him and into his house. What's a better way to do it than through a window? Then they could also be wearing gloves to leave no fingerprints…",
           "snippet": "Murderer snuck through window.",
           "weights": [ 1, 2, 3, 4, 5, 6, 7, 8, 9 ]
         }
@@ -412,17 +412,17 @@
     {
       "evidence1ID": 10,
       "evidence2ID": 12,
-      "description": "I can’t stop thinking about why someone would thrust a knife into a bullet hole. Did they want to hide the fact that it was a gunshot?",
+      "description": "I can't stop thinking about why someone would thrust a knife into a bullet hole. Did they want to hide the fact that it was a gunshot?",
       "options": [
         {
           "name": "bInb-knife-L14/1",
-          "choiceDescription": "It’s pretty smart.",
+          "choiceDescription": "It's pretty smart.",
           "snippet": "Knife to cover a bullet? Smart.",
           "weights": [ 1, 2, 3, 4, 5, 6, 7, 8, 9 ]
         },
         {
           "name": "bInb-knife-L14/2",
-          "choiceDescription": "It’s pretty stupid.",
+          "choiceDescription": "It's pretty stupid.",
           "snippet": "Knife to cover a bullet? Stupid.",
           "weights": [ 1, 2, 3, 4, 5, 6, 7, 8, 9 ]
         }
