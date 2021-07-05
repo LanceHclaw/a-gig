@@ -26,7 +26,7 @@ public class EpilogueManager : MonoBehaviour
 {
     private string selectedText;
 
-    private List<EndingItem> endings = new List<EndingItem>() {
+    /*private List<EndingItem> endings = new List<EndingItem>() {
         new EndingItem(  // Ending 1 (Correct - Murderer is Officer Davis)
             new List<string>() { "B12/2", "C13/1", "B14" },
             new List<string>() { "B4/2", "B5/2", "B9/2", "C5/2", "D5", "E7", "E9/2", "E12/2", "F11/2", "F14/1", "G8/2", "G14", "H9/2", "L14/1" },
@@ -99,7 +99,7 @@ public class EpilogueManager : MonoBehaviour
             new List<(string, string)>(),
             "\"Captain, I must confess - I am so utterly confused at what happened here that I believe it was me all along who killed Mr Frank Allen. I willingly ask you to arrest me please. I can’t dig in that anymore. Just.. just let me get the hell out of here even if the destination is prison!\"[$$*The captain does not respond, but calls an ambulance and you are being taken to a mental hospital.*[[$$$Everyone creates their own conspiracy theories.[$Some of them[ are not welcome by others.$"
         )
-    };
+    };*/
 
     private bool isFadingIn = false;
     private float fadeInStartedAt = -100;
@@ -120,19 +120,22 @@ public class EpilogueManager : MonoBehaviour
 
     void Start()
     {
-        dataStorage = GameObject.Find("DataStorage");
+        //dataStorage = GameObject.Find("DataStorage");
         canvasGroup = gameObject.GetComponent<CanvasGroup>();
         text = gameObject.transform.Find("Canvas/Text").GetComponent<TextMeshProUGUI>();
 
         isFadingIn = true;
         fadeInStartedAt = Time.time;
 
-        var createdConections = new List<string>();
+        selectedText = GlobalVersionControl.ending.epilogue;
+
+        /*var createdConections = new List<string>();
         if (dataStorage) {
             createdConections = dataStorage.GetComponent<DataStorage>().GetFormattedCreatedConnections();
         }
 
         selectedText = GetMatchingEnding(createdConections).epilogueText;
+        */
     }
 
     void Update()
@@ -203,6 +206,7 @@ public class EpilogueManager : MonoBehaviour
         gameObject.transform.Find("Canvas/BloodImage").GetComponent<Image>().color = c;
     }
 
+   /*
     EndingItem GetMatchingEnding(List<string> createdConnections) {
         foreach (var ending in endings) {
             bool isMatching = true;
@@ -247,4 +251,5 @@ public class EpilogueManager : MonoBehaviour
 
         return endings[endings.Count - 1];
     }
+   */
 }

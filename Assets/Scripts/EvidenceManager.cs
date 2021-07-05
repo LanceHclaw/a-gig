@@ -2,6 +2,7 @@
 using UnityEngine.UI;
 using UnityEngine;
 using TMPro;
+using System.Linq;
 
 public class EvidenceManager : MonoBehaviour
 {
@@ -10,6 +11,10 @@ public class EvidenceManager : MonoBehaviour
     public GameObject threadDescriptionTextPrefab;
 
     private MainQuestManager mqManager;
+    private Evidence currentlyHoldingEvidence;
+    private Evidence currentThreadComingFromEvidence = null;
+    private Evidence connectionPendingToEvidence;
+    private Connection connectionPending;
 
     private bool isInit = false;
 
@@ -39,15 +44,15 @@ public class EvidenceManager : MonoBehaviour
     private bool isHoldingThread = false;
     private Vector3 currentlyHoldingInitialScale;
     private GameObject currentlyHolding = null;
-    private string currentlyHoldingName = null;
+    //private string currentlyHoldingName = null;
     private GameObject currentThread = null;
-    private string currentThreadComingFrom = null;
+    //private string currentThreadComingFrom = null;
 
     private float threadDeletionThreshold = 0.1f;
 
     private bool isThreadConnectionPending = false;
     private GameObject connectionPendingTo;
-    private string connectionPendingToName;
+    //private string connectionPendingToName;
     private string connectionPendingDescriptionKey;
     private int connectionPendingDescriptionIdx;
 
@@ -88,17 +93,20 @@ public class EvidenceManager : MonoBehaviour
         }
 
         if (Input.GetMouseButtonDown(0)) {
-            var (photo, thread, name) = GetObjectUnderCursor(true);
+            //var (photo, thread, name) = GetObjectUnderCursor(true);
+            var (photo, thread, evidence) = GetObjectUnderCursor(true);
             if (photo) {
                 currentlyHolding = photo;
                 currentlyHoldingInitialScale = currentlyHolding.transform.localScale;
-                currentlyHoldingName = name;
+                //currentlyHoldingName = name;
+                currentlyHoldingEvidence = evidence;
                 isHoldingPhoto = true;
 
                 currentlyHolding.transform.localScale = currentlyHoldingInitialScale * 1.1f;
             } else if (thread) {
                 currentThread = thread;
-                currentThreadComingFrom = name;
+                //currentThreadComingFrom = name;
+                currentThreadComingFromEvidence = evidence;
                 isHoldingThread = true;
             } else {
                 DeleteThreadIfClicked();
@@ -107,7 +115,8 @@ public class EvidenceManager : MonoBehaviour
         if (Input.GetMouseButtonUp(0)) {
             if (isHoldingPhoto && currentlyHolding != null) {
                 currentlyHolding.transform.localScale = currentlyHoldingInitialScale;
-                UpdateThreadsFor(currentlyHoldingName, currentlyHolding);
+                //UpdateThreadsFor(currentlyHoldingName, currentlyHolding);
+                UpdateThreadsFor(currentlyHoldingEvidence, currentlyHolding);
             }
             if (isHoldingThread && currentThread != null) {
                 TryConnectThread();
@@ -128,13 +137,13 @@ public class EvidenceManager : MonoBehaviour
 
             tooltipManager.Hide();
         } else {
-            var (type, picName, (threadKey, threadIdx, threadOpt)) = GetObjectNameUnderCursor();
+            var (type, picName, connection) = GetObjectNameUnderCursor();
             if (IsMouseStationary() && !tooltipManager.IsShown()) {
                 if (type == "photo") {
                     tooltipManager.ShowPhoto(picName);
                 }
                 if (type == "thread") {
-                    tooltipManager.ShowThread(threadKey, threadIdx, threadOpt);
+                    tooltipManager.ShowThread(connection);
                 }
             }
 
@@ -158,14 +167,14 @@ public class EvidenceManager : MonoBehaviour
         pictureInstance.transform.SetParent(photos.transform, false);
 
         pictureInstance.transform.localPosition = new Vector3(
-            // xmin + polaroidPhotoPrefab.GetComponent<RectTransform>().rect.width / 2 + (collectedEvidence.Count * 2.1f),
-            // ymax - polaroidPhotoPrefab.GetComponent<RectTransform>().rect.height / 2 - 2 - (collectedEvidence.Count * 0.1f),
+            // notMyCode xmin + polaroidPhotoPrefab.GetComponent<RectTransform>().rect.width / 2 + (collectedEvidence.Count * 2.1f),
+            // notMyCode ymax - polaroidPhotoPrefab.GetComponent<RectTransform>().rect.height / 2 - 2 - (collectedEvidence.Count * 0.1f),
             xmin + polaroidPhotoPrefab.GetComponent<RectTransform>().rect.width / 2 + 1.2f + (mqManager.collectedEvidence.Count * 0.1f),
             ymax - polaroidPhotoPrefab.GetComponent<RectTransform>().rect.height / 2 - (mqManager.collectedEvidence.Count * 0.1f),
             0
         );
 
-        mqManager.CollectEvidence(evidenceID);
+        mqManager.CollectEvidence(evidenceID, pictureInstance);
         //dataStorage.collectedEvidence.Add((name, pictureInstance));
     }
 
@@ -188,6 +197,53 @@ public class EvidenceManager : MonoBehaviour
         dataStorage.collectedEvidence.Add((name, pictureInstance));
     }*/
 
+    (GameObject, GameObject, Evidence) GetObjectUnderCursor(bool createThreads)
+    {
+        //for (int i = mqManager.collectedEvidence.Count - 1; i >= 0; --i)
+        foreach(var evidencePhoto in mqManager.collectedEvidence)
+        {
+            //var (evidence, photo) = mqManager.collectedEvidence[i];
+            var evidence = evidencePhoto.Value;
+            var photo = evidencePhoto.Key;
+
+            var photoPos = photo.transform.position;
+            var photoRect = photo.GetComponent<RectTransform>().rect;
+            var topLeft = photoPos - new Vector3(photoRect.width / 2, photoRect.height / 2, 0);
+            var bottomRight = photoPos + new Vector3(photoRect.width / 2, photoRect.height / 2, 0);
+
+            var pinPos = photo.transform.Find("PinArea").transform.position;
+            var pinRect = photo.transform.Find("PinArea").GetComponent<RectTransform>().rect;
+            var pinTopLeft = pinPos - new Vector3(pinRect.width / 2, pinRect.height / 2, 0);
+            var pinBottomRight = pinPos + new Vector3(pinRect.width / 2, pinRect.height / 2, 0);
+
+            var mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+
+            if (pinTopLeft.x <= mousePos.x && mousePos.x <= pinBottomRight.x && pinTopLeft.y <= mousePos.y && mousePos.y <= pinBottomRight.y)
+            {
+                if (!createThreads)
+                {
+                    //return (photo, null, name);
+                    return (photo, null, evidence);
+                }
+
+                var newThread = Instantiate(threadPrefab);
+                newThread.GetComponent<LineRenderer>().SetPosition(0, pinPos);
+                newThread.transform.SetParent(threads.transform, true);
+
+                //return (null, newThread, name);
+                return (null, newThread, evidence);
+            }
+
+            if (topLeft.x <= mousePos.x && mousePos.x <= bottomRight.x && topLeft.y <= mousePos.y && mousePos.y <= bottomRight.y)
+            {
+                //return (photo, null, name);
+                return (photo, null, evidence);
+            }
+        }
+
+        return (null, null, null);
+    }
+    /*
     (GameObject, GameObject, string) GetObjectUnderCursor(bool createThreads) {
         for (int i = dataStorage.collectedEvidence.Count - 1; i >= 0; --i) {
             var (name, photo) = dataStorage.collectedEvidence[i];
@@ -222,7 +278,7 @@ public class EvidenceManager : MonoBehaviour
         }
 
         return (null, null, null);
-    }
+    }*/
 
     void MoveHeldPhoto() {
         var mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
@@ -236,7 +292,8 @@ public class EvidenceManager : MonoBehaviour
             currentlyHolding.transform.position.z
         );
 
-        UpdateThreadsFor(currentlyHoldingName, currentlyHolding);
+        //UpdateThreadsFor(currentlyHoldingName, currentlyHolding);
+        UpdateThreadsFor(currentlyHoldingEvidence, currentlyHolding);
     }
 
     void UpdateThreadPosition() {
@@ -250,53 +307,33 @@ public class EvidenceManager : MonoBehaviour
     }
 
     void TryConnectThread() {
-        var (photo, _, name) = GetObjectUnderCursor(false);
-        if (photo && currentThreadComingFrom != name) {
-            foreach (var (from, to, _, _, _, _, _) in dataStorage.connectedThreads) {
-                if (from == currentThreadComingFrom && to == name) {
+        var (photo, _, evidenceTo) = GetObjectUnderCursor(false);
+        if (photo && currentThreadComingFromEvidence != evidenceTo) {
+            //foreach (var (from, to, _, _, _, _, _) in dataStorage.connectedThreads) {
+            foreach (var (from, to, _, _) in mqManager.madeConnections) 
+            {
+                if ((currentThreadComingFromEvidence.id == from && evidenceTo.id == to) ||
+                   (currentThreadComingFromEvidence.id == to && evidenceTo.id == from))
+                {
                     Destroy(currentThread);
                     return;
                 }
             }
 
-            var doesDescriptionExist = false;
             connectionPendingTo = photo;
-            connectionPendingToName = name;
-            if (dataStorage.connectionDescriptions.ContainsKey(currentThreadComingFrom)) {
-                for (int i = 0; i < dataStorage.connectionDescriptions[currentThreadComingFrom].Count; ++i) {
-                    var (_to, _) = dataStorage.connectionDescriptions[currentThreadComingFrom][i];
-                    if (_to == connectionPendingToName) {
-                        connectionPendingDescriptionKey = currentThreadComingFrom;
-                        connectionPendingDescriptionIdx = i;
-                        doesDescriptionExist = true;
-                        break;
-                    }
-                }
-            }
-            if (dataStorage.connectionDescriptions.ContainsKey(name)) {
-                for (int i = 0; i < dataStorage.connectionDescriptions[name].Count; ++i) {
-                    var (_to, _) = dataStorage.connectionDescriptions[name][i];
-                    if (_to == currentThreadComingFrom) {
-                        connectionPendingDescriptionKey = name;
-                        connectionPendingDescriptionIdx = i;
-                        doesDescriptionExist = true;
-                        break;
-                    }
-                }
-            }
+            connectionPendingToEvidence = evidenceTo;
 
-            if (doesDescriptionExist) {
+            connectionPending = mqManager.GetConnectionByEvidence(currentThreadComingFromEvidence, connectionPendingToEvidence);
+            var doesDescriptionExist = !(connectionPending == MQConnections.defaultConnection);
+
+            if (doesDescriptionExist) 
+            {
+
                 isThreadConnectionPending = true;
+
                 var cdm = choiceDialog.GetComponent<ChoiceDialogManager>();
-                cdm.description = dataStorage.connectionDescriptions[connectionPendingDescriptionKey][connectionPendingDescriptionIdx].Item2.Item1;
-                cdm.leftName = dataStorage.connectionDescriptions[connectionPendingDescriptionKey][connectionPendingDescriptionIdx].Item1;
-                cdm.leftImage = dataStorage.spriteByName[cdm.leftName];
-                cdm.rightName = connectionPendingDescriptionKey;
-                cdm.rightImage = dataStorage.spriteByName[cdm.rightName];
-                cdm.options = new List<string>();
-                foreach (var (option, _) in dataStorage.connectionDescriptions[connectionPendingDescriptionKey][connectionPendingDescriptionIdx].Item2.Item2) {
-                    cdm.options.Add(option);
-                }
+                cdm.Setup(connectionPending, currentThreadComingFromEvidence, connectionPendingToEvidence);
+
                 choiceDialog.SetActive(true);
                 cdm.Reset();
             } else {
@@ -309,7 +346,84 @@ public class EvidenceManager : MonoBehaviour
         Destroy(currentThread);
     }
 
-    public void FinishConnectingThread(int optionNumber, bool doesMakeSense = true) {
+    /*
+     * void TryConnectThread()
+    {
+        var (photo, _, name) = GetObjectUnderCursor(false);
+        if (photo && currentThreadComingFrom != name)
+        {
+            foreach (var (from, to, _, _, _, _, _) in dataStorage.connectedThreads)
+            {
+                if (from == currentThreadComingFrom && to == name)
+                {
+                    Destroy(currentThread);
+                    return;
+                }
+            }
+
+            var doesDescriptionExist = false;
+            connectionPendingTo = photo;
+            connectionPendingToName = name;
+            if (dataStorage.connectionDescriptions.ContainsKey(currentThreadComingFrom))
+            {
+                for (int i = 0; i < dataStorage.connectionDescriptions[currentThreadComingFrom].Count; ++i)
+                {
+                    var (_to, _) = dataStorage.connectionDescriptions[currentThreadComingFrom][i];
+                    if (_to == connectionPendingToName)
+                    {
+                        connectionPendingDescriptionKey = currentThreadComingFrom;
+                        connectionPendingDescriptionIdx = i;
+                        doesDescriptionExist = true;
+                        break;
+                    }
+                }
+            }
+            if (dataStorage.connectionDescriptions.ContainsKey(name))
+            {
+                for (int i = 0; i < dataStorage.connectionDescriptions[name].Count; ++i)
+                {
+                    var (_to, _) = dataStorage.connectionDescriptions[name][i];
+                    if (_to == currentThreadComingFrom)
+                    {
+                        connectionPendingDescriptionKey = name;
+                        connectionPendingDescriptionIdx = i;
+                        doesDescriptionExist = true;
+                        break;
+                    }
+                }
+            }
+
+            if (doesDescriptionExist)
+            {
+                isThreadConnectionPending = true;
+                var cdm = choiceDialog.GetComponent<ChoiceDialogManager>();
+                cdm.description = dataStorage.connectionDescriptions[connectionPendingDescriptionKey][connectionPendingDescriptionIdx].Item2.Item1;
+                cdm.leftName = dataStorage.connectionDescriptions[connectionPendingDescriptionKey][connectionPendingDescriptionIdx].Item1;
+                cdm.leftImage = dataStorage.spriteByName[cdm.leftName];
+                cdm.rightName = connectionPendingDescriptionKey;
+                cdm.rightImage = dataStorage.spriteByName[cdm.rightName];
+                cdm.options = new List<string>();
+                foreach (var (option, _) in dataStorage.connectionDescriptions[connectionPendingDescriptionKey][connectionPendingDescriptionIdx].Item2.Item2)
+                {
+                    cdm.options.Add(option);
+                }
+                choiceDialog.SetActive(true);
+                cdm.Reset();
+            }
+            else
+            {
+                FinishConnectingThread(-1, false);
+            }
+
+            return;
+        }
+
+        Destroy(currentThread);
+    }
+    */
+
+    public void FinishConnectingThread(int optionNumber, bool doesMakeSense = true, Option option = null) 
+    {
         currentThread.GetComponent<LineRenderer>().SetPosition(1, connectionPendingTo.transform.Find("PinArea").position);
 
         bool shouldSwapDirection = SwapThreadPositionsIfNeeded(currentThread);
@@ -317,28 +431,31 @@ public class EvidenceManager : MonoBehaviour
         var threadDescription = Instantiate(threadDescriptionTextPrefab);
         threadDescription.transform.SetParent(threadDescriptions.transform, true);
 
-        string threadDescriptionText = "I see no connection";
-        if (doesMakeSense) {
-            threadDescriptionText = dataStorage.connectionDescriptions[connectionPendingDescriptionKey][connectionPendingDescriptionIdx].Item2.Item2[optionNumber].Item2;
+        string threadDescriptionText = "I see no connection"; 
+        if (doesMakeSense && !(option == null))
+        {
+            threadDescriptionText = option.snippet;
+            mqManager.ConfirmOption(connectionPending, option);
         }
         threadDescription.GetComponent<TextMeshProUGUI>().text = "\n" + threadDescriptionText;
 
         AlignTextToThread(threadDescription, currentThread);
 
         if (shouldSwapDirection) {
-            dataStorage.connectedThreads.Add((connectionPendingToName, currentThreadComingFrom, currentThread, threadDescription, doesMakeSense ? connectionPendingDescriptionKey : null, connectionPendingDescriptionIdx, optionNumber));
+            mqManager.madeConnections.Add((connectionPendingToEvidence.id, currentThreadComingFromEvidence.id, currentThread, threadDescription));
         } else {
-            dataStorage.connectedThreads.Add((currentThreadComingFrom, connectionPendingToName, currentThread, threadDescription, doesMakeSense ? connectionPendingDescriptionKey : null, connectionPendingDescriptionIdx, optionNumber));
+            mqManager.madeConnections.Add((currentThreadComingFromEvidence.id, connectionPendingToEvidence.id, currentThread, threadDescription));
         }
 
         isThreadConnectionPending = false;
 
-        if (((connectionPendingToName == "Knife" && currentThreadComingFrom == ".44 Magnum") || (connectionPendingToName == ".44 Magnum" && currentThreadComingFrom == "Knife")) && (!dataStorage.IsEvidenceCollected("Bullet in the Body"))) {
+        if (((connectionPendingToEvidence.id == 12 && currentThreadComingFromEvidence.id == 0) || 
+            (connectionPendingToEvidence.id == 0 && currentThreadComingFromEvidence.id == 12)) 
+            && (!mqManager.collectedEvidence.ContainsValue(mqManager.GetEvidenceByID(10)))) 
+        {
             flashManager.PhotoFlash();
-            //evidenceCollectedController.ShowPhoto("Bullet in the Body");
             evidenceCollectedController.ShowPhoto(10);
 
-            //AddEvidence("Bullet in the Body");
             AddEvidence(10);
         }
     }
@@ -348,6 +465,33 @@ public class EvidenceManager : MonoBehaviour
         isThreadConnectionPending = false;
     }
 
+    void UpdateThreadsFor(Evidence evidence, GameObject photo)
+    {
+        var newPosition = photo.transform.Find("PinArea").position;
+
+        foreach (var (from, to, thread, threadDesc) in mqManager.madeConnections.Where(x =>
+            x.Item1 == evidence.id || 
+            x.Item2 == evidence.id))
+        {
+            if (from == evidence.id)
+            {
+                thread.GetComponent<LineRenderer>().SetPosition(0, newPosition);
+            }
+            if (to == evidence.id)
+            {
+                thread.GetComponent<LineRenderer>().SetPosition(1, newPosition);
+            }
+
+            bool shouldSwapDirection = SwapThreadPositionsIfNeeded(thread);
+            if (shouldSwapDirection)
+            {
+                mqManager.madeConnections[mqManager.madeConnections.IndexOf((from, to, thread, threadDesc))] = (to, from, thread, threadDesc);
+            }
+
+            AlignTextToThread(threadDesc, thread);
+        }
+    }
+    /*
     void UpdateThreadsFor(string name, GameObject photo) {
         var newPosition = photo.transform.Find("PinArea").position;
 
@@ -369,7 +513,7 @@ public class EvidenceManager : MonoBehaviour
                 AlignTextToThread(threadDescription, thread);
             }
         }
-    }
+    }*/
 
     bool SwapThreadPositionsIfNeeded(GameObject thread) {
         var lr = thread.GetComponent<LineRenderer>();
@@ -387,12 +531,12 @@ public class EvidenceManager : MonoBehaviour
 
     void DeleteThreadIfClicked() {
         var mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        for (int i = 0; i < dataStorage.connectedThreads.Count; ++i) {
-            var (from, to, thread, threadDescription, _, _, _) = dataStorage.connectedThreads[i];
-            if (IsThreadInRange(mousePos, thread)) {
-                Destroy(thread);
-                Destroy(threadDescription);
-                dataStorage.connectedThreads.RemoveAt(i);
+        foreach(var connThread in mqManager.madeConnections) {
+            if (IsThreadInRange(mousePos, connThread.Item3)) 
+            {
+                mqManager.RemoveThread(connThread);
+                Destroy(connThread.Item3);
+                Destroy(connThread.Item4);
                 break;
             }
         }
@@ -449,19 +593,21 @@ public class EvidenceManager : MonoBehaviour
         return false;
     }
 
-    (string, string, (string, int, int)) GetObjectNameUnderCursor() {
-        var (photo, _, name) = GetObjectUnderCursor(false);
+    (string, string, Connection) GetObjectNameUnderCursor() {
+        var (photo, _, evidence) = GetObjectUnderCursor(false);
         if (photo) {
-            return ("photo", name, ("", 0, 0));
+            return ("photo", evidence.name, null);
         }
 
         var mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        foreach (var (_, _, thread, _, key, idx, opt) in dataStorage.connectedThreads) {
-            if (key != null && IsThreadInRange(mousePos, thread)) {
-                return ("thread", "", (key, idx, opt));
+        foreach (var tuple in mqManager.madeConnections) {
+            if (IsThreadInRange(mousePos, tuple.Item3)) {
+                var con = mqManager.GetConnectionByEvidence(mqManager.GetEvidenceByID(tuple.Item1), mqManager.GetEvidenceByID(tuple.Item2));
+                if (con.options != null && con.options.Count > 0) 
+                    return ("thread", "", con);
             }
         }
 
-        return ("none", "", ("", 0, 0));
+        return ("none", "", null);
     }
 }

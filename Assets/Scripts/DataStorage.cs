@@ -46,13 +46,13 @@ public class DataStorage : MonoBehaviour
     public List<string> evidenceNames = new List<string>() { ".44 Magnum", "Unfinished Letter", "Burnt Pillow", "Gun in a Box", "Half-burnt Cigarette", "Floor Mop", "Clean Floor", "Open Window", "Dummy", "Pack of Cigarettes", "Bullet in the Body", "Journal", "Knife" };
 
     
-    public List<(string, GameObject)> collectedEvidence = new List<(string, GameObject)>();
+    //public List<(string, GameObject)> collectedEvidence = new List<(string, GameObject)>();
 
     // From, To, Thread, ThreadShortDesc, CD_Key, CD_Idx, CD_Opt
-    public List<(string, string, GameObject, GameObject, string, int, int)> connectedThreads = new List<(string, string, GameObject, GameObject, string, int, int)>();
+    //public List<(string, string, GameObject, GameObject, string, int, int)> connectedThreads = new List<(string, string, GameObject, GameObject, string, int, int)>();
 
     // From: (To, (CommonDescription, List<Option, ShortDescription>)
-    public Dictionary<string, List<(string, (string, List<(string, string)>))>> connectionDescriptions = new Dictionary<string, List<(string, (string, List<(string, string)>))>>() {
+    /*public Dictionary<string, List<(string, (string, List<(string, string)>))>> connectionDescriptions = new Dictionary<string, List<(string, (string, List<(string, string)>))>>() {
         { ".44 Magnum", new List<(string, (string, List<(string, string)>))>() {
             ("Burnt Pillow", ("", new List<(string, string)>() {
                 ("Frank may have been testing muffling the gun shots.", "Frank muffled shots during practice"),
@@ -167,7 +167,7 @@ public class DataStorage : MonoBehaviour
         } },
         { "Journal", new List<(string, (string, List<(string, string)>))>() { } },
         { "Knife", new List<(string, (string, List<(string, string)>))>() { } }
-    };
+    };*/
 
     private List<string> formattedConnectionsFirst = new List<string>() { "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N" };
     private List<string> formattedConnectionsSecond = new List<string>() { "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14" };
@@ -196,7 +196,7 @@ public class DataStorage : MonoBehaviour
         };
     }
 
-    public List<string> GetFormattedCreatedConnections() {
+    /*public List<string> GetFormattedCreatedConnections() {
         var result = new List<string>();
         foreach (var (_, _, _, _, CD_Key, CD_Idx, CD_Opt) in connectedThreads) {
             if (CD_Key != null) {
@@ -206,8 +206,8 @@ public class DataStorage : MonoBehaviour
         }
 
         return result;
-    }
-
+    }*/
+    /*
     private string FormatConnection(string key, int idx, int opt) {
         string first = formattedConnectionsFirst[evidenceNames.IndexOf(key)];
         string second = formattedConnectionsSecond[evidenceNames.IndexOf(connectionDescriptions[key][idx].Item1)];
@@ -217,9 +217,10 @@ public class DataStorage : MonoBehaviour
         }
 
         return first + second;
-    }
+    }*/
 
-    public bool IsEvidenceCollected(string name) {
+    /*
+     *public bool IsEvidenceCollected(string name) {
         foreach (var (n, _) in collectedEvidence) {
             if (n == name) {
                 return true;
@@ -227,4 +228,5 @@ public class DataStorage : MonoBehaviour
         }
         return false;
     }
+    */
 }

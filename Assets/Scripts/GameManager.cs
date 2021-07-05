@@ -3,6 +3,8 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
+    private MainQuestManager mqManager;
+
     private EvidenceCollectedController evidenceCollectedController;
     private GameSceneManager gameSceneManager;
 
@@ -16,6 +18,7 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
+        mqManager = gameObject.GetComponent<MainQuestManager>();
         evidenceCollectedController = GameObject.Find("UI/EvidenceCollected").GetComponent<EvidenceCollectedController>();
         gameSceneManager = GameObject.Find("GameSceneManager").GetComponent<GameSceneManager>();
     }
@@ -40,6 +43,7 @@ public class GameManager : MonoBehaviour
     }
 
     public void SwitchToEpilogue() {
+        GlobalVersionControl.ending = mqManager.playerProgress.FinishQuest(mqManager.questData);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 

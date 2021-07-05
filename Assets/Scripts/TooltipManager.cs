@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using TMPro;
+using System.Linq;
 
 public class TooltipManager : MonoBehaviour
 {
@@ -30,12 +31,13 @@ public class TooltipManager : MonoBehaviour
         text.text = dataStorage.evidenceDescriptions[name];
     }
 
-    public void ShowThread(string key, int idx, int opt) {
+    public void ShowThread(Connection connection) {
+        var choiceDesc = connection.options.Where(x => x.Value == true).Select(x => x.Key).First().choiceDescription;
         isShowingConnection = true;
-        if (dataStorage.connectionDescriptions[key][idx].Item2.Item1 != "") {
-            text.text = dataStorage.connectionDescriptions[key][idx].Item2.Item1 + "\n" + dataStorage.connectionDescriptions[key][idx].Item2.Item2[opt].Item1;
+        if (connection.commonDescription != "") {
+            text.text = connection.commonDescription + "\n" + choiceDesc;
         } else {
-            text.text = dataStorage.connectionDescriptions[key][idx].Item2.Item2[opt].Item1;
+            text.text = choiceDesc;
         }
     }
 

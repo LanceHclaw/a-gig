@@ -55,6 +55,7 @@ public class MQConnections
     public MQConnections(string filename, MQEvidence mqEvidence, MQEndings mqEndings)
     {
         var evidenceCount = mqEvidence.evidenceByID.Count;
+        ConnectionsByID.Add(defaultConnection.id, defaultConnection);
 
         connectionMatrix = new int[evidenceCount, evidenceCount];
         for (var i = 0; i < evidenceCount; i++)
