@@ -199,12 +199,12 @@ public class EvidenceManager : MonoBehaviour
 
     (GameObject, GameObject, Evidence) GetObjectUnderCursor(bool createThreads)
     {
-        //for (int i = mqManager.collectedEvidence.Count - 1; i >= 0; --i)
-        foreach(var evidencePhoto in mqManager.collectedEvidence)
+        for (int i = mqManager.collectedEvidence.Count - 1; i >= 0; --i)
+        //foreach(var evidencePhoto in mqManager.collectedEvidence.ToList())
         {
-            //var (evidence, photo) = mqManager.collectedEvidence[i];
-            var evidence = evidencePhoto.Value;
-            var photo = evidencePhoto.Key;
+            var (photo, evidence) = mqManager.collectedEvidence[i];
+            //var evidence = evidencePhoto.Value;
+            //var photo = evidencePhoto.Key;
 
             var photoPos = photo.transform.position;
             var photoRect = photo.GetComponent<RectTransform>().rect;
@@ -451,7 +451,7 @@ public class EvidenceManager : MonoBehaviour
 
         if (((connectionPendingToEvidence.id == 12 && currentThreadComingFromEvidence.id == 0) || 
             (connectionPendingToEvidence.id == 0 && currentThreadComingFromEvidence.id == 12)) 
-            && (!mqManager.collectedEvidence.ContainsValue(mqManager.GetEvidenceByID(10)))) 
+            && (!mqManager.collectedEvidence.Any(x => x.Item2 == mqManager.GetEvidenceByID(10)))) 
         {
             flashManager.PhotoFlash();
             evidenceCollectedController.ShowPhoto(10);

@@ -1,3 +1,935 @@
 {
-
+  "Connections": [
+    {
+      "evidence1ID": 0,
+      "evidence2ID": 1,
+      "description": "",
+      "options": [
+        {
+          "name": "shell-letter-B3",
+          "choiceDescription": "I wonder if he was killed for this letter. But then why is it still here?",
+          "snippet": "The letter might be important.",
+          "weights": [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ]
+        }
+      ]
+    },
+    {
+      "evidence1ID": 0,
+      "evidence2ID": 2,
+      "description": "",
+      "options": [
+        {
+          "name": "shell-pillow-B4/1",
+          "choiceDescription": "Frank may have been testing muffling the gun shots.",
+          "snippet": "Frank tested muffling gunshots.",
+          "weights": [ 0, 0, 0, 1, 0, 0, 0, 0, 0 ]
+        },
+        {
+          "name": "shell-pillow-B4/2",
+          "choiceDescription": "The murderer must have muffled the gun shot with the pillow.",
+          "snippet": "The murderer muffled the gunshot.",
+          "weights": [ 1, 0, 1, -1, 1, 0, 0, 0, 0 ]
+        }
+      ]
+    },
+    {
+      "evidence1ID": 0,
+      "evidence2ID": 3,
+      "description": "The shell fits the pistol.",
+      "options": [
+        {
+          "name": "shell-gun-B5/1",
+          "choiceDescription": "Frank must be using .44 Magnum when practicing.",
+          "snippet": "Frank used .44 for practice.",
+          "weights": [ 0, 1, 0, 1, 0, 0, 0, 0, 0 ]
+        },
+        {
+          "name": "shell-gun-B5/2",
+          "choiceDescription": "It's the most common caliber, everyone could be using it. Even the murderer.",
+          "snippet": "Murderer used .44 caliber.",
+          "weights": [ 1, 0, 1, -1, 1, 0, 0, 0, 0 ]
+        }
+      ]
+    },
+    {
+      "evidence1ID": 0,
+      "evidence2ID": 4,
+      "description": "",
+      "options": [
+        {
+          "name": "shell-cigarette-B6",
+          "choiceDescription": "Frank probably didn't finish this cigarette because he wanted to shoot something. Or someone?",
+          "snippet": "Frank was impulsive.",
+          "weights": [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ]
+        }
+      ]
+    },
+    {
+      "evidence1ID": 0,
+      "evidence2ID": 5,
+      "description": "I wonder if this shell is recent or was actually stuck in the mop threads for a while.",
+      "options": [
+        {
+          "name": "shell-mop-B7/1",
+          "choiceDescription": "It's recent.",
+          "snippet": "The shell is recently used.",
+          "weights": [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ]
+        },
+        {
+          "name": "shell-mop-B7/2",
+          "choiceDescription": "It was stuck for a while.",
+          "snippet": "The shell is old.",
+          "weights": [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ]
+        }
+      ]
+    },
+    {
+      "evidence1ID": 0,
+      "evidence2ID": 6,
+      "description": "Whoever cleaned this floor definitely missed the shell. To be fair, it's hard to notice, yet still.",
+      "options": [
+        {
+          "name": "shell-floor-B8/1",
+          "choiceDescription": "Frank didn't care enough and he used the gun frequently anyway. Must've been him who mopped last.",
+          "snippet": "Frank used the shell.",
+          "weights": [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ]
+        },
+        {
+          "name": "shell-floor-B8/2",
+          "choiceDescription": "The murderer probably tried to clean up, but couldn't find it and thought nobody would. Tough luck, I guess.",
+          "snippet": "The murderer used the shell.",
+          "weights": [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ]
+        }
+      ]
+    },
+    {
+      "evidence1ID": 0,
+      "evidence2ID": 7,
+      "description": "Open windows ventilate the area quite well.",
+      "options": [
+        {
+          "name": "shell-window-B9/1",
+          "choiceDescription": "F.Allen must have used it to ventilate the room after practice.",
+          "snippet": "F.Allen used to ventilate gunpowder smell.",
+          "weights": [ -1, 0, 1, 0, 0, -1, 0, 0, 0 ]
+        },
+        {
+          "name": "shell-window-B9/2",
+          "choiceDescription": "The murderer may have wanted to hide the smell of gunpowder.",
+          "snippet": "The murderer tried to get rid of gunpowder smell.",
+          "weights": [ 1, 0, -1, -1, 1, 0, 0, 0, 0 ]
+        }
+      ]
+    },
+    {
+      "evidence1ID": 0,
+      "evidence2ID": 8,
+      "description": "",
+      "options": [
+        {
+          "name": "shell-dummy-B10/1",
+          "choiceDescription": "The caliber fits the size of the holes in the dummy. Allen must have been causing a lot of noise indeed.",
+          "snippet": "F.Allen practiced shooting a lot.",
+          "weights": [ 0, 1, 1, 1, 0, 0, 0, 1, 0 ]
+        },
+        {
+          "name": "shell-dummy-B10/2",
+          "choiceDescription": "Even though the holes may have been left by bullets of this caliber, it's hard to believe a sane man would shoot in his own house.",
+          "snippet": "F.Allen wouldn't shoot at home.",
+          "weights": [ 0, 0, 0, 0, 1, 0, 0, 0, 0 ]
+        }
+      ]
+    },
+    {
+      "evidence1ID": 0,
+      "evidence2ID": 9,
+      "description": "",
+      "options": [
+        {
+          "name": "shell-packOfCigs-B11",
+          "choiceDescription": "Frank must have attempted to light up his cigarettes with a gun.",
+          "snippet": "Frank used his gun as a lighter.",
+          "weights": [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ]
+        }
+      ]
+    },
+    {
+      "evidence1ID": 0,
+      "evidence2ID": 10,
+      "description": "The puncture wound is not very big. Just about the right size for .44 magnum.",
+      "options": [
+        {
+          "name": "shell-bInb-B12/1",
+          "choiceDescription": "I can't believe he would shoot himself...",
+          "snippet": "F.Allen shot himself?",
+          "weights": [ 0, 0, 0, 1, 1, 0, 0, 1, 0 ]
+        },
+        {
+          "name": "shell-bInb-B12/2",
+          "choiceDescription": "The murderer must have used the same type of weapon.",
+          "snippet": "The murderer shot F.Allen.",
+          "weights": [ 1, 0, 1, 0, 1, 0, 0, 0, 0 ]
+        }
+      ]
+    },
+    {
+      "evidence1ID": 0,
+      "evidence2ID": 11,
+      "description": "The type of work Frank used to do could cause stress.",
+      "options": [
+        {
+          "name": "shell-journal-B13/1",
+          "choiceDescription": "Frank was on edge because of his work.",
+          "snippet": "Frank was paranoid.",
+          "weights": [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ]
+        },
+        {
+          "name": "shell-journal-B13/2",
+          "choiceDescription": "Frank was practicing at home because his work could be dangerous.",
+          "snippet": "Frank used to practice.",
+          "weights": [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ]
+        }
+      ]
+    },
+    {
+      "evidence1ID": 0,
+      "evidence2ID": 12,
+      "description": "",
+      "options": [
+        {
+          "name": "shell-knife-B14",
+          "choiceDescription": "Hold on.. This bullet is out of place. What if I remove that knife... Hah. Either smart or desperately stupid. There's a puncture wound... Or rather - a bullet one.",
+          "snippet": "Knife hid a bullet wound.",
+          "weights": [ 1, 0, 1, 0, 0, 0, 0, 0, 0 ]
+        }
+      ]
+    },
+    {
+      "evidence1ID": 1,
+      "evidence2ID": 2,
+      "description": "",
+      "options": [
+        {
+          "name": "letter-pillow-C4",
+          "choiceDescription": "He probably went to sleep in the middle of writing this.",
+          "snippet": "F.Allen fell asleep mid-writing.",
+          "weights": [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ]
+        }
+      ]
+    },
+    {
+      "evidence1ID": 1,
+      "evidence2ID": 3,
+      "description": "",
+      "options": [
+        {
+          "name": "letter-gun-C5/1",
+          "choiceDescription": "Shooting while writing? I guess he was making noise indeed. That thing ain't quiet.",
+          "snippet": "Frank was a noisy weirdo.",
+          "weights": [ 0, 1, 1, 1, 1, 0, 0, 0, 0 ]
+        },
+        {
+          "name": "letter-gun-C5/2",
+          "choiceDescription": "I think this detective was quite serious with his business. He was ready to solve whatever he needed to solve.",
+          "snippet": "Frank took detective work seriously.",
+          "weights": [ 1, 0, 0, 0, 1, 0, 0, 0, 0 ]
+        }
+      ]
+    },
+    {
+      "evidence1ID": 1,
+      "evidence2ID": 4,
+      "description": "",
+      "options": [
+        {
+          "name": "letter-cigarette-C6",
+          "choiceDescription": "He probably was just smoking and writing this when the murderer came. Must've gone to see what was going on.",
+          "snippet": "Was smoking when writing this.",
+          "weights": [ 0, 0, 1, 1, 0, 1, 0, 0, 0 ]
+        }
+      ]
+    },
+    {
+      "evidence1ID": 1,
+      "evidence2ID": 5,
+      "description": "",
+      "options": [
+        {
+          "name": "letter-mop-C7",
+          "choiceDescription": "You don't wanna get the letter wet.",
+          "snippet": "Keep the letter away from the mop.",
+          "weights": [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ]
+        }
+      ]
+    },
+    {
+      "evidence1ID": 1,
+      "evidence2ID": 6,
+      "description": "It's strange of Frank to not have finished his letter, given how tidy he was. That is... IF he was tidy.",
+      "options": [
+        {
+          "name": "letter-floor-C8/1",
+          "choiceDescription": "He was interrupted.",
+          "snippet": "F.Allen was interrupted by something.",
+          "weights": [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ]
+        },
+        {
+          "name": "letter-floor-C8/2",
+          "choiceDescription": "He wasn't tidy.",
+          "snippet": "F.Allen wasn't tidy.",
+          "weights": [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ]
+        }
+      ]
+    },
+    {
+      "evidence1ID": 1,
+      "evidence2ID": 7,
+      "description": "",
+      "options": [
+        {
+          "name": "letter-window-C9",
+          "choiceDescription": "Maybe the windows are open because Frank used owls to send letters...",
+          "snippet": "Frank used owls to send letters.",
+          "weights": [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ]
+        }
+      ]
+    },
+    {
+      "evidence1ID": 1,
+      "evidence2ID": 8,
+      "description": "",
+      "options": [
+        {
+          "name": "letter-dummy-C10",
+          "choiceDescription": "According to the letter F.Allen was dealing with a lot. He must've loved releasing his frustration on this dummy.",
+          "snippet": "F.Allen released anger on the dummy.",
+          "weights": [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ]
+        }
+      ]
+    },
+    {
+      "evidence1ID": 1,
+      "evidence2ID": 9,
+      "description": "",
+      "options": [
+        {
+          "name": "letter-packOfCigs-C11",
+          "choiceDescription": "Given that amount of problems, no surprise Frank smoked like a factory.",
+          "snippet": "F.Allen smoked a lot.",
+          "weights": [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ]
+        }
+      ]
+    },
+    {
+      "evidence1ID": 1,
+      "evidence2ID": 10,
+      "description": "",
+      "options": [
+        {
+          "name": "letter-bInb-C12",
+          "choiceDescription": "He must have tried to end himself to escape all the problems. Very wrong decision which doesn't help.",
+          "snippet": "F.Allen must've shot himself.",
+          "weights": [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ]
+        }
+      ]
+    },
+    {
+      "evidence1ID": 1,
+      "evidence2ID": 11,
+      "description": "The letter said he was in the middle of a case or something.",
+      "options": [
+        {
+          "name": "letter-journal-C13/1",
+          "choiceDescription": "The latest entries must be missing.",
+          "snippet": "Someone tore the latest entries out.",
+          "weights": [ 1, -1, -1, 0, 1, 0, 0, 0, 0 ]
+        },
+        {
+          "name": "letter-journal-C13/2",
+          "choiceDescription": "He must've been about to start that case when the murder happened.",
+          "snippet": "F.Allen didn't start his most recent case.",
+          "weights": [ 0, 0, 0, 1, 1, 0, 0, 1, 0 ]
+        },
+        {
+          "name": "letter-journal-C13/3",
+          "choiceDescription": "He must have been writing in a different journal or keeping it in his head. He seems to have not been himself lately.",
+          "snippet": "F.Allen wasn't keeping notes of the latest case.",
+          "weights": [ 0, 0, 0, 1, 0, 0, 0, 1, 0 ]
+        }
+      ]
+    },
+    {
+      "evidence1ID": 1,
+      "evidence2ID": 12,
+      "description": "",
+      "options": [
+        {
+          "name": "letter-knife-C14",
+          "choiceDescription": "He must have tried to end himself to escape all the problems. Very wrong decision which doesn't help.",
+          "snippet": "F.Allen must've stabbed himself.",
+          "weights": [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ]
+        }
+      ]
+    },
+    {
+      "evidence1ID": 2,
+      "evidence2ID": 3,
+      "description": "",
+      "options": [
+        {
+          "name": "pillow-gun-D5",
+          "choiceDescription": "If anything, I doubt one can muffle an AutoMag shot with a pillow. You can always try though.",
+          "snippet": "AutoMag is too loud to muffle.",
+          "weights": [ 1, 0, 1, 0, 0, 0, 0, 0, 0 ]
+        }
+      ]
+    },
+    {
+      "evidence1ID": 2,
+      "evidence2ID": 4,
+      "description": "",
+      "options": [
+        {
+          "name": "pillow-cigarette-D6",
+          "choiceDescription": "Allen used to smoke. Maybe at some point he did it in bed? Should've been lucky to not burn the house down.",
+          "snippet": "Allen nearly burnt himself once.",
+          "weights": [ 0, 0, 0, 1, 0, 1, 0, 0, 0 ]
+        }
+      ]
+    },
+    {
+      "evidence1ID": 2,
+      "evidence2ID": 5,
+      "description": "",
+      "options": [
+        {
+          "name": "pillow-mop-D7",
+          "choiceDescription": "I mean... If you really want to, you could use your pillow as a mop, but Frank at least wasn't that insane.",
+          "snippet": "Frank was OK in his head.",
+          "weights": [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ]
+        }
+      ]
+    },
+    {
+      "evidence1ID": 2,
+      "evidence2ID": 6,
+      "description": "",
+      "options": [
+        {
+          "name": "pillow-floor-D8",
+          "choiceDescription": "Something is off. A seemingly tidy man couldn't change his pillow after it got burnt.",
+          "snippet": "Burnt pillow is out of place.",
+          "weights": [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ]
+        }
+      ]
+    },
+    {
+      "evidence1ID": 2,
+      "evidence2ID": 7,
+      "description": "",
+      "options": [
+        {
+          "name": "pillow-window-D9",
+          "choiceDescription": "Given how much noise Allen was making, I imagine his neighbours had a rough time sleepin. It would only be poetic to try and use a pillow for murder.",
+          "snippet": "Pillow may have been used in murder.",
+          "weights": [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ]
+        }
+      ]
+    },
+    {
+      "evidence1ID": 2,
+      "evidence2ID": 8,
+      "description": "",
+      "options": [
+        {
+          "name": "pillow-dummy-D10",
+          "choiceDescription": "I think F.Allen may have tested noise reduction of a gunshot with a pillow on his dummy.",
+          "snippet": "Frank tested noise reduction.",
+          "weights": [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ]
+        }
+      ]
+    },
+    {
+      "evidence1ID": 2,
+      "evidence2ID": 9,
+      "description": "",
+      "options": [
+        {
+          "name": "pillow-packOfCigs-D11",
+          "choiceDescription": "Having a cigarette pack next to the bed surely says he was doing it here. Must have narrowly avoided an accident.",
+          "snippet": "Frank had a habit of smoking in bed.",
+          "weights": [ 0, 0, 0, 1, 0, 1, 0, 0, 0 ]
+        }
+      ]
+    },
+    {
+      "evidence1ID": 2,
+      "evidence2ID": 10,
+      "description": "",
+      "options": [
+        {
+          "name": "pillow-bInb-D12",
+          "choiceDescription": "Now that I look at it, the pillow burn mark looks like it might've been a result of a gunshot.",
+          "snippet": "Pillow was used as a silencer.",
+          "weights": [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ]
+        }
+      ]
+    },
+    {
+      "evidence1ID": 2,
+      "evidence2ID": 11,
+      "description": "The journal doesn't contain any information about pillows.",
+      "options": [
+        {
+          "name": "pillow-journal-D13/1",
+          "choiceDescription": "Whatever Frank was doing to this pillow, he didn't come up with a conclusion.",
+          "snippet": "Frank didn't finish his experiments.",
+          "weights": [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ]
+        },
+        {
+          "name": "pillow-journal-D13/2",
+          "choiceDescription": "I doubt Frank would use the pillow for something and not write about it. Surely someone else touched this.",
+          "snippet": "Pillow was used by someone else.",
+          "weights": [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ]
+        }
+      ]
+    },
+    {
+      "evidence1ID": 2,
+      "evidence2ID": 12,
+      "description": "",
+      "options": [
+        {
+          "name": "pillow-knife-D14",
+          "choiceDescription": "If the murder was committed with a knife, why not use a pillow to choke him instead? Leaves fewer tracks.",
+          "snippet": "Knife seems a weird choice.",
+          "weights": [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ]
+        }
+      ]
+    },
+    {
+      "evidence1ID": 3,
+      "evidence2ID": 4,
+      "description": "",
+      "options": [
+        {
+          "name": "gun-cigarette-E6/1",
+          "choiceDescription": "Shooting a gun while smoking a cigarette surely looks badass.",
+          "snippet": "Frank smoked while shooting.",
+          "weights": [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ]
+        },
+        {
+          "name": "gun-cigarette-E6/2",
+          "choiceDescription": "I wouldn't dare lighting up my cigarette with a gun. I assume, Frank was reckless.",
+          "snippet": "Frank was reckless.",
+          "weights": [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ]
+        }
+      ]
+    },
+    {
+      "evidence1ID": 3,
+      "evidence2ID": 5,
+      "description": "",
+      "options": [
+        {
+          "name": "gun-mop-E7",
+          "choiceDescription": "I bet he had to clean up a lot if he used this gun indoors.",
+          "snippet": "Frank must've mopped a lot.",
+          "weights": [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ]
+        }
+      ]
+    },
+    {
+      "evidence1ID": 3,
+      "evidence2ID": 6,
+      "description": "",
+      "options": [
+        {
+          "name": "gun-floor-E8",
+          "choiceDescription": "The gun is as neatly packed up as his kitchen is clean. The man was weird.",
+          "snippet": "Inconsistent standards of cleanliness.",
+          "weights": [ 1, 0, 0, 1, 0, 0, 1, 0, 0 ]
+        }
+      ]
+    },
+    {
+      "evidence1ID": 3,
+      "evidence2ID": 7,
+      "description": "",
+      "options": [
+        {
+          "name": "gun-window-E9/1",
+          "choiceDescription": "If he used to shoot frequently, he may well have been keeping the windows open to ventilate the gunpowder stench.",
+          "snippet": "Gunpowder ventilation.",
+          "weights": [ 0, 1, 1, 0, 0, -1, 0, 0, 0 ]
+        },
+        {
+          "name": "gun-window-E9/2",
+          "choiceDescription": "If people are already accusing you of noise, why keep your windows open? Surely someone else opened them.",
+          "snippet": "Someone else opened the windows.",
+          "weights": [ 1, 0, 0, 0, 1, 0, 0, 0, 0 ]
+        }
+      ]
+    },
+    {
+      "evidence1ID": 3,
+      "evidence2ID": 8,
+      "description": "",
+      "options": [
+        {
+          "name": "gun-dummy-E10",
+          "choiceDescription": "The holes definitely look like they were left by a similar weapon. And the noise complaints... I think the officer was right about home shooting.",
+          "snippet": "Frank did indeed shoot in his place.",
+          "weights": [ 0, 1, 1, 1, 1, 0, 0, 0, 0 ]
+        }
+      ]
+    },
+    {
+      "evidence1ID": 3,
+      "evidence2ID": 9,
+      "description": "",
+      "options": [
+        {
+          "name": "gun-packOfCigs-E11",
+          "choiceDescription": "A gun and a pack of cigarettes - the true toolset of an investigator.",
+          "snippet": "Frank was a true investigator.",
+          "weights": [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ]
+        }
+      ]
+    },
+    {
+      "evidence1ID": 3,
+      "evidence2ID": 10,
+      "description": "The bullet wound looks like it could've been caused by this weapon.",
+      "options": [
+        {
+          "name": "gun-knife-E12/1",
+          "choiceDescription": "Suicide? But who put the weapon back in the case then? Must have been someone close.",
+          "snippet": "Suicide. Friend stored the gun after death.",
+          "weights": [ -1, -1, 0, 1, 1, 0, 0, 0, 0 ]
+        },
+        {
+          "name": "gun-knife-E12/2",
+          "choiceDescription": "The murderer must have used a similar weapon. Or known of the existence of this one.",
+          "snippet": "Murderer used the same weapon.",
+          "weights": [ 1, -1, 1, 0, 1, 0, 0, 0, 0 ]
+        }
+      ]
+    },
+    {
+      "evidence1ID": 3,
+      "evidence2ID": 11,
+      "description": "",
+      "options": [
+        {
+          "name": "gun-journal-E13",
+          "choiceDescription": "According to his journal, he needed his gun and he needed to be good with it.",
+          "snippet": "Frank was good with his gun.",
+          "weights": [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ]
+        }
+      ]
+    },
+    {
+      "evidence1ID": 3,
+      "evidence2ID": 12,
+      "description": "",
+      "options": [
+        {
+          "name": "gun-knife-E14",
+          "choiceDescription": "If the murderer wanted something from this journal, they could've used that knife better.",
+          "snippet": "The murderer didn't look for the journal.",
+          "weights": [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ]
+        }
+      ]
+    },
+    {
+      "evidence1ID": 4,
+      "evidence2ID": 5,
+      "description": "",
+      "options": [
+        {
+          "name": "cigarette-mop-F7",
+          "choiceDescription": "He must have been mopping a lot to maintain the floor cleanliness with all the ash from the cigarettes.",
+          "snippet": "Frank was a tidy man.",
+          "weights": [ -1, 0, 0, -1, 0, 0, 0, 0, 0 ]
+        }
+      ]
+    },
+    {
+      "evidence1ID": 4,
+      "evidence2ID": 6,
+      "description": "",
+      "options": [
+        {
+          "name": "cigarette-floor-F8",
+          "choiceDescription": "Regardless of who smoked the cigarette, no one went to the kitchen with it since the murder occurred.",
+          "snippet": "Nobody smoked in the kitchen.",
+          "weights": [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ]
+        }
+      ]
+    },
+    {
+      "evidence1ID": 4,
+      "evidence2ID": 7,
+      "description": "",
+      "options": [
+        {
+          "name": "cigarette-window-F9",
+          "choiceDescription": "The window must be open to let the place ventilate a bit. Regardless of who smoked...",
+          "snippet": "Someone decided to ventilate the smoke.",
+          "weights": [ 0, 0, 0, 1, 0, 0, 0, 0, 0 ]
+        }
+      ]
+    },
+    {
+      "evidence1ID": 4,
+      "evidence2ID": 8,
+      "description": "",
+      "options": [
+        {
+          "name": "cigarette-dummy-F10",
+          "choiceDescription": "Weird the dummy doesn't have any burn marks. I guess Frank cared about his neighbours after all - he didn't want to start a fire.",
+          "snippet": "Frank cared about his neighbours.",
+          "weights": [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ]
+        }
+      ]
+    },
+    {
+      "evidence1ID": 4,
+      "evidence2ID": 9,
+      "description": "The cigarette is definitely from this pack.",
+      "options": [
+        {
+          "name": "cigarette-packOfCigs-F11/1",
+          "choiceDescription": "Whoever smoked it uses the same ones.",
+          "snippet": "Someone smokes the same cigarettes as Allen.",
+          "weights": [ 1, 0, 0, 0, 0, 0, 0, 0, 0 ]
+        },
+        {
+          "name": "cigarette-packOfCigs-F11/2",
+          "choiceDescription": "It was Frank who smoked this one.",
+          "snippet": "Allen smoked this cigarette.",
+          "weights": [ 0, 0, 1, 1, 0, 1, 0, 0, 0 ]
+        }
+      ]
+    },
+    {
+      "evidence1ID": 4,
+      "evidence2ID": 10,
+      "description": "",
+      "options": [
+        {
+          "name": "cigarette-bInb-F12",
+          "choiceDescription": "That's why smoking is bad... You get shot.",
+          "snippet": "Don't smoke.",
+          "weights": [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ]
+        }
+      ]
+    },
+    {
+      "evidence1ID": 4,
+      "evidence2ID": 11,
+      "description": "",
+      "options": [
+        {
+          "name": "cigarette-journal-F13",
+          "choiceDescription": "This kind of job would drive anyone crazy. Frank must have been stressed out.",
+          "snippet": "Frank was stressed out.",
+          "weights": [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ]
+        }
+      ]
+    },
+    {
+      "evidence1ID": 4,
+      "evidence2ID": 12,
+      "description": "What if it was the murderer who put the cigarette in the ashtray after all? Fire would cover all the tracks if the victim was smoking when murdered.",
+      "options": [
+        {
+          "name": "cigarette-knife-F14/1",
+          "choiceDescription": "The murderer wanted something in the house and didn't want fire to destroy it.",
+          "snippet": "Murderer was looking for something.",
+          "weights": [ 1, 0, 0, -1, 1, 0, 0, 0, 0 ]
+        },
+        {
+          "name": "cigarette-knife-F14/2",
+          "choiceDescription": "The murderer lives in the same building and didn't want to burn it down.",
+          "snippet": "Murderer lives in the same building.",
+          "weights": [ -1, 1, 1, 0, 1, 0, 0, 0, 0 ]
+        }
+      ]
+    },
+    {
+      "evidence1ID": 5,
+      "evidence2ID": 6,
+      "description": "The mop was definitely used to clean the floor. Though it is slightly wet still.",
+      "options": [
+        {
+          "name": "mop-floor-G8/1",
+          "choiceDescription": "Frank must have been very particular about keeping the floor clean and the murderer wore no shoes.",
+          "snippet": "Murderer wore no shoes.",
+          "weights": [ 0, 1, 1, 0, 0, 0, 1, 0, 0 ]
+        },
+        {
+          "name": "mop-floor-G8/2",
+          "choiceDescription": "Someone else used it recently. Murderer?",
+          "snippet": "Murderer used the mop recently.",
+          "weights": [ 1, 0, 0, -1, 0, 0, 1, 0, 0 ]
+        }
+      ]
+    },
+    {
+      "evidence1ID": 5,
+      "evidence2ID": 7,
+      "description": "",
+      "options": [
+        {
+          "name": "mop-window-G9",
+          "choiceDescription": "With open windows the mop would've dried out much faster...",
+          "snippet": "The mop was used recently.",
+          "weights": [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ]
+        }
+      ]
+    },
+    {
+      "evidence1ID": 5,
+      "evidence2ID": 8,
+      "description": "",
+      "options": [
+        {
+          "name": "mop-dummy-G10",
+          "choiceDescription": "This dummy must have never been cleaned.",
+          "snippet": "The dummy is dirty.",
+          "weights": [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ]
+        }
+      ]
+    },
+    {
+      "evidence1ID": 5,
+      "evidence2ID": 9,
+      "description": "Given how much Frank smoked I wouldn't be surprised if he mopped daily. Or never did.",
+      "options": [
+        {
+          "name": "mop-packOfCigs-G11/1",
+          "choiceDescription": "He mopped daily.",
+          "snippet": "Frank mopped daily.",
+          "weights": [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ]
+        },
+        {
+          "name": "mop-packOfCigs-G11/2",
+          "choiceDescription": "He never mopped, someone else did.",
+          "snippet": "Frank never mopped.",
+          "weights": [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ]
+        }
+      ]
+    },
+    {
+      "evidence1ID": 5,
+      "evidence2ID": 10,
+      "description": "If there was so much blood after the gunshot and the knife, why did someone mop the kitchen at all?",
+      "options": [
+        {
+          "name": "mop-bInb-G12/1",
+          "choiceDescription": "The person who mopped arrived at the crime scene after the fact.",
+          "snippet": "Whoever mopped is innocent.",
+          "weights": [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ]
+        },
+        {
+          "name": "mop-bInb-G12/2",
+          "choiceDescription": "Whoever mopped did it for some other reason.",
+          "snippet": "Whoever mopped is guilty.",
+          "weights": [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ]
+        }
+      ]
+    },
+    {
+      "evidence1ID": 5,
+      "evidence2ID": 11,
+      "description": "",
+      "options": [
+        {
+          "name": "mop-journal-G13",
+          "choiceDescription": "The journal is kept quite clean.",
+          "snippet": "Frank was pedantic.",
+          "weights": [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ]
+        }
+      ]
+    },
+    {
+      "evidence1ID": 5,
+      "evidence2ID": 12,
+      "description": "",
+      "options": [
+        {
+          "name": "mop-knife-G14",
+          "choiceDescription": "The cloth of the mop can be used to hold the knife without leaving fingerprints.",
+          "snippet": "Mop hid the fingerprints.",
+          "weights": [ 1, 0, 1, 0, 0, 0, 1, 0, 0 ]
+        }
+      ]
+    },
+    {
+      "evidence1ID": 6,
+      "evidence2ID": 7,
+      "description": "If you keep the windows open, the floor ain't gonna be clean for long.",
+      "options": [
+        {
+          "name": "floor-window-H9/1",
+          "choiceDescription": "Maybe that's why Frank is weirdly tidy about certain things?",
+          "snippet": "Open windows made Allen clean up often.",
+          "weights": [ 0, 0, 1, 0, 0, -1, 1, 0, 0 ]
+        },
+        {
+          "name": "floor-window-H9/2",
+          "choiceDescription": "Maybe Frank didn't open the windows much?",
+          "snippet": "Frank didn't open the windows often.",
+          "weights": [ 1, 1, 1, 1, 0, 1, 0, 0, 0 ]
+        }
+      ]
+    },
+    {
+      "evidence1ID": 7,
+      "evidence2ID": 9,
+      "description": "",
+      "options": [
+        {
+          "name": "window-packOfCigs-I11",
+          "choiceDescription": "I mean... If you smoke at home frequently, opening the windows makes sense if you don't want to suffocate.",
+          "snippet": "Open windows ventilate cigarettes' smoke.",
+          "weights": [ 0, 0, 0, 0, 0, 0, 1, 0, 0 ]
+        }
+      ]
+    },
+    {
+      "evidence1ID": 7,
+      "evidence2ID": 12,
+      "description": "",
+      "options": [
+        {
+          "name": "window-knife-I14",
+          "choiceDescription": "Frank has a gun. If the killer knew it, they could try to sneak up to him and into his house. What's a better way to do it than through a window? Then they could also be wearing gloves to leave no fingerprints...",
+          "snippet": "Murderer snuck through window.",
+          "weights": [ -1, 1, 1, 0, 1, 0, 0, 0, 0 ]
+        }
+      ]
+    },
+    {
+      "evidence1ID": 10,
+      "evidence2ID": 12,
+      "description": "I can't stop thinking about why someone would thrust a knife into a bullet hole. Did they want to hide the fact that it was a gunshot?",
+      "options": [
+        {
+          "name": "bInb-knife-L14/1",
+          "choiceDescription": "It's pretty smart.",
+          "snippet": "Knife to cover a bullet? Smart.",
+          "weights": [ 1, -1, 0, 0, 1, 0, 0, 0, 0 ]
+        },
+        {
+          "name": "bInb-knife-L14/2",
+          "choiceDescription": "It's pretty stupid.",
+          "snippet": "Knife to cover a bullet? Stupid.",
+          "weights": [ 0, 1, 1, 0, 1, 0, 0, 0, 0 ]
+        }
+      ]
+    }
+  ]
 }

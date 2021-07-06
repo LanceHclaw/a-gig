@@ -15,11 +15,11 @@ D:/Unity/Projects/Thesis Gig/a-gig
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-59455
+61684
 Successfully changed project path to: D:/Unity/Projects/Thesis Gig/a-gig
 D:/Unity/Projects/Thesis Gig/a-gig
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 44.31 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 29.40 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2020.2.0b13 (655e1a328b90)
 [Subsystems] Discovering subsystems at path D:/Unity/2020.2.0b13/Editor/Data/Resources/UnitySubsystems
@@ -35,189 +35,189 @@ Initialize mono
 Mono path[0] = 'D:/Unity/2020.2.0b13/Editor/Data/Managed'
 Mono path[1] = 'D:/Unity/2020.2.0b13/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
 Mono config path = 'D:/Unity/2020.2.0b13/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56008
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56880
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: D:/Unity/2020.2.0b13/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
 Register platform support module: D:/Unity/2020.2.0b13/Editor/Data/PlaybackEngines/MacStandaloneSupport/UnityEditor.OSXStandalone.Extensions.dll
 Register platform support module: D:/Unity/2020.2.0b13/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
 Register platform support module: D:/Unity/2020.2.0b13/Editor/Data/PlaybackEngines/LinuxStandaloneSupport/UnityEditor.LinuxStandalone.Extensions.dll
-Registered in 0.002130 seconds.
+Registered in 0.001680 seconds.
 Native extension for LinuxStandalone target not found
 Native extension for WindowsStandalone target not found
 Native extension for OSXStandalone target not found
 Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 31.93 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 25.63 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.338 seconds
+- Completed reload, in  1.038 seconds
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.001377 seconds.
+Registered in 0.001361 seconds.
 Begin MonoManager ReloadAssembly
 Symbol file LoadedFromMemory doesn't match image D:\Unity\Projects\Thesis Gig\a-gig\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
 Native extension for LinuxStandalone target not found
 Native extension for WindowsStandalone target not found
 Native extension for OSXStandalone target not found
 Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 0.24 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 0.35 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.254 seconds
+- Completed reload, in  0.890 seconds
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.06 seconds
-Refreshing native plugins compatible for Editor in 0.29 ms, found 0 plugins.
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.05 seconds
+Refreshing native plugins compatible for Editor in 0.25 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1185 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 61.4 MB.
+Unloading 1186 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 61.5 MB.
 System memory in use after: 61.5 MB.
 
-Unloading 16 unused Assets to reduce memory usage. Loaded Objects now: 1628.
-Total: 2.232100 ms (FindLiveObjects: 0.135600 ms CreateObjectMapping: 0.042800 ms MarkObjects: 1.952300 ms  DeleteObjects: 0.100000 ms)
+Unloading 16 unused Assets to reduce memory usage. Loaded Objects now: 1629.
+Total: 2.051100 ms (FindLiveObjects: 0.155900 ms CreateObjectMapping: 0.075000 ms MarkObjects: 1.734500 ms  DeleteObjects: 0.084400 ms)
 
 ========================================================================
 Received Import Request.
-  path: Assets/Scripts/MainQuestScripts/DataObjects.cs
-  artifactKey: Guid(5b8b6facecf85494ebd3c93b5eaa1d64) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/MainQuestScripts/DataObjects.cs using Guid(5b8b6facecf85494ebd3c93b5eaa1d64) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1d990074a3b33cc6c775b651cb2362ef') in 0.654358 seconds
-  Import took 0.657500 seconds .
+  path: Assets/Scripts/MainQuestScripts/DataConnectionsRestricted.json
+  artifactKey: Guid(e39d1122f40534a4a8e291d9aebc9832) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/MainQuestScripts/DataConnectionsRestricted.json using Guid(e39d1122f40534a4a8e291d9aebc9832) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b5d794136cf1c15db113dab20452fb95') in 0.629675 seconds
+  Import took 0.632306 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3392.593199 seconds.
+  path: Assets/Scripts/MainQuestScripts/DataConnectionsRestricted.json
+  artifactKey: Guid(e39d1122f40534a4a8e291d9aebc9832) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/MainQuestScripts/DataConnectionsRestricted.json using Guid(e39d1122f40534a4a8e291d9aebc9832) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '913b7fb552d12fcc04888999efd7b196') in 0.010416 seconds
+  Import took 0.013661 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 7.917782 seconds.
+  path: Assets/Scripts/MainQuestScripts/MainQuestManager.cs
+  artifactKey: Guid(967c6ad4f1a745b4a92928a105291eb4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/MainQuestScripts/MainQuestManager.cs using Guid(967c6ad4f1a745b4a92928a105291eb4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ccb8667bf6b51e397f2754ecf1f3da5f') in 0.198747 seconds
+  Import took 0.200943 seconds .
 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.001596 seconds.
+Registered in 0.001446 seconds.
 Begin MonoManager ReloadAssembly
 Symbol file LoadedFromMemory doesn't match image D:\Unity\Projects\Thesis Gig\a-gig\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
 Native extension for LinuxStandalone target not found
 Native extension for WindowsStandalone target not found
 Native extension for OSXStandalone target not found
 Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 0.42 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 0.36 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.945 seconds
+- Completed reload, in  0.899 seconds
 Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.80 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 0.26 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1168 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 1169 Unused Serialized files (Serialized files now loaded: 0)
 System memory in use before: 60.7 MB.
-System memory in use after: 60.7 MB.
+System memory in use after: 60.8 MB.
 
-Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 1630.
-Total: 2.777600 ms (FindLiveObjects: 0.394800 ms CreateObjectMapping: 0.048100 ms MarkObjects: 2.277400 ms  DeleteObjects: 0.037200 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 765.895794 seconds.
-  path: Assets/Scripts/MainQuestScripts/Endings.json
-  artifactKey: Guid(a484f8bec10fe5a4a89bd6c480bda306) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/MainQuestScripts/Endings.json using Guid(a484f8bec10fe5a4a89bd6c480bda306) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1a513d155bf523a00f47dd9c1955cd00') in 0.157301 seconds
-  Import took 0.159997 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 1.175055 seconds.
-  path: Assets/Scripts/MainQuestScripts/Endings.json
-  artifactKey: Guid(a484f8bec10fe5a4a89bd6c480bda306) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/MainQuestScripts/Endings.json using Guid(a484f8bec10fe5a4a89bd6c480bda306) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1a513d155bf523a00f47dd9c1955cd00') in 0.120795 seconds
-  Import took 0.123626 seconds .
+Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 1631.
+Total: 1.506500 ms (FindLiveObjects: 0.131000 ms CreateObjectMapping: 0.040700 ms MarkObjects: 1.317600 ms  DeleteObjects: 0.016100 ms)
 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.002259 seconds.
+Registered in 0.001836 seconds.
 Begin MonoManager ReloadAssembly
 Symbol file LoadedFromMemory doesn't match image D:\Unity\Projects\Thesis Gig\a-gig\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
 Native extension for LinuxStandalone target not found
 Native extension for WindowsStandalone target not found
 Native extension for OSXStandalone target not found
 Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 0.22 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 0.27 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.118 seconds
+- Completed reload, in  1.169 seconds
 Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.67 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 0.33 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1168 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 60.8 MB.
-System memory in use after: 60.9 MB.
+Unloading 1169 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 60.9 MB.
+System memory in use after: 61.0 MB.
 
-Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 1632.
-Total: 3.246800 ms (FindLiveObjects: 0.262000 ms CreateObjectMapping: 0.081100 ms MarkObjects: 2.863800 ms  DeleteObjects: 0.035400 ms)
+Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 1633.
+Total: 2.115200 ms (FindLiveObjects: 0.226400 ms CreateObjectMapping: 0.095200 ms MarkObjects: 1.757000 ms  DeleteObjects: 0.034000 ms)
 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.002190 seconds.
+Registered in 0.001367 seconds.
 Begin MonoManager ReloadAssembly
 Symbol file LoadedFromMemory doesn't match image D:\Unity\Projects\Thesis Gig\a-gig\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
 Native extension for LinuxStandalone target not found
 Native extension for WindowsStandalone target not found
 Native extension for OSXStandalone target not found
 Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 0.31 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 0.32 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.020 seconds
+- Completed reload, in  0.916 seconds
 Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.67 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 0.28 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1168 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 1169 Unused Serialized files (Serialized files now loaded: 0)
 System memory in use before: 61.0 MB.
 System memory in use after: 61.1 MB.
 
-Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 1634.
-Total: 1.918700 ms (FindLiveObjects: 0.175900 ms CreateObjectMapping: 0.040900 ms MarkObjects: 1.685400 ms  DeleteObjects: 0.015500 ms)
+Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 1635.
+Total: 2.038700 ms (FindLiveObjects: 0.280400 ms CreateObjectMapping: 0.069100 ms MarkObjects: 1.652300 ms  DeleteObjects: 0.035500 ms)
 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.001653 seconds.
+Registered in 0.002250 seconds.
 Begin MonoManager ReloadAssembly
 Symbol file LoadedFromMemory doesn't match image D:\Unity\Projects\Thesis Gig\a-gig\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
 Native extension for LinuxStandalone target not found
 Native extension for WindowsStandalone target not found
 Native extension for OSXStandalone target not found
 Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 0.22 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 0.37 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.815 seconds
+- Completed reload, in  1.139 seconds
 Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.23 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 0.36 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1168 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 61.1 MB.
-System memory in use after: 61.2 MB.
+Unloading 1169 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 61.2 MB.
+System memory in use after: 61.3 MB.
 
-Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 1636.
-Total: 2.067200 ms (FindLiveObjects: 0.162400 ms CreateObjectMapping: 0.036600 ms MarkObjects: 1.848700 ms  DeleteObjects: 0.018600 ms)
+Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 1637.
+Total: 1.983700 ms (FindLiveObjects: 0.249900 ms CreateObjectMapping: 0.142600 ms MarkObjects: 1.572700 ms  DeleteObjects: 0.016800 ms)
 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.001578 seconds.
+Registered in 0.001435 seconds.
 Begin MonoManager ReloadAssembly
 Symbol file LoadedFromMemory doesn't match image D:\Unity\Projects\Thesis Gig\a-gig\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
 Native extension for LinuxStandalone target not found
@@ -230,21 +230,296 @@ Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.832 seconds
+- Completed reload, in  0.906 seconds
 Platform modules already initialized, skipping
 Refreshing native plugins compatible for Editor in 0.23 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1168 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 1169 Unused Serialized files (Serialized files now loaded: 0)
 System memory in use before: 61.3 MB.
-System memory in use after: 61.3 MB.
+System memory in use after: 61.4 MB.
 
-Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 1638.
-Total: 2.168300 ms (FindLiveObjects: 0.139200 ms CreateObjectMapping: 0.040100 ms MarkObjects: 1.933200 ms  DeleteObjects: 0.054800 ms)
+Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 1639.
+Total: 1.897300 ms (FindLiveObjects: 0.174700 ms CreateObjectMapping: 0.036400 ms MarkObjects: 1.669500 ms  DeleteObjects: 0.016000 ms)
 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.001494 seconds.
+Registered in 0.001501 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image D:\Unity\Projects\Thesis Gig\a-gig\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
+Native extension for LinuxStandalone target not found
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.36 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.894 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.25 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1169 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 61.5 MB.
+System memory in use after: 61.5 MB.
+
+Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 1641.
+Total: 2.238800 ms (FindLiveObjects: 0.308000 ms CreateObjectMapping: 0.089400 ms MarkObjects: 1.822200 ms  DeleteObjects: 0.017700 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001361 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image D:\Unity\Projects\Thesis Gig\a-gig\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
+Native extension for LinuxStandalone target not found
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.26 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.011 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.51 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1169 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 61.5 MB.
+System memory in use after: 61.6 MB.
+
+Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 1643.
+Total: 2.286700 ms (FindLiveObjects: 0.191400 ms CreateObjectMapping: 0.173100 ms MarkObjects: 1.902900 ms  DeleteObjects: 0.017900 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001368 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image D:\Unity\Projects\Thesis Gig\a-gig\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
+Native extension for LinuxStandalone target not found
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.23 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.848 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.23 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1169 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 61.7 MB.
+System memory in use after: 61.8 MB.
+
+Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 1645.
+Total: 1.779700 ms (FindLiveObjects: 0.184600 ms CreateObjectMapping: 0.035100 ms MarkObjects: 1.495400 ms  DeleteObjects: 0.063200 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001347 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image D:\Unity\Projects\Thesis Gig\a-gig\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
+Native extension for LinuxStandalone target not found
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.28 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.860 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.25 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1169 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 61.9 MB.
+System memory in use after: 62.0 MB.
+
+Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 1647.
+Total: 1.927400 ms (FindLiveObjects: 0.155800 ms CreateObjectMapping: 0.042700 ms MarkObjects: 1.712700 ms  DeleteObjects: 0.014900 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002678 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image D:\Unity\Projects\Thesis Gig\a-gig\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
+Native extension for LinuxStandalone target not found
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.26 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.024 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.32 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1169 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 62.0 MB.
+System memory in use after: 62.1 MB.
+
+Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 1649.
+Total: 1.812300 ms (FindLiveObjects: 0.181700 ms CreateObjectMapping: 0.048900 ms MarkObjects: 1.563400 ms  DeleteObjects: 0.016100 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001407 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image D:\Unity\Projects\Thesis Gig\a-gig\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
+Native extension for LinuxStandalone target not found
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.34 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.917 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.28 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1169 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 62.2 MB.
+System memory in use after: 62.3 MB.
+
+Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 1651.
+Total: 2.167000 ms (FindLiveObjects: 0.165800 ms CreateObjectMapping: 0.067700 ms MarkObjects: 1.916300 ms  DeleteObjects: 0.016300 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001575 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image D:\Unity\Projects\Thesis Gig\a-gig\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
+Native extension for LinuxStandalone target not found
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.23 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.824 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.23 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1169 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 62.3 MB.
+System memory in use after: 62.4 MB.
+
+Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 1653.
+Total: 2.209300 ms (FindLiveObjects: 0.323700 ms CreateObjectMapping: 0.090200 ms MarkObjects: 1.779000 ms  DeleteObjects: 0.015300 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001343 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image D:\Unity\Projects\Thesis Gig\a-gig\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
+Native extension for LinuxStandalone target not found
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.23 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.820 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.23 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1169 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 62.4 MB.
+System memory in use after: 62.5 MB.
+
+Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 1655.
+Total: 2.320300 ms (FindLiveObjects: 0.175300 ms CreateObjectMapping: 0.047900 ms MarkObjects: 2.040200 ms  DeleteObjects: 0.055900 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 1459.741293 seconds.
+  path: Assets/ProgressionVector 1.dll
+  artifactKey: Guid(062a4fa129cfb2a49bdbfaddc1dec23d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ProgressionVector 1.dll using Guid(062a4fa129cfb2a49bdbfaddc1dec23d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1f6f31714a4302d9998dade48ccd3b9a') in 0.015796 seconds
+  Import took 0.018239 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.975526 seconds.
+  path: Assets/ProgressionVector 1.dll
+  artifactKey: Guid(062a4fa129cfb2a49bdbfaddc1dec23d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ProgressionVector 1.dll using Guid(062a4fa129cfb2a49bdbfaddc1dec23d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1f6f31714a4302d9998dade48ccd3b9a') in 0.002759 seconds
+  Import took 0.005622 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.668971 seconds.
+  path: Assets/ProgressionVector.dll
+  artifactKey: Guid(dbca1fbb9702d5742ad8d6d8e505b246) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ProgressionVector.dll using Guid(dbca1fbb9702d5742ad8d6d8e505b246) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e719d6f2da684a5ef632294dd74ccfda') in 0.008205 seconds
+  Import took 0.010344 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001618 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image D:\Unity\Projects\Thesis Gig\a-gig\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
+Native extension for LinuxStandalone target not found
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.45 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.883 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.22 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1168 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 62.5 MB.
+System memory in use after: 62.6 MB.
+
+Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 1657.
+Total: 1.782600 ms (FindLiveObjects: 0.136800 ms CreateObjectMapping: 0.039000 ms MarkObjects: 1.589800 ms  DeleteObjects: 0.015600 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 38.944104 seconds.
+  path: Assets/ProgressionVector.dll
+  artifactKey: Guid(062a4fa129cfb2a49bdbfaddc1dec23d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ProgressionVector.dll using Guid(062a4fa129cfb2a49bdbfaddc1dec23d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f447cc5209f5af4ac05758b29597b4f5') in 0.014021 seconds
+  Import took 0.017384 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001583 seconds.
 Begin MonoManager ReloadAssembly
 Symbol file LoadedFromMemory doesn't match image D:\Unity\Projects\Thesis Gig\a-gig\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
 Native extension for LinuxStandalone target not found
@@ -257,48 +532,282 @@ Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.830 seconds
+- Completed reload, in  0.936 seconds
 Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.23 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 0.34 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 1168 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 61.4 MB.
-System memory in use after: 61.5 MB.
+System memory in use before: 61.7 MB.
+System memory in use after: 61.8 MB.
 
-Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 1640.
-Total: 2.132600 ms (FindLiveObjects: 0.173800 ms CreateObjectMapping: 0.044300 ms MarkObjects: 1.873700 ms  DeleteObjects: 0.039300 ms)
+Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 1659.
+Total: 1.962800 ms (FindLiveObjects: 0.152900 ms CreateObjectMapping: 0.042500 ms MarkObjects: 1.749700 ms  DeleteObjects: 0.016900 ms)
 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.002104 seconds.
+Registered in 0.001267 seconds.
 Begin MonoManager ReloadAssembly
 Symbol file LoadedFromMemory doesn't match image D:\Unity\Projects\Thesis Gig\a-gig\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
 Native extension for LinuxStandalone target not found
 Native extension for WindowsStandalone target not found
 Native extension for OSXStandalone target not found
 Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 0.27 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 0.24 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+Temp/RoslynAnalysisRunner has been deleted.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.945 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.25 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1168 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 61.8 MB.
+System memory in use after: 61.9 MB.
+
+Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 1661.
+Total: 1.566100 ms (FindLiveObjects: 0.131100 ms CreateObjectMapping: 0.040300 ms MarkObjects: 1.360600 ms  DeleteObjects: 0.033100 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001533 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image D:\Unity\Projects\Thesis Gig\a-gig\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
+Native extension for LinuxStandalone target not found
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.28 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.029 seconds
+- Completed reload, in  1.022 seconds
 Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.29 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 0.36 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 1168 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 61.5 MB.
-System memory in use after: 61.6 MB.
+System memory in use before: 62.0 MB.
+System memory in use after: 62.1 MB.
 
-Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 1642.
-Total: 1.984600 ms (FindLiveObjects: 0.162300 ms CreateObjectMapping: 0.048000 ms MarkObjects: 1.757100 ms  DeleteObjects: 0.015600 ms)
+Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 1663.
+Total: 2.312500 ms (FindLiveObjects: 0.152500 ms CreateObjectMapping: 0.044000 ms MarkObjects: 2.098700 ms  DeleteObjects: 0.016100 ms)
 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.001978 seconds.
+Registered in 0.001023 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image D:\Unity\Projects\Thesis Gig\a-gig\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
+Native extension for LinuxStandalone target not found
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.26 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+Temp/RoslynAnalysisRunner has been deleted.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.096 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.22 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1168 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 62.1 MB.
+System memory in use after: 62.2 MB.
+
+Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 1665.
+Total: 2.127700 ms (FindLiveObjects: 0.178300 ms CreateObjectMapping: 0.067300 ms MarkObjects: 1.846000 ms  DeleteObjects: 0.035100 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001130 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image D:\Unity\Projects\Thesis Gig\a-gig\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
+Native extension for LinuxStandalone target not found
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.22 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.886 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.22 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1168 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 62.3 MB.
+System memory in use after: 62.4 MB.
+
+Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 1667.
+Total: 2.282000 ms (FindLiveObjects: 0.265800 ms CreateObjectMapping: 0.070300 ms MarkObjects: 1.908400 ms  DeleteObjects: 0.036400 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001487 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image D:\Unity\Projects\Thesis Gig\a-gig\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
+Native extension for LinuxStandalone target not found
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.25 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.805 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.22 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1168 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 62.4 MB.
+System memory in use after: 62.5 MB.
+
+Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 1669.
+Total: 2.072800 ms (FindLiveObjects: 0.258400 ms CreateObjectMapping: 0.137700 ms MarkObjects: 1.659600 ms  DeleteObjects: 0.015600 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001075 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image D:\Unity\Projects\Thesis Gig\a-gig\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
+Native extension for LinuxStandalone target not found
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.28 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.867 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.24 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1168 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 62.5 MB.
+System memory in use after: 62.6 MB.
+
+Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 1671.
+Total: 2.009200 ms (FindLiveObjects: 0.161400 ms CreateObjectMapping: 0.040300 ms MarkObjects: 1.773700 ms  DeleteObjects: 0.032900 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001063 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image D:\Unity\Projects\Thesis Gig\a-gig\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
+Native extension for LinuxStandalone target not found
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.23 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.896 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.22 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1168 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 61.7 MB.
+System memory in use after: 61.8 MB.
+
+Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 1673.
+Total: 1.907000 ms (FindLiveObjects: 0.208200 ms CreateObjectMapping: 0.051900 ms MarkObjects: 1.613500 ms  DeleteObjects: 0.032400 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001173 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image D:\Unity\Projects\Thesis Gig\a-gig\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
+Native extension for LinuxStandalone target not found
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.30 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.799 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.23 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1168 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 61.8 MB.
+System memory in use after: 61.9 MB.
+
+Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 1675.
+Total: 1.966800 ms (FindLiveObjects: 0.145700 ms CreateObjectMapping: 0.034700 ms MarkObjects: 1.735700 ms  DeleteObjects: 0.049900 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001070 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image D:\Unity\Projects\Thesis Gig\a-gig\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
+Native extension for LinuxStandalone target not found
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.26 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.844 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.24 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1168 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 62.0 MB.
+System memory in use after: 62.1 MB.
+
+Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 1677.
+Total: 2.253000 ms (FindLiveObjects: 0.170100 ms CreateObjectMapping: 0.039300 ms MarkObjects: 2.026800 ms  DeleteObjects: 0.015900 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 2006.898256 seconds.
+  path: Assets/Scripts/MainQuestScripts/Connection.cs
+  artifactKey: Guid(805af6bb76dd76a4d8c143584946d481) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/MainQuestScripts/Connection.cs using Guid(805af6bb76dd76a4d8c143584946d481) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8243bbdbb603cb38838f9ab23b291366') in 0.010999 seconds
+  Import took 0.013592 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.024991 seconds.
+  path: Assets/Scripts/MainQuestScripts/Connection.cs
+  artifactKey: Guid(805af6bb76dd76a4d8c143584946d481) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/MainQuestScripts/Connection.cs using Guid(805af6bb76dd76a4d8c143584946d481) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8243bbdbb603cb38838f9ab23b291366') in 0.002903 seconds
+  Import took 0.006212 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.000968 seconds.
 Begin MonoManager ReloadAssembly
 Symbol file LoadedFromMemory doesn't match image D:\Unity\Projects\Thesis Gig\a-gig\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
 Native extension for LinuxStandalone target not found
@@ -311,21 +820,239 @@ Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.995 seconds
+- Completed reload, in  0.832 seconds
 Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.38 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 0.23 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 1168 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 61.7 MB.
-System memory in use after: 61.8 MB.
+System memory in use before: 62.1 MB.
+System memory in use after: 62.2 MB.
 
-Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 1644.
-Total: 2.159000 ms (FindLiveObjects: 0.229400 ms CreateObjectMapping: 0.057900 ms MarkObjects: 1.854700 ms  DeleteObjects: 0.015500 ms)
+Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 1679.
+Total: 1.611500 ms (FindLiveObjects: 0.146500 ms CreateObjectMapping: 0.039400 ms MarkObjects: 1.405900 ms  DeleteObjects: 0.018400 ms)
 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.001487 seconds.
+Registered in 0.001682 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image D:\Unity\Projects\Thesis Gig\a-gig\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
+Native extension for LinuxStandalone target not found
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.33 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.009 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.36 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1168 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 62.3 MB.
+System memory in use after: 62.4 MB.
+
+Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 1681.
+Total: 1.908800 ms (FindLiveObjects: 0.157400 ms CreateObjectMapping: 0.094600 ms MarkObjects: 1.641200 ms  DeleteObjects: 0.014500 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 1494.680229 seconds.
+  path: Assets/Prefabs/Main Camera.prefab
+  artifactKey: Guid(43b09a35e52b7ac47b59aa4bde4a0969) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Main Camera.prefab using Guid(43b09a35e52b7ac47b59aa4bde4a0969) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'afd5e734f9dd0b9b1a0c7c4208099ea2') in 0.035105 seconds
+  Import took 0.037787 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000298 seconds.
+  path: Assets/Prefabs/Thread.prefab
+  artifactKey: Guid(f0cfaa0dac0cfee4d8c3f629408c4f3b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Thread.prefab using Guid(f0cfaa0dac0cfee4d8c3f629408c4f3b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd2c9f97eccfd3bab680e8bb716d97c22') in 0.009659 seconds
+  Import took 0.011804 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000239 seconds.
+  path: Assets/Prefabs/ThreadDescriptionText.prefab
+  artifactKey: Guid(752f80fec4f1fec4e9c66424eccbd36b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/ThreadDescriptionText.prefab using Guid(752f80fec4f1fec4e9c66424eccbd36b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '45541f208d3a34a2e880d7aa80cdaff5') in 0.054127 seconds
+  Import took 0.056402 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000273 seconds.
+  path: Assets/Prefabs/Pickupable.prefab
+  artifactKey: Guid(065de9503e6204e48bfe45feffd5faf0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Pickupable.prefab using Guid(065de9503e6204e48bfe45feffd5faf0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '58d0d769cea2c6eac4018daff411001b') in 0.008809 seconds
+  Import took 0.011626 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000263 seconds.
+  path: Assets/Prefabs/PolaroidPhoto.prefab
+  artifactKey: Guid(06066a810c9d11440b7352b770554084) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/PolaroidPhoto.prefab using Guid(06066a810c9d11440b7352b770554084) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4dd6d395eccac3547c946fe9187c55a3') in 0.023899 seconds
+  Import took 0.026462 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000289 seconds.
+  path: Assets/Prefabs/PressFToggle.prefab
+  artifactKey: Guid(b50d11d11161efd43ab191e6c2c23655) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/PressFToggle.prefab using Guid(b50d11d11161efd43ab191e6c2c23655) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '998546fc26110b73172e1a419e400b32') in 0.015615 seconds
+  Import took 0.017995 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000328 seconds.
+  path: Assets/Prefabs/POI.prefab
+  artifactKey: Guid(a16c06bf1e26059449ae0bb82aba0f8f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/POI.prefab using Guid(a16c06bf1e26059449ae0bb82aba0f8f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e4b3ed88fa3d475a2161852f47603a6e') in 0.009310 seconds
+  Import took 0.011851 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001459 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image D:\Unity\Projects\Thesis Gig\a-gig\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
+Native extension for LinuxStandalone target not found
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.22 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.822 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.23 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1168 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 62.4 MB.
+System memory in use after: 62.5 MB.
+
+Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 1683.
+Total: 1.807300 ms (FindLiveObjects: 0.141900 ms CreateObjectMapping: 0.036600 ms MarkObjects: 1.608200 ms  DeleteObjects: 0.019700 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001051 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image D:\Unity\Projects\Thesis Gig\a-gig\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
+Native extension for LinuxStandalone target not found
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.22 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.821 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.23 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1168 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 62.6 MB.
+System memory in use after: 62.7 MB.
+
+Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 1685.
+Total: 2.203200 ms (FindLiveObjects: 0.249300 ms CreateObjectMapping: 0.125100 ms MarkObjects: 1.810600 ms  DeleteObjects: 0.016600 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001118 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image D:\Unity\Projects\Thesis Gig\a-gig\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
+Native extension for LinuxStandalone target not found
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.23 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.843 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.46 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1168 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 62.6 MB.
+System memory in use after: 62.7 MB.
+
+Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 1687.
+Total: 2.366900 ms (FindLiveObjects: 0.226200 ms CreateObjectMapping: 0.068600 ms MarkObjects: 2.055100 ms  DeleteObjects: 0.015600 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001171 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image D:\Unity\Projects\Thesis Gig\a-gig\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
+Native extension for LinuxStandalone target not found
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.23 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.954 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.25 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1168 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 61.9 MB.
+System memory in use after: 62.0 MB.
+
+Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 1689.
+Total: 1.777700 ms (FindLiveObjects: 0.149300 ms CreateObjectMapping: 0.045500 ms MarkObjects: 1.566500 ms  DeleteObjects: 0.015000 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001055 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image D:\Unity\Projects\Thesis Gig\a-gig\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
+Native extension for LinuxStandalone target not found
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.35 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.814 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.23 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1168 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 62.0 MB.
+System memory in use after: 62.1 MB.
+
+Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 1691.
+Total: 1.813000 ms (FindLiveObjects: 0.228400 ms CreateObjectMapping: 0.059800 ms MarkObjects: 1.507000 ms  DeleteObjects: 0.016000 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001718 seconds.
 Begin MonoManager ReloadAssembly
 Symbol file LoadedFromMemory doesn't match image D:\Unity\Projects\Thesis Gig\a-gig\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
 Native extension for LinuxStandalone target not found
@@ -338,21 +1065,139 @@ Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.070 seconds
+- Completed reload, in  1.153 seconds
 Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.28 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 0.37 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 1168 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 61.8 MB.
-System memory in use after: 61.9 MB.
+System memory in use before: 62.1 MB.
+System memory in use after: 62.2 MB.
 
-Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 1646.
-Total: 2.498200 ms (FindLiveObjects: 0.168900 ms CreateObjectMapping: 0.055100 ms MarkObjects: 2.226200 ms  DeleteObjects: 0.046100 ms)
+Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 1693.
+Total: 2.658700 ms (FindLiveObjects: 0.386500 ms CreateObjectMapping: 0.109900 ms MarkObjects: 2.138500 ms  DeleteObjects: 0.021500 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 3289.085692 seconds.
+  path: Assets/Scripts/GameManager.cs
+  artifactKey: Guid(d25600a186b7d7548857f34724f40bdc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/GameManager.cs using Guid(d25600a186b7d7548857f34724f40bdc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '61d9956e48747d18351d0324fc55c7bb') in 0.011777 seconds
+  Import took 0.013904 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.407200 seconds.
+  path: Assets/Scripts/GameManager.cs
+  artifactKey: Guid(d25600a186b7d7548857f34724f40bdc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/GameManager.cs using Guid(d25600a186b7d7548857f34724f40bdc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '61d9956e48747d18351d0324fc55c7bb') in 0.003711 seconds
+  Import took 0.006356 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 21.493646 seconds.
+  path: Assets/Scripts/MainQuestScripts
+  artifactKey: Guid(827949246fa9dba49ad4b79c2d85db43) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/MainQuestScripts using Guid(827949246fa9dba49ad4b79c2d85db43) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b30d0dc0fc8440c86e2d83ce1a8a60a1') in 0.008165 seconds
+  Import took 0.011345 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 13.591676 seconds.
+  path: Assets/Scripts/MainQuestScripts/GlobalVersionControl.cs
+  artifactKey: Guid(c53d5a5352169e442b1a6dcc483c3d8e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/MainQuestScripts/GlobalVersionControl.cs using Guid(c53d5a5352169e442b1a6dcc483c3d8e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3ba7eadf25d73d598c57d50ced214423') in 0.009259 seconds
+  Import took 0.012517 seconds .
 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.001653 seconds.
+Registered in 0.001072 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image D:\Unity\Projects\Thesis Gig\a-gig\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
+Native extension for LinuxStandalone target not found
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.24 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.901 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.28 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1169 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 62.3 MB.
+System memory in use after: 62.4 MB.
+
+Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 1696.
+Total: 2.002800 ms (FindLiveObjects: 0.233500 ms CreateObjectMapping: 0.060100 ms MarkObjects: 1.692300 ms  DeleteObjects: 0.015700 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001499 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image D:\Unity\Projects\Thesis Gig\a-gig\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
+Native extension for LinuxStandalone target not found
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.27 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.853 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.22 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1169 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 62.4 MB.
+System memory in use after: 62.5 MB.
+
+Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 1698.
+Total: 1.845800 ms (FindLiveObjects: 0.148100 ms CreateObjectMapping: 0.043600 ms MarkObjects: 1.634300 ms  DeleteObjects: 0.018700 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 97.082056 seconds.
+  path: Assets/Scripts/MainQuestScripts/GlobalVersionControl.cs
+  artifactKey: Guid(c53d5a5352169e442b1a6dcc483c3d8e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/MainQuestScripts/GlobalVersionControl.cs using Guid(c53d5a5352169e442b1a6dcc483c3d8e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '70023ace5247f5bf2faa9db196af2a33') in 0.004382 seconds
+  Import took 0.006485 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 18.179665 seconds.
+  path: Assets/Scenes/MainMenu.unity
+  artifactKey: Guid(dacfdb4885a6eec4c821bbe5a2518ed0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/MainMenu.unity using Guid(dacfdb4885a6eec4c821bbe5a2518ed0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '893e9a0817716f36641bce87e8840cc8') in 0.016159 seconds
+  Import took 0.018864 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 8.942941 seconds.
+  path: Assets/Scenes/Game.unity
+  artifactKey: Guid(8229682bd64671c49af6844f504f1daf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Game.unity using Guid(8229682bd64671c49af6844f504f1daf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '598d517fc418c0425e1f285871246229') in 0.010078 seconds
+  Import took 0.013385 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 64.800501 seconds.
+  path: Assets/Scenes/MainMenu.unity
+  artifactKey: Guid(dacfdb4885a6eec4c821bbe5a2518ed0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/MainMenu.unity using Guid(dacfdb4885a6eec4c821bbe5a2518ed0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4f44db423d3bf681b13893080609750f') in 0.003307 seconds
+  Import took 0.006092 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001744 seconds.
 Begin MonoManager ReloadAssembly
 Symbol file LoadedFromMemory doesn't match image D:\Unity\Projects\Thesis Gig\a-gig\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
 Native extension for LinuxStandalone target not found
@@ -365,70 +1210,237 @@ Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.844 seconds
+- Completed reload, in  0.817 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.23 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1169 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 62.6 MB.
+System memory in use after: 62.7 MB.
+
+Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 1700.
+Total: 1.780400 ms (FindLiveObjects: 0.213200 ms CreateObjectMapping: 0.047700 ms MarkObjects: 1.501800 ms  DeleteObjects: 0.015700 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 482.925382 seconds.
+  path: Assets/Scenes/Game.unity
+  artifactKey: Guid(8229682bd64671c49af6844f504f1daf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Game.unity using Guid(8229682bd64671c49af6844f504f1daf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9fc0bc5d99c5c743e26528fd86d6d864') in 0.014774 seconds
+  Import took 0.016997 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 115.644944 seconds.
+  path: Assets/Scenes/Game.unity
+  artifactKey: Guid(8229682bd64671c49af6844f504f1daf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Game.unity using Guid(8229682bd64671c49af6844f504f1daf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f0cd96db02dbc08086704e025f657b2b') in 0.003338 seconds
+  Import took 0.099125 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001441 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image D:\Unity\Projects\Thesis Gig\a-gig\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
+Native extension for LinuxStandalone target not found
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.24 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.873 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.23 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1169 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 62.7 MB.
+System memory in use after: 62.8 MB.
+
+Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 1702.
+Total: 2.234300 ms (FindLiveObjects: 0.297000 ms CreateObjectMapping: 0.073200 ms MarkObjects: 1.846500 ms  DeleteObjects: 0.016400 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001135 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image D:\Unity\Projects\Thesis Gig\a-gig\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
+Native extension for LinuxStandalone target not found
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.32 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.801 seconds
 Platform modules already initialized, skipping
 Refreshing native plugins compatible for Editor in 0.24 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1168 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 62.0 MB.
+Unloading 1169 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 61.9 MB.
 System memory in use after: 62.0 MB.
 
-Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 1648.
-Total: 1.721200 ms (FindLiveObjects: 0.153000 ms CreateObjectMapping: 0.047800 ms MarkObjects: 1.502300 ms  DeleteObjects: 0.016900 ms)
+Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 1704.
+Total: 2.082000 ms (FindLiveObjects: 0.229300 ms CreateObjectMapping: 0.086400 ms MarkObjects: 1.713200 ms  DeleteObjects: 0.051900 ms)
 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.001651 seconds.
+Registered in 0.001433 seconds.
 Begin MonoManager ReloadAssembly
 Symbol file LoadedFromMemory doesn't match image D:\Unity\Projects\Thesis Gig\a-gig\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
 Native extension for LinuxStandalone target not found
 Native extension for WindowsStandalone target not found
 Native extension for OSXStandalone target not found
 Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 0.35 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 0.24 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.992 seconds
+- Completed reload, in  0.848 seconds
 Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.25 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 0.23 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1168 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 62.1 MB.
-System memory in use after: 62.2 MB.
+Unloading 1169 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 62.0 MB.
+System memory in use after: 62.1 MB.
 
-Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 1650.
-Total: 2.153700 ms (FindLiveObjects: 0.126000 ms CreateObjectMapping: 0.037500 ms MarkObjects: 1.973700 ms  DeleteObjects: 0.015100 ms)
+Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 1706.
+Total: 1.926300 ms (FindLiveObjects: 0.311300 ms CreateObjectMapping: 0.057100 ms MarkObjects: 1.520100 ms  DeleteObjects: 0.037000 ms)
 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.001365 seconds.
+Registered in 0.001229 seconds.
 Begin MonoManager ReloadAssembly
 Symbol file LoadedFromMemory doesn't match image D:\Unity\Projects\Thesis Gig\a-gig\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
 Native extension for LinuxStandalone target not found
 Native extension for WindowsStandalone target not found
 Native extension for OSXStandalone target not found
 Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 0.25 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 0.23 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.913 seconds
+- Completed reload, in  0.818 seconds
 Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.32 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 0.22 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1168 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 1169 Unused Serialized files (Serialized files now loaded: 0)
 System memory in use before: 62.2 MB.
 System memory in use after: 62.3 MB.
 
-Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 1652.
-Total: 2.173400 ms (FindLiveObjects: 0.134700 ms CreateObjectMapping: 0.040200 ms MarkObjects: 1.982200 ms  DeleteObjects: 0.015000 ms)
+Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 1708.
+Total: 1.935500 ms (FindLiveObjects: 0.136400 ms CreateObjectMapping: 0.040700 ms MarkObjects: 1.728700 ms  DeleteObjects: 0.028900 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 218.085900 seconds.
+  path: Assets/Scenes/MainMenu.unity
+  artifactKey: Guid(dacfdb4885a6eec4c821bbe5a2518ed0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/MainMenu.unity using Guid(dacfdb4885a6eec4c821bbe5a2518ed0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd788b77aa880b8cd44954b8ab07826c7') in 0.012791 seconds
+  Import took 0.015189 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001566 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image D:\Unity\Projects\Thesis Gig\a-gig\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
+Native extension for LinuxStandalone target not found
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.26 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.809 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.23 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1169 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 62.3 MB.
+System memory in use after: 62.4 MB.
+
+Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 1710.
+Total: 1.874400 ms (FindLiveObjects: 0.238500 ms CreateObjectMapping: 0.037400 ms MarkObjects: 1.583700 ms  DeleteObjects: 0.013700 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001084 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image D:\Unity\Projects\Thesis Gig\a-gig\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
+Native extension for LinuxStandalone target not found
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.23 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.822 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.23 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1169 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 62.5 MB.
+System memory in use after: 62.6 MB.
+
+Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 1712.
+Total: 1.882700 ms (FindLiveObjects: 0.204600 ms CreateObjectMapping: 0.069600 ms MarkObjects: 1.590200 ms  DeleteObjects: 0.016000 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 230.813941 seconds.
+  path: Assets/Scenes/MainMenu.unity
+  artifactKey: Guid(dacfdb4885a6eec4c821bbe5a2518ed0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/MainMenu.unity using Guid(dacfdb4885a6eec4c821bbe5a2518ed0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd90e46662e5df2701c90f13c52956e57') in 0.013057 seconds
+  Import took 0.015573 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001086 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image D:\Unity\Projects\Thesis Gig\a-gig\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
+Native extension for LinuxStandalone target not found
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.26 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.831 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.22 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1169 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 62.6 MB.
+System memory in use after: 62.7 MB.
+
+Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 1714.
+Total: 2.385300 ms (FindLiveObjects: 0.200700 ms CreateObjectMapping: 0.062200 ms MarkObjects: 2.078900 ms  DeleteObjects: 0.042400 ms)
 
 ========================================================================
 Received Prepare
@@ -440,7 +1452,290 @@ Native extension for LinuxStandalone target not found
 Native extension for WindowsStandalone target not found
 Native extension for OSXStandalone target not found
 Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 0.24 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 0.32 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.850 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.23 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1169 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 62.7 MB.
+System memory in use after: 62.8 MB.
+
+Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 1716.
+Total: 1.825400 ms (FindLiveObjects: 0.162300 ms CreateObjectMapping: 0.040400 ms MarkObjects: 1.606000 ms  DeleteObjects: 0.015800 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 149.122780 seconds.
+  path: Assets/Scenes/MainMenu.unity
+  artifactKey: Guid(dacfdb4885a6eec4c821bbe5a2518ed0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/MainMenu.unity using Guid(dacfdb4885a6eec4c821bbe5a2518ed0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '999d76eb9f4827550774128201c11f9a') in 0.012681 seconds
+  Import took 0.015105 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001143 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image D:\Unity\Projects\Thesis Gig\a-gig\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
+Native extension for LinuxStandalone target not found
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.26 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.847 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.36 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1169 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 61.9 MB.
+System memory in use after: 62.0 MB.
+
+Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 1718.
+Total: 2.315000 ms (FindLiveObjects: 0.308900 ms CreateObjectMapping: 0.097300 ms MarkObjects: 1.864800 ms  DeleteObjects: 0.042900 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001042 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image D:\Unity\Projects\Thesis Gig\a-gig\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
+Native extension for LinuxStandalone target not found
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.26 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.822 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.23 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1169 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 62.1 MB.
+System memory in use after: 62.1 MB.
+
+Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 1720.
+Total: 1.965400 ms (FindLiveObjects: 0.160800 ms CreateObjectMapping: 0.049000 ms MarkObjects: 1.720400 ms  DeleteObjects: 0.034000 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001176 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image D:\Unity\Projects\Thesis Gig\a-gig\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
+Native extension for LinuxStandalone target not found
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.31 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.827 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.23 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1169 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 62.2 MB.
+System memory in use after: 62.3 MB.
+
+Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 1722.
+Total: 1.941000 ms (FindLiveObjects: 0.279700 ms CreateObjectMapping: 0.047100 ms MarkObjects: 1.596800 ms  DeleteObjects: 0.015900 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 304.676206 seconds.
+  path: Assets/Scenes/MainMenu.unity
+  artifactKey: Guid(dacfdb4885a6eec4c821bbe5a2518ed0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/MainMenu.unity using Guid(dacfdb4885a6eec4c821bbe5a2518ed0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9c9b405064ccbb6630ea39c236401b47') in 0.014793 seconds
+  Import took 0.017313 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001074 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image D:\Unity\Projects\Thesis Gig\a-gig\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
+Native extension for LinuxStandalone target not found
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.22 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.811 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.23 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1169 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 62.3 MB.
+System memory in use after: 62.4 MB.
+
+Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 1724.
+Total: 1.868900 ms (FindLiveObjects: 0.179000 ms CreateObjectMapping: 0.035400 ms MarkObjects: 1.632800 ms  DeleteObjects: 0.020900 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001629 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image D:\Unity\Projects\Thesis Gig\a-gig\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
+Native extension for LinuxStandalone target not found
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.25 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.798 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.23 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1169 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 62.5 MB.
+System memory in use after: 62.6 MB.
+
+Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 1726.
+Total: 1.882300 ms (FindLiveObjects: 0.192700 ms CreateObjectMapping: 0.037700 ms MarkObjects: 1.636600 ms  DeleteObjects: 0.014500 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001754 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image D:\Unity\Projects\Thesis Gig\a-gig\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
+Native extension for LinuxStandalone target not found
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.22 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.773 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.23 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1169 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 62.6 MB.
+System memory in use after: 62.7 MB.
+
+Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 1728.
+Total: 2.014500 ms (FindLiveObjects: 0.403200 ms CreateObjectMapping: 0.047000 ms MarkObjects: 1.547600 ms  DeleteObjects: 0.015400 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001442 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image D:\Unity\Projects\Thesis Gig\a-gig\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
+Native extension for LinuxStandalone target not found
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.22 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.807 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.22 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1169 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 62.8 MB.
+System memory in use after: 62.9 MB.
+
+Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 1730.
+Total: 1.821600 ms (FindLiveObjects: 0.140800 ms CreateObjectMapping: 0.044100 ms MarkObjects: 1.618800 ms  DeleteObjects: 0.016600 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 843.872806 seconds.
+  path: Assets/Scripts/MainQuestScripts/DataEvidence.json
+  artifactKey: Guid(24a4b471b7675664d9427ca75258109b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/MainQuestScripts/DataEvidence.json using Guid(24a4b471b7675664d9427ca75258109b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c4666b9dec65b604f4520a61589b3f5c') in 0.017891 seconds
+  Import took 0.020599 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.019468 seconds.
+  path: Assets/Scripts/MainQuestScripts/DataEvidence.json
+  artifactKey: Guid(24a4b471b7675664d9427ca75258109b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/MainQuestScripts/DataEvidence.json using Guid(24a4b471b7675664d9427ca75258109b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c4666b9dec65b604f4520a61589b3f5c') in 0.003178 seconds
+  Import took 0.006310 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 106.767788 seconds.
+  path: Assets/Scenes/MainMenu.unity
+  artifactKey: Guid(dacfdb4885a6eec4c821bbe5a2518ed0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/MainMenu.unity using Guid(dacfdb4885a6eec4c821bbe5a2518ed0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e3de01929174fd97c3de45bce54cbd9a') in 0.003853 seconds
+  Import took 0.006449 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001218 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image D:\Unity\Projects\Thesis Gig\a-gig\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
+Native extension for LinuxStandalone target not found
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.23 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.821 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.22 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1169 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 62.9 MB.
+System memory in use after: 63.0 MB.
+
+Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 1732.
+Total: 2.228300 ms (FindLiveObjects: 0.245000 ms CreateObjectMapping: 0.093200 ms MarkObjects: 1.839600 ms  DeleteObjects: 0.049700 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001122 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image D:\Unity\Projects\Thesis Gig\a-gig\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
+Native extension for LinuxStandalone target not found
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.25 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
@@ -448,19 +1743,278 @@ RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
 - Completed reload, in  0.828 seconds
 Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.23 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 0.22 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1168 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 62.4 MB.
-System memory in use after: 62.5 MB.
+Unloading 1169 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 62.1 MB.
+System memory in use after: 62.2 MB.
 
-Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 1654.
-Total: 2.857200 ms (FindLiveObjects: 0.289600 ms CreateObjectMapping: 0.112000 ms MarkObjects: 2.417100 ms  DeleteObjects: 0.036400 ms)
+Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 1734.
+Total: 1.929900 ms (FindLiveObjects: 0.154900 ms CreateObjectMapping: 0.043000 ms MarkObjects: 1.714700 ms  DeleteObjects: 0.016000 ms)
 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.001283 seconds.
+Registered in 0.001265 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image D:\Unity\Projects\Thesis Gig\a-gig\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
+Native extension for LinuxStandalone target not found
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.30 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.860 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.23 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1169 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 62.2 MB.
+System memory in use after: 62.3 MB.
+
+Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 1736.
+Total: 2.001200 ms (FindLiveObjects: 0.149400 ms CreateObjectMapping: 0.038700 ms MarkObjects: 1.792800 ms  DeleteObjects: 0.019100 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001502 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image D:\Unity\Projects\Thesis Gig\a-gig\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
+Native extension for LinuxStandalone target not found
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.27 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.821 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.25 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1169 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 62.3 MB.
+System memory in use after: 62.4 MB.
+
+Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 1738.
+Total: 2.054900 ms (FindLiveObjects: 0.277300 ms CreateObjectMapping: 0.049000 ms MarkObjects: 1.711500 ms  DeleteObjects: 0.016400 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 13844.952903 seconds.
+  path: Assets/Scripts/MainQuestScripts/GlobalVersionControl.cs
+  artifactKey: Guid(c53d5a5352169e442b1a6dcc483c3d8e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/MainQuestScripts/GlobalVersionControl.cs using Guid(c53d5a5352169e442b1a6dcc483c3d8e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd5e94910f3ef2b4693053f387e083210') in 0.009047 seconds
+  Import took 0.011275 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 8.716360 seconds.
+  path: Assets/Scenes/Epilogue.unity
+  artifactKey: Guid(e283846c4f0a3f24ab61b2b6fa698dec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Epilogue.unity using Guid(e283846c4f0a3f24ab61b2b6fa698dec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '180b67cfb04802c319ae47f8f361cf9a') in 0.015530 seconds
+  Import took 0.017911 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001062 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image D:\Unity\Projects\Thesis Gig\a-gig\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
+Native extension for LinuxStandalone target not found
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.41 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.905 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.22 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1169 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 62.5 MB.
+System memory in use after: 62.6 MB.
+
+Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 1740.
+Total: 1.901400 ms (FindLiveObjects: 0.150400 ms CreateObjectMapping: 0.042300 ms MarkObjects: 1.691300 ms  DeleteObjects: 0.016200 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001192 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image D:\Unity\Projects\Thesis Gig\a-gig\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
+Native extension for LinuxStandalone target not found
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.22 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.795 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.23 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1169 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 62.6 MB.
+System memory in use after: 62.7 MB.
+
+Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 1742.
+Total: 1.812800 ms (FindLiveObjects: 0.170400 ms CreateObjectMapping: 0.061700 ms MarkObjects: 1.562700 ms  DeleteObjects: 0.016600 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001378 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image D:\Unity\Projects\Thesis Gig\a-gig\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
+Native extension for LinuxStandalone target not found
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.31 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.102 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.36 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1169 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 62.8 MB.
+System memory in use after: 62.9 MB.
+
+Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 1744.
+Total: 2.406800 ms (FindLiveObjects: 0.234000 ms CreateObjectMapping: 0.061100 ms MarkObjects: 2.064600 ms  DeleteObjects: 0.045500 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001278 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image D:\Unity\Projects\Thesis Gig\a-gig\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
+Native extension for LinuxStandalone target not found
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.31 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.858 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.23 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1169 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 62.8 MB.
+System memory in use after: 62.9 MB.
+
+Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 1746.
+Total: 2.034100 ms (FindLiveObjects: 0.156300 ms CreateObjectMapping: 0.045900 ms MarkObjects: 1.811200 ms  DeleteObjects: 0.019700 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001608 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image D:\Unity\Projects\Thesis Gig\a-gig\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
+Native extension for LinuxStandalone target not found
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.23 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.946 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.24 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1169 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 62.1 MB.
+System memory in use after: 62.2 MB.
+
+Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 1748.
+Total: 1.993000 ms (FindLiveObjects: 0.226700 ms CreateObjectMapping: 0.118900 ms MarkObjects: 1.629600 ms  DeleteObjects: 0.016400 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001087 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image D:\Unity\Projects\Thesis Gig\a-gig\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
+Native extension for LinuxStandalone target not found
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.22 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.830 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.23 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1169 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 62.2 MB.
+System memory in use after: 62.3 MB.
+
+Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 1750.
+Total: 2.181500 ms (FindLiveObjects: 0.355200 ms CreateObjectMapping: 0.082000 ms MarkObjects: 1.729100 ms  DeleteObjects: 0.013900 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001517 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image D:\Unity\Projects\Thesis Gig\a-gig\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
+Native extension for LinuxStandalone target not found
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.43 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.898 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.29 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1169 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 62.3 MB.
+System memory in use after: 62.4 MB.
+
+Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 1752.
+Total: 2.216700 ms (FindLiveObjects: 0.284700 ms CreateObjectMapping: 0.076000 ms MarkObjects: 1.834400 ms  DeleteObjects: 0.020000 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001528 seconds.
 Begin MonoManager ReloadAssembly
 Symbol file LoadedFromMemory doesn't match image D:\Unity\Projects\Thesis Gig\a-gig\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
 Native extension for LinuxStandalone target not found
@@ -473,21 +2027,215 @@ Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.822 seconds
+- Completed reload, in  1.188 seconds
 Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.26 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 0.27 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1168 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 1169 Unused Serialized files (Serialized files now loaded: 0)
 System memory in use before: 62.5 MB.
 System memory in use after: 62.6 MB.
 
-Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 1656.
-Total: 2.451000 ms (FindLiveObjects: 0.299700 ms CreateObjectMapping: 0.130100 ms MarkObjects: 2.002000 ms  DeleteObjects: 0.017500 ms)
+Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 1754.
+Total: 2.741300 ms (FindLiveObjects: 0.204500 ms CreateObjectMapping: 0.049500 ms MarkObjects: 2.466000 ms  DeleteObjects: 0.019700 ms)
 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.001520 seconds.
+Registered in 0.001561 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image D:\Unity\Projects\Thesis Gig\a-gig\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
+Native extension for LinuxStandalone target not found
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.43 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.819 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.26 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1169 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 62.7 MB.
+System memory in use after: 62.8 MB.
+
+Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 1756.
+Total: 1.927300 ms (FindLiveObjects: 0.175800 ms CreateObjectMapping: 0.050700 ms MarkObjects: 1.683900 ms  DeleteObjects: 0.015900 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001091 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image D:\Unity\Projects\Thesis Gig\a-gig\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
+Native extension for LinuxStandalone target not found
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.23 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.904 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.26 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1169 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 62.9 MB.
+System memory in use after: 63.0 MB.
+
+Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 1758.
+Total: 1.926700 ms (FindLiveObjects: 0.202200 ms CreateObjectMapping: 0.040200 ms MarkObjects: 1.653600 ms  DeleteObjects: 0.029600 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001484 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image D:\Unity\Projects\Thesis Gig\a-gig\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
+Native extension for LinuxStandalone target not found
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.35 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.064 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.27 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1169 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 63.0 MB.
+System memory in use after: 63.1 MB.
+
+Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 1760.
+Total: 2.500500 ms (FindLiveObjects: 0.281500 ms CreateObjectMapping: 0.111800 ms MarkObjects: 2.088800 ms  DeleteObjects: 0.016600 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001086 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image D:\Unity\Projects\Thesis Gig\a-gig\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
+Native extension for LinuxStandalone target not found
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.24 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.837 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.30 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1169 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 62.2 MB.
+System memory in use after: 62.2 MB.
+
+Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 1762.
+Total: 2.291200 ms (FindLiveObjects: 0.233500 ms CreateObjectMapping: 0.077300 ms MarkObjects: 1.912800 ms  DeleteObjects: 0.065900 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001364 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image D:\Unity\Projects\Thesis Gig\a-gig\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
+Native extension for LinuxStandalone target not found
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.24 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.037 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.33 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1169 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 62.3 MB.
+System memory in use after: 62.4 MB.
+
+Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 1764.
+Total: 2.592800 ms (FindLiveObjects: 0.303200 ms CreateObjectMapping: 0.107900 ms MarkObjects: 2.158400 ms  DeleteObjects: 0.021600 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 3851.221325 seconds.
+  path: Assets/ProgressionVector.dll
+  artifactKey: Guid(062a4fa129cfb2a49bdbfaddc1dec23d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ProgressionVector.dll using Guid(062a4fa129cfb2a49bdbfaddc1dec23d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7f748e544736e66be6587b0b3d279d70') in 0.010879 seconds
+  Import took 0.013747 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.710482 seconds.
+  path: Assets/ProgressionVector.dll
+  artifactKey: Guid(062a4fa129cfb2a49bdbfaddc1dec23d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ProgressionVector.dll using Guid(062a4fa129cfb2a49bdbfaddc1dec23d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7f748e544736e66be6587b0b3d279d70') in 0.002526 seconds
+  Import took 0.005335 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 23.753506 seconds.
+  path: Assets/ProgressionVector.dll
+  artifactKey: Guid(062a4fa129cfb2a49bdbfaddc1dec23d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ProgressionVector.dll using Guid(062a4fa129cfb2a49bdbfaddc1dec23d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1d09df7dd4496619868f44576bf0371d') in 0.004749 seconds
+  Import took 0.008038 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.916151 seconds.
+  path: Assets/ProgressionVector 1.dll
+  artifactKey: Guid(0da292468d464ac4d9ab8b371014e257) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ProgressionVector 1.dll using Guid(0da292468d464ac4d9ab8b371014e257) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '81623d4dea3737147c6bf596e037b513') in 0.015605 seconds
+  Import took 1.399979 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001161 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image D:\Unity\Projects\Thesis Gig\a-gig\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
+Native extension for LinuxStandalone target not found
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.44 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.906 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.27 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1169 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 62.4 MB.
+System memory in use after: 62.5 MB.
+
+Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 1766.
+Total: 2.638400 ms (FindLiveObjects: 0.307900 ms CreateObjectMapping: 0.105200 ms MarkObjects: 2.203800 ms  DeleteObjects: 0.020100 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001192 seconds.
 Begin MonoManager ReloadAssembly
 Symbol file LoadedFromMemory doesn't match image D:\Unity\Projects\Thesis Gig\a-gig\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
 Native extension for LinuxStandalone target not found
@@ -500,926 +2248,15 @@ Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.065 seconds
+- Completed reload, in  0.888 seconds
 Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.42 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1168 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 61.6 MB.
-System memory in use after: 61.7 MB.
-
-Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 1658.
-Total: 2.041500 ms (FindLiveObjects: 0.209700 ms CreateObjectMapping: 0.050000 ms MarkObjects: 1.763300 ms  DeleteObjects: 0.017000 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.001314 seconds.
-Begin MonoManager ReloadAssembly
-Symbol file LoadedFromMemory doesn't match image D:\Unity\Projects\Thesis Gig\a-gig\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
-Native extension for LinuxStandalone target not found
-Native extension for WindowsStandalone target not found
-Native extension for OSXStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 0.24 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.996 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.38 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1168 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 61.8 MB.
-System memory in use after: 61.9 MB.
-
-Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 1660.
-Total: 2.320700 ms (FindLiveObjects: 0.231300 ms CreateObjectMapping: 0.124800 ms MarkObjects: 1.948700 ms  DeleteObjects: 0.014500 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 8914.493158 seconds.
-  path: Assets/Images/EvidenceSprites
-  artifactKey: Guid(3496a5586d1859442bdace6578e52aca) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Images/EvidenceSprites using Guid(3496a5586d1859442bdace6578e52aca) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5655fe098d6ea3051abc9aa01748baee') in 0.013096 seconds
-  Import took 0.016123 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 31.543889 seconds.
-  path: Assets/Images/EvidenceSprites/BulletInTheBody.png
-  artifactKey: Guid(a3eb210d08dc7ed40b5ecb794f65f122) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Images/EvidenceSprites/BulletInTheBody.png using Guid(a3eb210d08dc7ed40b5ecb794f65f122) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '14b0cc6b011b6b16a182df42ee384d3d') in 0.381977 seconds
-  Import took 0.385011 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000311 seconds.
-  path: Assets/Images/EvidenceSprites/GunInABox.png
-  artifactKey: Guid(da56f73e556f29f418aad3522038ebe6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Images/EvidenceSprites/GunInABox.png using Guid(da56f73e556f29f418aad3522038ebe6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '44b638c34b91bc8a6b640820c9e183a5') in 0.046138 seconds
-  Import took 0.048625 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000313 seconds.
-  path: Assets/Images/EvidenceSprites/Dummy.png
-  artifactKey: Guid(147e08d6095a7ff408568749dbd15bc6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Images/EvidenceSprites/Dummy.png using Guid(147e08d6095a7ff408568749dbd15bc6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0997f5aac09176d72337f0bd243a96f8') in 0.081086 seconds
-  Import took 0.083077 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000399 seconds.
-  path: Assets/Images/EvidenceSprites/UnfinishedLetter.png
-  artifactKey: Guid(aa82a4ee575c0b842b7c9a1466636b79) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Images/EvidenceSprites/UnfinishedLetter.png using Guid(aa82a4ee575c0b842b7c9a1466636b79) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8798505c6f94aedbfb2e8da9ac3fb85a') in 0.022954 seconds
-  Import took 0.025073 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000364 seconds.
-  path: Assets/Images/EvidenceSprites/LockedBoxWithGun.png
-  artifactKey: Guid(a9a732b6748050f4fbd9466aa53302ef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Images/EvidenceSprites/LockedBoxWithGun.png using Guid(a9a732b6748050f4fbd9466aa53302ef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0eccd02649bbdbd61a2d3402c75b6ea2') in 0.024918 seconds
-  Import took 0.027880 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000351 seconds.
-  path: Assets/Images/EvidenceSprites/FloorMop.png
-  artifactKey: Guid(16cfa5b8a3e627740bb62a684b2032bd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Images/EvidenceSprites/FloorMop.png using Guid(16cfa5b8a3e627740bb62a684b2032bd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '43af4c567df33e1946dd69c6dd21f221') in 0.053425 seconds
-  Import took 0.055528 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000249 seconds.
-  path: Assets/Images/EvidenceSprites/Knife.png
-  artifactKey: Guid(0f31aaa997b9e71408f7d8f27c69284a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Images/EvidenceSprites/Knife.png using Guid(0f31aaa997b9e71408f7d8f27c69284a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'df4a60c17be506b4f17200c644fdf247') in 0.031274 seconds
-  Import took 0.033453 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000271 seconds.
-  path: Assets/Images/EvidenceSprites/PolaroidFrame.png
-  artifactKey: Guid(10ad383c7769914408c044ea304975c7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Images/EvidenceSprites/PolaroidFrame.png using Guid(10ad383c7769914408c044ea304975c7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c8355356c6e10983ebfe3b9d172f92bc') in 0.041415 seconds
-  Import took 0.043433 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000281 seconds.
-  path: Assets/Images/EvidenceSprites/CleanFloor.png
-  artifactKey: Guid(4bf9bad4c8c0e26418897c7ed3be7996) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Images/EvidenceSprites/CleanFloor.png using Guid(4bf9bad4c8c0e26418897c7ed3be7996) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'db2dc6fb3292161a48a8184c063f6929') in 0.020067 seconds
-  Import took 0.022158 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000297 seconds.
-  path: Assets/Images/EvidenceSprites/HalfBurntCigarette.png
-  artifactKey: Guid(d1ab57b71b98e324ab6b81f16f44ae6b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Images/EvidenceSprites/HalfBurntCigarette.png using Guid(d1ab57b71b98e324ab6b81f16f44ae6b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '68c7322a66ccbfccd0c8f4ba7c222838') in 0.041978 seconds
-  Import took 0.044293 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000278 seconds.
-  path: Assets/Images/EvidenceSprites/OpenWindow.png
-  artifactKey: Guid(1712d5d573b821649a060823ea136bb6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Images/EvidenceSprites/OpenWindow.png using Guid(1712d5d573b821649a060823ea136bb6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cf33e2668238c60bd729c071fdb70376') in 0.038437 seconds
-  Import took 0.040664 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000287 seconds.
-  path: Assets/Images/EvidenceSprites/FrankJournal.png
-  artifactKey: Guid(057b51b71aa723f41af810422c4165ef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Images/EvidenceSprites/FrankJournal.png using Guid(057b51b71aa723f41af810422c4165ef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '366e4de584c45d61eb95b73a5fa5b7ba') in 0.033618 seconds
-  Import took 0.035673 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000400 seconds.
-  path: Assets/Images/EvidenceSprites/p44Magnum.png
-  artifactKey: Guid(2a215dcecb201814582ffd8ca6d889fd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Images/EvidenceSprites/p44Magnum.png using Guid(2a215dcecb201814582ffd8ca6d889fd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3b1e73e58bcd0267a42def9b192c5c3f') in 0.029023 seconds
-  Import took 0.031089 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000556 seconds.
-  path: Assets/Images/EvidenceSprites/PackOfCigarettes.png
-  artifactKey: Guid(dbcb491d4c043594b8714a27ca5bb86e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Images/EvidenceSprites/PackOfCigarettes.png using Guid(dbcb491d4c043594b8714a27ca5bb86e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '518ddd3b6b746f3a089799cbb240fc3e') in 0.029249 seconds
-  Import took 0.031663 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000287 seconds.
-  path: Assets/Images/EvidenceSprites/BurntPillow.png
-  artifactKey: Guid(099ab8ea16469834fad2c86ea1ebb2fa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Images/EvidenceSprites/BurntPillow.png using Guid(099ab8ea16469834fad2c86ea1ebb2fa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e69f78b1e9e648ccb8d7206959c2bef5') in 0.061855 seconds
-  Import took 0.064034 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000278 seconds.
-  path: Assets/Images/EvidenceSprites/SecretRoomMapPiece.png
-  artifactKey: Guid(d53c7a1fe7b41a6418d30f5fac8b1bf8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Images/EvidenceSprites/SecretRoomMapPiece.png using Guid(d53c7a1fe7b41a6418d30f5fac8b1bf8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2b366ad151fdf2f8fe2ee62e00423e7d') in 0.016467 seconds
-  Import took 0.019028 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000331 seconds.
-  path: Assets/Images/EvidenceSprites/KeyToBedrromDrawer.png
-  artifactKey: Guid(cd9d735a27ee8a248a50c8682fc19755) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Images/EvidenceSprites/KeyToBedrromDrawer.png using Guid(cd9d735a27ee8a248a50c8682fc19755) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ddf85e9b1777d99127000bb1e5667301') in 0.046140 seconds
-  Import took 0.048375 seconds .
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.001403 seconds.
-Begin MonoManager ReloadAssembly
-Symbol file LoadedFromMemory doesn't match image D:\Unity\Projects\Thesis Gig\a-gig\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
-Native extension for LinuxStandalone target not found
-Native extension for WindowsStandalone target not found
-Native extension for OSXStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 0.22 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.813 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.24 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1168 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 65.0 MB.
-System memory in use after: 65.1 MB.
-
-Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 1670.
-Total: 1.844600 ms (FindLiveObjects: 0.142100 ms CreateObjectMapping: 0.037700 ms MarkObjects: 1.647500 ms  DeleteObjects: 0.016200 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 6546.718556 seconds.
-  path: Assets/Images/EvidenceSprites/Resources
-  artifactKey: Guid(de02555469a711b49a9459b65cb90870) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Images/EvidenceSprites/Resources using Guid(de02555469a711b49a9459b65cb90870) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '69ff03d3841645f0b55b07d04e7f3f5f') in 0.011367 seconds
-  Import took 0.013870 seconds .
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.002067 seconds.
-Begin MonoManager ReloadAssembly
-Symbol file LoadedFromMemory doesn't match image D:\Unity\Projects\Thesis Gig\a-gig\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
-Native extension for LinuxStandalone target not found
-Native extension for WindowsStandalone target not found
-Native extension for OSXStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 0.24 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.877 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.23 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1168 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 65.1 MB.
-System memory in use after: 65.2 MB.
-
-Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 1672.
-Total: 2.048200 ms (FindLiveObjects: 0.169500 ms CreateObjectMapping: 0.051100 ms MarkObjects: 1.809700 ms  DeleteObjects: 0.016100 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 232.585348 seconds.
-  path: Assets/Images/EvidenceSprites/Resources/MagnumShell.png
-  artifactKey: Guid(2a215dcecb201814582ffd8ca6d889fd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Images/EvidenceSprites/Resources/MagnumShell.png using Guid(2a215dcecb201814582ffd8ca6d889fd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cef56b9c9ca2819350be35889e827344') in 0.067402 seconds
-  Import took 0.069939 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 9.286186 seconds.
-  path: Assets/Images/EvidenceSprites/Resources/Letter.png
-  artifactKey: Guid(aa82a4ee575c0b842b7c9a1466636b79) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Images/EvidenceSprites/Resources/Letter.png using Guid(aa82a4ee575c0b842b7c9a1466636b79) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ca08c7c1d4dd0d6c4b1fec9f8de88a0e') in 0.032805 seconds
-  Import took 0.035340 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 8.436403 seconds.
-  path: Assets/Images/EvidenceSprites/Resources/Pillow.png
-  artifactKey: Guid(099ab8ea16469834fad2c86ea1ebb2fa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Images/EvidenceSprites/Resources/Pillow.png using Guid(099ab8ea16469834fad2c86ea1ebb2fa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '69bd9e4cef715d7914a7d863d2c908ef') in 0.017358 seconds
-  Import took 0.020462 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 12.964238 seconds.
-  path: Assets/Images/EvidenceSprites/Resources/GunInBox.png
-  artifactKey: Guid(da56f73e556f29f418aad3522038ebe6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Images/EvidenceSprites/Resources/GunInBox.png using Guid(da56f73e556f29f418aad3522038ebe6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '053c55a8365efacfdf780aa9ec913150') in 0.026513 seconds
-  Import took 0.029298 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 16.156071 seconds.
-  path: Assets/Images/EvidenceSprites/Resources/Cigarette.png
-  artifactKey: Guid(d1ab57b71b98e324ab6b81f16f44ae6b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Images/EvidenceSprites/Resources/Cigarette.png using Guid(d1ab57b71b98e324ab6b81f16f44ae6b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5df59700c80a1c6b0857f1b9abc76561') in 0.020565 seconds
-  Import took 0.022725 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 51.769004 seconds.
-  path: Assets/Images/EvidenceSprites/Resources/BulletInBody.png
-  artifactKey: Guid(a3eb210d08dc7ed40b5ecb794f65f122) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Images/EvidenceSprites/Resources/BulletInBody.png using Guid(a3eb210d08dc7ed40b5ecb794f65f122) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3ca48a21c6a4468136898798655d4fa8') in 0.036732 seconds
-  Import took 0.039192 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 9.400851 seconds.
-  path: Assets/Images/EvidenceSprites/Resources/Journal.png
-  artifactKey: Guid(057b51b71aa723f41af810422c4165ef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Images/EvidenceSprites/Resources/Journal.png using Guid(057b51b71aa723f41af810422c4165ef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '643e8ecf3370ee655de68183d1bfdbb3') in 0.047294 seconds
-  Import took 0.049835 seconds .
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.001388 seconds.
-Begin MonoManager ReloadAssembly
-Symbol file LoadedFromMemory doesn't match image D:\Unity\Projects\Thesis Gig\a-gig\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
-Native extension for LinuxStandalone target not found
-Native extension for WindowsStandalone target not found
-Native extension for OSXStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 0.25 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.844 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.24 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1168 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 65.3 MB.
-System memory in use after: 65.4 MB.
-
-Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 1675.
-Total: 1.837900 ms (FindLiveObjects: 0.141600 ms CreateObjectMapping: 0.038300 ms MarkObjects: 1.621900 ms  DeleteObjects: 0.034800 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.001803 seconds.
-Begin MonoManager ReloadAssembly
-Symbol file LoadedFromMemory doesn't match image D:\Unity\Projects\Thesis Gig\a-gig\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
-Native extension for LinuxStandalone target not found
-Native extension for WindowsStandalone target not found
-Native extension for OSXStandalone target not found
-Native extension for WebGL target not found
 Refreshing native plugins compatible for Editor in 0.27 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.002 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.32 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1168 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 65.4 MB.
-System memory in use after: 65.5 MB.
-
-Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 1677.
-Total: 2.424100 ms (FindLiveObjects: 0.183400 ms CreateObjectMapping: 0.049900 ms MarkObjects: 2.132900 ms  DeleteObjects: 0.055600 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 780.436936 seconds.
-  path: Assets/Images/EvidenceSprites/Resources/Knife.png
-  artifactKey: Guid(0f31aaa997b9e71408f7d8f27c69284a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Images/EvidenceSprites/Resources/Knife.png using Guid(0f31aaa997b9e71408f7d8f27c69284a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2a482103957843c2e8b95656e9cee679') in 0.067295 seconds
-  Import took 0.069707 seconds .
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.001396 seconds.
-Begin MonoManager ReloadAssembly
-Symbol file LoadedFromMemory doesn't match image D:\Unity\Projects\Thesis Gig\a-gig\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
-Native extension for LinuxStandalone target not found
-Native extension for WindowsStandalone target not found
-Native extension for OSXStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 0.23 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.913 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.25 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1168 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 65.6 MB.
-System memory in use after: 65.7 MB.
-
-Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 1680.
-Total: 3.080100 ms (FindLiveObjects: 0.214900 ms CreateObjectMapping: 0.067900 ms MarkObjects: 2.777900 ms  DeleteObjects: 0.017900 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.001481 seconds.
-Begin MonoManager ReloadAssembly
-Symbol file LoadedFromMemory doesn't match image D:\Unity\Projects\Thesis Gig\a-gig\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
-Native extension for LinuxStandalone target not found
-Native extension for WindowsStandalone target not found
-Native extension for OSXStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 0.22 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.813 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.23 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1168 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 65.6 MB.
-System memory in use after: 65.7 MB.
-
-Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 1682.
-Total: 2.356700 ms (FindLiveObjects: 0.225300 ms CreateObjectMapping: 0.057800 ms MarkObjects: 2.042100 ms  DeleteObjects: 0.030100 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.001340 seconds.
-Begin MonoManager ReloadAssembly
-Symbol file LoadedFromMemory doesn't match image D:\Unity\Projects\Thesis Gig\a-gig\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
-Native extension for LinuxStandalone target not found
-Native extension for WindowsStandalone target not found
-Native extension for OSXStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 0.23 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.863 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.28 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1168 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 64.8 MB.
-System memory in use after: 64.9 MB.
-
-Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 1684.
-Total: 1.824500 ms (FindLiveObjects: 0.205700 ms CreateObjectMapping: 0.042200 ms MarkObjects: 1.558700 ms  DeleteObjects: 0.016400 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 1192.432507 seconds.
-  path: Assets/Images/EvidenceSprites/Resources/BulletInBody.png
-  artifactKey: Guid(a3eb210d08dc7ed40b5ecb794f65f122) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Images/EvidenceSprites/Resources/BulletInBody.png using Guid(a3eb210d08dc7ed40b5ecb794f65f122) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '33e6e1a1e3d0d904e846b86c06bfb3d6') in 0.062449 seconds
-  Import took 0.064993 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000552 seconds.
-  path: Assets/Images/EvidenceSprites/Resources/GunInBox.png
-  artifactKey: Guid(da56f73e556f29f418aad3522038ebe6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Images/EvidenceSprites/Resources/GunInBox.png using Guid(da56f73e556f29f418aad3522038ebe6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '01be569a5f25cbf54c081a09f49e0781') in 0.025367 seconds
-  Import took 0.028301 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000257 seconds.
-  path: Assets/Images/EvidenceSprites/Resources/Dummy.png
-  artifactKey: Guid(147e08d6095a7ff408568749dbd15bc6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Images/EvidenceSprites/Resources/Dummy.png using Guid(147e08d6095a7ff408568749dbd15bc6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '580e836583f2006776aad53ad23782e7') in 0.016625 seconds
-  Import took 0.019106 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000323 seconds.
-  path: Assets/Images/EvidenceSprites/Resources/Letter.png
-  artifactKey: Guid(aa82a4ee575c0b842b7c9a1466636b79) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Images/EvidenceSprites/Resources/Letter.png using Guid(aa82a4ee575c0b842b7c9a1466636b79) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ac75a3154f36eb5e8311caac498c79d8') in 0.022701 seconds
-  Import took 0.380706 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000337 seconds.
-  path: Assets/Images/EvidenceSprites/Resources/LockedBoxWithGun.png
-  artifactKey: Guid(a9a732b6748050f4fbd9466aa53302ef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Images/EvidenceSprites/Resources/LockedBoxWithGun.png using Guid(a9a732b6748050f4fbd9466aa53302ef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a49029aaae101e60a3c19ad19dfd4fae') in 0.019262 seconds
-  Import took 0.021392 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000323 seconds.
-  path: Assets/Images/EvidenceSprites/Resources/FloorMop.png
-  artifactKey: Guid(16cfa5b8a3e627740bb62a684b2032bd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Images/EvidenceSprites/Resources/FloorMop.png using Guid(16cfa5b8a3e627740bb62a684b2032bd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ac201a8788e0d01bee07515a77ebf18d') in 0.035471 seconds
-  Import took 0.038596 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000342 seconds.
-  path: Assets/Images/EvidenceSprites/Resources/PolaroidFrame.png
-  artifactKey: Guid(10ad383c7769914408c044ea304975c7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Images/EvidenceSprites/Resources/PolaroidFrame.png using Guid(10ad383c7769914408c044ea304975c7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'baaf4bd79c785c98c1644696ce437462') in 0.025096 seconds
-  Import took 0.027601 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000309 seconds.
-  path: Assets/Images/EvidenceSprites/Resources/CleanFloor.png
-  artifactKey: Guid(4bf9bad4c8c0e26418897c7ed3be7996) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Images/EvidenceSprites/Resources/CleanFloor.png using Guid(4bf9bad4c8c0e26418897c7ed3be7996) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e0637f04b7782900da87a82b0ddd2f15') in 0.023271 seconds
-  Import took 0.025446 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000366 seconds.
-  path: Assets/Images/EvidenceSprites/Resources/Cigarette.png
-  artifactKey: Guid(d1ab57b71b98e324ab6b81f16f44ae6b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Images/EvidenceSprites/Resources/Cigarette.png using Guid(d1ab57b71b98e324ab6b81f16f44ae6b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a5ad89f805cbe4fb517dff94982ded4a') in 0.018283 seconds
-  Import took 0.020804 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000329 seconds.
-  path: Assets/Images/EvidenceSprites/Resources/OpenWindow.png
-  artifactKey: Guid(1712d5d573b821649a060823ea136bb6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Images/EvidenceSprites/Resources/OpenWindow.png using Guid(1712d5d573b821649a060823ea136bb6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a51958223c28a3cf08aa1cf3ab12eb71') in 0.019589 seconds
-  Import took 0.022388 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000314 seconds.
-  path: Assets/Images/EvidenceSprites/Resources/Journal.png
-  artifactKey: Guid(057b51b71aa723f41af810422c4165ef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Images/EvidenceSprites/Resources/Journal.png using Guid(057b51b71aa723f41af810422c4165ef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '042eaf692066a3ca3fb0eef28b167460') in 0.019856 seconds
-  Import took 0.022816 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000377 seconds.
-  path: Assets/Images/EvidenceSprites/Resources/MagnumShell.png
-  artifactKey: Guid(2a215dcecb201814582ffd8ca6d889fd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Images/EvidenceSprites/Resources/MagnumShell.png using Guid(2a215dcecb201814582ffd8ca6d889fd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b314a42827299e82b07a9015f6534524') in 0.019645 seconds
-  Import took 0.022029 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000355 seconds.
-  path: Assets/Images/EvidenceSprites/Resources/PackOfCigarettes.png
-  artifactKey: Guid(dbcb491d4c043594b8714a27ca5bb86e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Images/EvidenceSprites/Resources/PackOfCigarettes.png using Guid(dbcb491d4c043594b8714a27ca5bb86e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cd302475e3fce8745f128012161c0b1d') in 0.015213 seconds
-  Import took 0.017892 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000245 seconds.
-  path: Assets/Images/EvidenceSprites/Resources/Pillow.png
-  artifactKey: Guid(099ab8ea16469834fad2c86ea1ebb2fa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Images/EvidenceSprites/Resources/Pillow.png using Guid(099ab8ea16469834fad2c86ea1ebb2fa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '95c49b4b029dd7b8d8f27d0ce61102d5') in 0.033671 seconds
-  Import took 0.036130 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000217 seconds.
-  path: Assets/Images/EvidenceSprites/Resources/SecretRoomMapPiece.png
-  artifactKey: Guid(d53c7a1fe7b41a6418d30f5fac8b1bf8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Images/EvidenceSprites/Resources/SecretRoomMapPiece.png using Guid(d53c7a1fe7b41a6418d30f5fac8b1bf8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4c27e3088e038fbf92c3a1cd7097dd6f') in 0.016760 seconds
-  Import took 0.019021 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000250 seconds.
-  path: Assets/Images/EvidenceSprites/Resources/KeyToBedrromDrawer.png
-  artifactKey: Guid(cd9d735a27ee8a248a50c8682fc19755) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Images/EvidenceSprites/Resources/KeyToBedrromDrawer.png using Guid(cd9d735a27ee8a248a50c8682fc19755) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9582380eaec77803fccc6bbffc158899') in 0.018303 seconds
-  Import took 0.020756 seconds .
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.001474 seconds.
-Begin MonoManager ReloadAssembly
-Symbol file LoadedFromMemory doesn't match image D:\Unity\Projects\Thesis Gig\a-gig\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
-Native extension for LinuxStandalone target not found
-Native extension for WindowsStandalone target not found
-Native extension for OSXStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 0.23 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.871 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.26 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 1169 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 65.0 MB.
-System memory in use after: 65.1 MB.
+System memory in use before: 62.6 MB.
+System memory in use after: 62.7 MB.
 
-Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 1688.
-Total: 1.912300 ms (FindLiveObjects: 0.135100 ms CreateObjectMapping: 0.030200 ms MarkObjects: 1.730600 ms  DeleteObjects: 0.015200 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.001516 seconds.
-Begin MonoManager ReloadAssembly
-Symbol file LoadedFromMemory doesn't match image D:\Unity\Projects\Thesis Gig\a-gig\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
-Native extension for LinuxStandalone target not found
-Native extension for WindowsStandalone target not found
-Native extension for OSXStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 0.23 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.855 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.23 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1169 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 65.2 MB.
-System memory in use after: 65.3 MB.
-
-Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 1690.
-Total: 2.333200 ms (FindLiveObjects: 0.252700 ms CreateObjectMapping: 0.069700 ms MarkObjects: 1.987400 ms  DeleteObjects: 0.021000 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.001589 seconds.
-Begin MonoManager ReloadAssembly
-Symbol file LoadedFromMemory doesn't match image D:\Unity\Projects\Thesis Gig\a-gig\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
-Native extension for LinuxStandalone target not found
-Native extension for WindowsStandalone target not found
-Native extension for OSXStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 0.23 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.854 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.23 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1169 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 65.3 MB.
-System memory in use after: 65.4 MB.
-
-Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 1692.
-Total: 1.884900 ms (FindLiveObjects: 0.320800 ms CreateObjectMapping: 0.060300 ms MarkObjects: 1.465100 ms  DeleteObjects: 0.036500 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.001574 seconds.
-Begin MonoManager ReloadAssembly
-Symbol file LoadedFromMemory doesn't match image D:\Unity\Projects\Thesis Gig\a-gig\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
-Native extension for LinuxStandalone target not found
-Native extension for WindowsStandalone target not found
-Native extension for OSXStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 0.24 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.835 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.24 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1169 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 65.4 MB.
-System memory in use after: 65.5 MB.
-
-Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 1694.
-Total: 1.971800 ms (FindLiveObjects: 0.124000 ms CreateObjectMapping: 0.033000 ms MarkObjects: 1.797600 ms  DeleteObjects: 0.016300 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.001370 seconds.
-Begin MonoManager ReloadAssembly
-Symbol file LoadedFromMemory doesn't match image D:\Unity\Projects\Thesis Gig\a-gig\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
-Native extension for LinuxStandalone target not found
-Native extension for WindowsStandalone target not found
-Native extension for OSXStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 0.23 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.839 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.24 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1169 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 65.6 MB.
-System memory in use after: 65.7 MB.
-
-Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 1696.
-Total: 1.959800 ms (FindLiveObjects: 0.278900 ms CreateObjectMapping: 0.071500 ms MarkObjects: 1.594100 ms  DeleteObjects: 0.014400 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.001773 seconds.
-Begin MonoManager ReloadAssembly
-Symbol file LoadedFromMemory doesn't match image D:\Unity\Projects\Thesis Gig\a-gig\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
-Native extension for LinuxStandalone target not found
-Native extension for WindowsStandalone target not found
-Native extension for OSXStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 0.28 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.816 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.23 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1169 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 65.7 MB.
-System memory in use after: 65.8 MB.
-
-Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 1698.
-Total: 1.895600 ms (FindLiveObjects: 0.155200 ms CreateObjectMapping: 0.041100 ms MarkObjects: 1.660500 ms  DeleteObjects: 0.037600 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.001388 seconds.
-Begin MonoManager ReloadAssembly
-Symbol file LoadedFromMemory doesn't match image D:\Unity\Projects\Thesis Gig\a-gig\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
-Native extension for LinuxStandalone target not found
-Native extension for WindowsStandalone target not found
-Native extension for OSXStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 0.26 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.204 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.78 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1169 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 64.9 MB.
-System memory in use after: 65.0 MB.
-
-Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 1700.
-Total: 2.107100 ms (FindLiveObjects: 0.190600 ms CreateObjectMapping: 0.055500 ms MarkObjects: 1.829100 ms  DeleteObjects: 0.028800 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.001507 seconds.
-Begin MonoManager ReloadAssembly
-Symbol file LoadedFromMemory doesn't match image D:\Unity\Projects\Thesis Gig\a-gig\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
-Native extension for LinuxStandalone target not found
-Native extension for WindowsStandalone target not found
-Native extension for OSXStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 0.63 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.956 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.24 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1169 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 65.0 MB.
-System memory in use after: 65.1 MB.
-
-Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 1702.
-Total: 2.294300 ms (FindLiveObjects: 0.140800 ms CreateObjectMapping: 0.040100 ms MarkObjects: 2.097500 ms  DeleteObjects: 0.014700 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.002072 seconds.
-Begin MonoManager ReloadAssembly
-Symbol file LoadedFromMemory doesn't match image D:\Unity\Projects\Thesis Gig\a-gig\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
-Native extension for LinuxStandalone target not found
-Native extension for WindowsStandalone target not found
-Native extension for OSXStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 0.36 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.875 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.23 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1169 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 65.1 MB.
-System memory in use after: 65.2 MB.
-
-Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 1704.
-Total: 1.932200 ms (FindLiveObjects: 0.194100 ms CreateObjectMapping: 0.118200 ms MarkObjects: 1.601700 ms  DeleteObjects: 0.017100 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.001376 seconds.
-Begin MonoManager ReloadAssembly
-Symbol file LoadedFromMemory doesn't match image D:\Unity\Projects\Thesis Gig\a-gig\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
-Native extension for LinuxStandalone target not found
-Native extension for WindowsStandalone target not found
-Native extension for OSXStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 0.23 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.816 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.25 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1169 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 65.3 MB.
-System memory in use after: 65.4 MB.
-
-Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 1706.
-Total: 2.134800 ms (FindLiveObjects: 0.209900 ms CreateObjectMapping: 0.060000 ms MarkObjects: 1.846400 ms  DeleteObjects: 0.017000 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.001956 seconds.
-Begin MonoManager ReloadAssembly
-Symbol file LoadedFromMemory doesn't match image D:\Unity\Projects\Thesis Gig\a-gig\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
-Native extension for LinuxStandalone target not found
-Native extension for WindowsStandalone target not found
-Native extension for OSXStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 0.25 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.049 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.24 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1169 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 65.4 MB.
-System memory in use after: 65.5 MB.
-
-Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 1708.
-Total: 2.108600 ms (FindLiveObjects: 0.156900 ms CreateObjectMapping: 0.090700 ms MarkObjects: 1.844500 ms  DeleteObjects: 0.015200 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.001436 seconds.
-Begin MonoManager ReloadAssembly
-Symbol file LoadedFromMemory doesn't match image D:\Unity\Projects\Thesis Gig\a-gig\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
-Native extension for LinuxStandalone target not found
-Native extension for WindowsStandalone target not found
-Native extension for OSXStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 0.24 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.866 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.23 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1169 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 65.6 MB.
-System memory in use after: 65.7 MB.
-
-Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 1710.
-Total: 2.181400 ms (FindLiveObjects: 0.169500 ms CreateObjectMapping: 0.089300 ms MarkObjects: 1.905300 ms  DeleteObjects: 0.015200 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.001904 seconds.
-Begin MonoManager ReloadAssembly
-Symbol file LoadedFromMemory doesn't match image D:\Unity\Projects\Thesis Gig\a-gig\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
-Native extension for LinuxStandalone target not found
-Native extension for WindowsStandalone target not found
-Native extension for OSXStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 0.36 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.984 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.25 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1169 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 65.7 MB.
-System memory in use after: 65.8 MB.
-
-Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 1712.
-Total: 2.479400 ms (FindLiveObjects: 0.422300 ms CreateObjectMapping: 0.058700 ms MarkObjects: 1.978600 ms  DeleteObjects: 0.017400 ms)
+Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 1768.
+Total: 2.122700 ms (FindLiveObjects: 0.268900 ms CreateObjectMapping: 0.093700 ms MarkObjects: 1.717700 ms  DeleteObjects: 0.041100 ms)
 
 AssetImportWorkerClient::OnTransportError - code=2 error=End of file

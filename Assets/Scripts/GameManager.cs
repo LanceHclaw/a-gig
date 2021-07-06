@@ -1,4 +1,6 @@
-﻿using UnityEngine;
+﻿using System.Collections.Generic;
+using System.Linq;
+using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
@@ -43,8 +45,38 @@ public class GameManager : MonoBehaviour
     }
 
     public void SwitchToEpilogue() {
+        string allMajor = "";
+        string allMinor = "";
+        Dictionary<Ending, int> weights = new Dictionary<Ending, int>();
+        string weightsString = "";
+
+        foreach (var action in mqManager.playerProgress.actionFlags.Where(x => x.Value == true).Select(x => x.Key).ToList())
+        {
+            allMajor += action.ToString() + "\n";
+            foreach(var weight in action.weights)
+            {
+                if (!weights.ContainsKey(weight.Key)) 
+                    weights.Add(weight.Key, 0);
+                weights[weight.Key] += weight.Value;
+            }
+        }
+        foreach (var action in mqManager.playerProgress.minorActionFlags.Where(x => x.Value == true).Select(x => x.Key).ToList())
+        {
+            allMinor += action.ToString() + "\n";
+        }
+
+        Debug.Log(allMajor);
+        Debug.Log(allMinor);
+        foreach(var w in weights)
+        {
+            weightsString += w.Key.name + " " + w.Value + " \n";
+        }
+        Debug.Log(weightsString);
+
         GlobalVersionControl.ending = mqManager.playerProgress.FinishQuest(mqManager.questData);
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        Debug.Log(GlobalVersionControl.ending.name);
+#warning remove comment
+        //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
     public bool IsParentSceneActive(GameObject obj) {
