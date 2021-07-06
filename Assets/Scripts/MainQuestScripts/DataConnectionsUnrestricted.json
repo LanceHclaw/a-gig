@@ -636,8 +636,8 @@
       "options": [
         {
           "name": "gun-knife-E14",
-          "choiceDescription": "If the murderer wanted something from this journal, they could've used that knife better.",
-          "snippet": "The murderer didn't look for the journal.",
+          "choiceDescription": "It makes no sense to use a knife after shooting someone. If it was a similar weapon, it should've been enough to shoot Frank once.",
+          "snippet": "The gun is powerful enough to kill.",
           "weights": [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ]
         }
       ]
@@ -887,6 +887,84 @@
       ]
     },
     {
+      "evidence1ID": 6,
+      "evidence2ID": 8,
+      "description": "",
+      "options": [
+        {
+          "name": "floor-dummy-H10",
+          "choiceDescription": "I find it suspicious that the floor is clean yet most of the appartment, including this dummy, is not.",
+          "snippet": "Something is off about the tidiness.",
+          "weights": [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ]
+        }
+      ]
+    },
+    {
+      "evidence1ID": 6,
+      "evidence2ID": 9,
+      "description": "",
+      "options": [
+        {
+          "name": "floor-packOfCigs-H11",
+          "choiceDescription": "The pack is neatly stored in the bed cabinet. Matches the Allen's attitude towards tidiness.",
+          "snippet": "Allen is consistently tidy.",
+          "weights": [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ]
+        }
+      ]
+    },
+    {
+      "evidence1ID": 6,
+      "evidence2ID": 10,
+      "description": "",
+      "options": [
+        {
+          "name": "floor-bInb-H12",
+          "choiceDescription": "There must have been a lot more blood. Someone definitely cleaned it up.",
+          "snippet": "Someone mopped the blood.",
+          "weights": [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ]
+        }
+      ]
+    },
+    {
+      "evidence1ID": 6,
+      "evidence2ID": 11,
+      "description": "",
+      "options": [
+        {
+          "name": "floor-journal-H13",
+          "choiceDescription": "If anybody was in the room with the journal, they definitely cleaned the floor afterwards similar to what they did in the kitchen.",
+          "snippet": "Secret room floor is clean.",
+          "weights": [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ]
+        }
+      ]
+    },
+    {
+      "evidence1ID": 6,
+      "evidence2ID": 12,
+      "description": "",
+      "options": [
+        {
+          "name": "floor-knife-H14",
+          "choiceDescription": "That knife would've made a giant pool of blood. The floor is suspiciously clean.",
+          "snippet": "Knife should've made more blood.",
+          "weights": [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ]
+        }
+      ]
+    },
+    {
+      "evidence1ID": 7,
+      "evidence2ID": 8,
+      "description": "",
+      "options": [
+        {
+          "name": "window-dummy-I10",
+          "choiceDescription": "So many holes in the dummy... I would also keep my window open to be able to breathe.",
+          "snippet": "Window was always open.",
+          "weights": [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ]
+        }
+      ]
+    },
+    {
       "evidence1ID": 7,
       "evidence2ID": 9,
       "description": "",
@@ -901,6 +979,32 @@
     },
     {
       "evidence1ID": 7,
+      "evidence2ID": 10,
+      "description": "",
+      "options": [
+        {
+          "name": "window-bInb-I12",
+          "choiceDescription": "If Allen got shot, the murderer must've opened the window to cover the tracks.",
+          "snippet": "Murderer opened the window.",
+          "weights": [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ]
+        }
+      ]
+    },
+    {
+      "evidence1ID": 7,
+      "evidence2ID": 11,
+      "description": "",
+      "options": [
+        {
+          "name": "window-journal-I13",
+          "choiceDescription": "If the murderer got through the window, surely they could've stolen the journal without murdering Allen.",
+          "snippet": "Murder was intentional.",
+          "weights": [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ]
+        }
+      ]
+    },
+    {
+      "evidence1ID": 7,
       "evidence2ID": 12,
       "description": "",
       "options": [
@@ -909,6 +1013,110 @@
           "choiceDescription": "Frank has a gun. If the killer knew it, they could try to sneak up to him and into his house. What's a better way to do it than through a window? Then they could also be wearing gloves to leave no fingerprints...",
           "snippet": "Murderer snuck through window.",
           "weights": [ -1, 1, 1, 0, 1, 0, 0, 0, 0 ]
+        }
+      ]
+    },
+    {
+      "evidence1ID": 8,
+      "evidence2ID": 9,
+      "description": "",
+      "options": [
+        {
+          "name": "dummy-packOfCigs-J11",
+          "choiceDescription": "The dummy stinks of cigarette smoke.",
+          "snippet": "Frank smoked near dummy a lot.",
+          "weights": [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ]
+        }
+      ]
+    },
+    {
+      "evidence1ID": 8,
+      "evidence2ID": 10,
+      "description": "",
+      "options": [
+        {
+          "name": "dummy-bInb-J12",
+          "choiceDescription": "If you compare the bullet wound with the holes in the dummy - they are of a very similar shape. This makes me believe he was shot with the same caliber.",
+          "snippet": "The holes are similar.",
+          "weights": [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ]
+        }
+      ]
+    },
+    {
+      "evidence1ID": 8,
+      "evidence2ID": 11,
+      "description": "",
+      "options": [
+        {
+          "name": "dummy-bInb-J13",
+          "choiceDescription": "Frank never mentions some experiments on his dummy in his journal. Very curious. I think he is shooting at home not for naught.",
+          "snippet": "Frank used to shoot at home for a reason.",
+          "weights": [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ]
+        }
+      ]
+    },
+    {
+      "evidence1ID": 8,
+      "evidence2ID": 12,
+      "description": "",
+      "options": [
+        {
+          "name": "dummy-knife-J14",
+          "choiceDescription": "The dummy doesn't have a single cut. That makes me believe Frank didn't particularly enjoy cold weapons.",
+          "snippet": "Frank wouldn't use a knife.",
+          "weights": [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ]
+        }
+      ]
+    },
+    {
+      "evidence1ID": 9,
+      "evidence2ID": 10,
+      "description": "",
+      "options": [
+        {
+          "name": "packOfCigs-bInb-K12",
+          "choiceDescription": "If Frank didn't smoke that much maybe he would've survived until the cops' arrival.",
+          "snippet": "Frank died because he smoked.",
+          "weights": [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ]
+        }
+      ]
+    },
+    {
+      "evidence1ID": 9,
+      "evidence2ID": 11,
+      "description": "",
+      "options": [
+        {
+          "name": "packOfCigs-journal-K13",
+          "choiceDescription": "Surely he popped one or two cigs whenever he sat down to take notes in his journal. The ash tray in that room proves it.",
+          "snippet": "Frank smoked during work.",
+          "weights": [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ]
+        }
+      ]
+    },
+    {
+      "evidence1ID": 9,
+      "evidence2ID": 12,
+      "description": "",
+      "options": [
+        {
+          "name": "packOfCigs-knife-K14",
+          "choiceDescription": "I wonder if that knife was ever used to cut cigars. Given Frank's cigarette addiction, wouldn't be surprised.",
+          "snippet": "Frank may have smoked cigars.",
+          "weights": [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ]
+        }
+      ]
+    },
+    {
+      "evidence1ID": 10,
+      "evidence2ID": 11,
+      "description": "",
+      "options": [
+        {
+          "name": "bInb-journal-L13",
+          "choiceDescription": "Frank was a very renown investigator. I doubt he'd take his own life. It must've been someone he dug under or someone jealous of his achievements.",
+          "snippet": "Someone had a reason to murder Frank.",
+          "weights": [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ]
         }
       ]
     },
@@ -928,6 +1136,19 @@
           "choiceDescription": "It's pretty stupid.",
           "snippet": "Knife to cover a bullet? Stupid.",
           "weights": [ 0, 1, 1, 0, 1, 0, 0, 0, 0 ]
+        }
+      ]
+    },
+    {
+      "evidence1ID": 11,
+      "evidence2ID": 12,
+      "description": "",
+      "options": [
+        {
+          "name": "journal-knife-M14",
+          "choiceDescription": "Weirdly, looking at the journal makes me think the knife is a ruse.",
+          "snippet": "Knife is weird.",
+          "weights": [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ]
         }
       ]
     }

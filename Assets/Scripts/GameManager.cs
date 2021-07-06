@@ -45,6 +45,7 @@ public class GameManager : MonoBehaviour
     }
 
     public void SwitchToEpilogue() {
+        /*
         string allMajor = "";
         string allMinor = "";
         Dictionary<Ending, int> weights = new Dictionary<Ending, int>();
@@ -64,7 +65,7 @@ public class GameManager : MonoBehaviour
         {
             allMinor += action.ToString() + "\n";
         }
-
+        
         Debug.Log(allMajor);
         Debug.Log(allMinor);
         foreach(var w in weights)
@@ -72,11 +73,10 @@ public class GameManager : MonoBehaviour
             weightsString += w.Key.name + " " + w.Value + " \n";
         }
         Debug.Log(weightsString);
-
+        */
         GlobalVersionControl.ending = mqManager.playerProgress.FinishQuest(mqManager.questData);
-        Debug.Log(GlobalVersionControl.ending.name);
-#warning remove comment
-        //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        //Debug.Log(GlobalVersionControl.ending.name);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
     public bool IsParentSceneActive(GameObject obj) {
