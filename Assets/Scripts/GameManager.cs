@@ -74,7 +74,7 @@ public class GameManager : MonoBehaviour
         }
         Debug.Log(weightsString);
         */
-        GlobalVersionControl.ending = mqManager.playerProgress.FinishQuest(mqManager.questData);
+        GlobalVersionController.SetEnding(mqManager.playerProgress.FinishQuest(mqManager.questData));
         //Debug.Log(GlobalVersionControl.ending.name);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }

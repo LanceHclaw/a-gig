@@ -15,13 +15,13 @@ public class VersionSelectorUI : MonoBehaviour
 
     public void ClickRestricted()
     {
-        GlobalVersionControl.restricted = true;
+        GlobalVersionController.SetRestricted(true);
         CloseCanvas();
     }
 
     public void ClickUnrestricted()
     {
-        GlobalVersionControl.restricted = false;
+        GlobalVersionController.SetRestricted(false);
         CloseCanvas();
     }
 }

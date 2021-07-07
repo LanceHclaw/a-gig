@@ -129,7 +129,7 @@ public class MainQuestManager : MonoBehaviour
 
     void Awake()
     {
-        Instantiate(GlobalVersionControl.restricted);
+        Instantiate(GlobalVersionController.IsRestricted());
     }
 
     private IEnumerable<PV_Action<Ending>> GetMajorActions(MQConnections connections)
@@ -265,13 +265,13 @@ public class MainQuestManager : MonoBehaviour
 
 public static class FileDirectory
 {
-    public static readonly string GameFolder = Application.dataPath;
+    public static readonly string JsonFolder = "JsonFiles";
 
-    public static readonly string EvidenceJsonFile = GameFolder + "/Scripts/MainQuestScripts/DataEvidence.json";
+    public static readonly string EvidenceJsonFile = JsonFolder + "/DataEvidence";
 
-    public static readonly string EpiloguesFile = GameFolder + "/Scripts/MainQuestScripts/Endings.json";
+    public static readonly string EpiloguesFile = JsonFolder + "/Endings";
 
-    public static readonly string ConnectionsRestrictedJsonFile = GameFolder + "/Scripts/MainQuestScripts/DataConnectionsRestricted.json";
+    public static readonly string ConnectionsRestrictedJsonFile = JsonFolder + "/DataConnectionsRestricted";
 
-    public static readonly string ConnectionsUnrestrictedJsonFile = GameFolder + "/Scripts/MainQuestScripts/DataConnectionsUnrestricted.json";
+    public static readonly string ConnectionsUnrestrictedJsonFile = JsonFolder + "/DataConnectionsUnrestricted";
 }

@@ -3,6 +3,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using ProgressionVector;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public struct EndingItem {
     public List<string> required { get; set; }
@@ -127,7 +128,7 @@ public class EpilogueManager : MonoBehaviour
         isFadingIn = true;
         fadeInStartedAt = Time.time;
 
-        selectedText = GlobalVersionControl.ending.epilogue;
+        selectedText = GlobalVersionController.GetEnding().epilogue + "\n\nEnding Key: " + GlobalVersionController.GetEnding().name;
 
         /*var createdConections = new List<string>();
         if (dataStorage) {
@@ -204,6 +205,11 @@ public class EpilogueManager : MonoBehaviour
         var c = gameObject.transform.Find("Canvas/BloodImage").GetComponent<Image>().color;
         c.a = a;
         gameObject.transform.Find("Canvas/BloodImage").GetComponent<Image>().color = c;
+    }
+
+    public void OnMenuClick()
+    {
+        Application.Quit();
     }
 
    /*

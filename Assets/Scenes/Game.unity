@@ -10309,7 +10309,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   description: 
-  options: []
   leftImage: {fileID: 0}
   rightImage: {fileID: 0}
   leftName: 
@@ -12411,7 +12410,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectorCanvas: {fileID: 1825126413}
-  GameManagerObject: {fileID: 379323512}
 --- !u!223 &1825126413
 Canvas:
   m_ObjectHideFlags: 0

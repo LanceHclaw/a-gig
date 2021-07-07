@@ -14,14 +14,15 @@ public class MQEvidence
 
     public MQEvidence()
     {
-        var jobject = JObject.Parse(File.ReadAllText(FileDirectory.EvidenceJsonFile)).Properties();
+        //var jobject = JObject.Parse(File.ReadAllText(FileDirectory.EvidenceJsonFile)).Properties();
+        var jobject = JObject.Parse(Resources.Load<TextAsset>(FileDirectory.EvidenceJsonFile).text).Properties();
         var tuples = jobject.Select(x => (x.Name, x.Value.ToString())).ToList();
 
         foreach (var tuple in tuples)
         {
             Evidence e = JsonConvert.DeserializeObject<Evidence>(tuple.Item2);
             e.PV_name = e.name;
-            e.sprite = Resources.Load<Sprite>(tuple.Name);
+            e.sprite = Resources.Load<Sprite>("EvidenceSprites/" + tuple.Name);
             evidenceByID.Add(e.id, e);
         }
     }
@@ -33,7 +34,8 @@ public class MQEndings
 
     public MQEndings()
     {
-        var jobject = JObject.Parse(File.ReadAllText(FileDirectory.EpiloguesFile)).Properties();
+        //var jobject = JObject.Parse(File.ReadAllText(FileDirectory.EpiloguesFile)).Properties();
+        var jobject = JObject.Parse(Resources.Load<TextAsset>(FileDirectory.EpiloguesFile).text).Properties();
         var tuples = jobject.Select(x => (x.Name, x.Value.ToString())).ToList();
 
         foreach (var tuple in tuples)
@@ -63,7 +65,8 @@ public class MQConnections
                 connectionMatrix[i,j] = defaultConnection.id;
             }
 
-        var jobject = JObject.Parse(File.ReadAllText(filename)).Properties();
+        //var jobject = JObject.Parse(File.ReadAllText(filename)).Properties();
+        var jobject = JObject.Parse(Resources.Load<TextAsset>(filename).text).Properties();
         var jcvalues = jobject.Select(x => x.Value).ToList()[0];
 
         foreach (var jcstring in jcvalues)
