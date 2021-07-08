@@ -79,6 +79,26 @@ public class Connection
         this.id = currID++;
         this.options = new Dictionary<Option, bool>();
     }
+
+    /// <summary>
+    /// Returns previously selected option.
+    /// </summary>
+    /// <param name="option"></param>
+    /// <returns></returns>
+    public Option ChooseOption(Option option)
+    {
+        Option opToReturn = null;
+        foreach(var opKey in options.Keys.ToList())
+        {
+            if (opKey == option) options[opKey] = true;
+            else
+            {
+                if (options[opKey] == true) opToReturn = opKey;
+                options[opKey] = false;
+            }
+        }
+        return opToReturn;
+    }
 }
 
 public class Option : PV_Action<Ending>

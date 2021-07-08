@@ -2,11 +2,13 @@
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using System.Linq;
 
 public class ChoiceDialogManager : MonoBehaviour
 {
     public string description = "";
-    public List<string> options = new List<string>();
+
+    public List<Option> options;
 
     public Sprite leftImage;
     public Sprite rightImage;
@@ -21,6 +23,8 @@ public class ChoiceDialogManager : MonoBehaviour
     private GameObject descriptionContainer;
     private GameObject choicesContainer;
 
+    private MainQuestManager mqManager;
+
     private int selectedOption = 0;
 
     void Start()
@@ -29,6 +33,8 @@ public class ChoiceDialogManager : MonoBehaviour
     }
 
     public void Reset() {
+        mqManager = GameObject.Find("GameManager").GetComponent<MainQuestManager>();
+
         evidenceManager = GameObject.Find("UI/Journal/EvidenceCanvas/Evidence").GetComponent<EvidenceManager>();
         descriptionContainer = gameObject.transform.Find("Description").gameObject;
         choicesContainer = gameObject.transform.Find("Choices").gameObject;
@@ -55,12 +61,25 @@ public class ChoiceDialogManager : MonoBehaviour
 
         for (var i = 0; i < options.Count; ++i) {
             var option = choicesContainer.transform.GetChild(i).gameObject;
-            option.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = options[i];
+            option.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = options[i].choiceDescription;
             option.SetActive(true);
         }
 
         selectedOption = 0;
         UpdateAlphas();
+    }
+
+    public void Setup(Connection connection, Evidence leftEv, Evidence rightEv)
+    {
+        description = connection.commonDescription;
+
+        leftName = leftEv.name;
+        leftImage = leftEv.sprite;
+
+        rightName = rightEv.name;
+        rightImage = rightEv.sprite;
+
+        options = connection.options.Select(x => x.Key).ToList();
     }
 
     public void OnClick(int option) {
@@ -69,7 +88,7 @@ public class ChoiceDialogManager : MonoBehaviour
     }
 
     public void OnConfirm() {
-        evidenceManager.FinishConnectingThread(selectedOption);
+        evidenceManager.FinishConnectingThread(selectedOption, option: options[selectedOption]);
         gameObject.SetActive(false);
     }
 

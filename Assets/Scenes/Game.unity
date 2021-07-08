@@ -451,7 +451,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 0
+  m_PresetInfoIsWorld: 1
 --- !u!223 &53882602
 Canvas:
   m_ObjectHideFlags: 0
@@ -831,6 +831,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3905125438883830486, guid: 065de9503e6204e48bfe45feffd5faf0,
+        type: 3}
+      propertyPath: evidenceID
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 3905125438883830486, guid: 065de9503e6204e48bfe45feffd5faf0,
         type: 3}
@@ -3445,8 +3450,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 967c6ad4f1a745b4a92928a105291eb4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  restricted: 0
-  fileName: 
 --- !u!1001 &422929820
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3568,6 +3571,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3905125438883830486, guid: 065de9503e6204e48bfe45feffd5faf0,
+        type: 3}
+      propertyPath: evidenceID
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 3905125438883830486, guid: 065de9503e6204e48bfe45feffd5faf0,
         type: 3}
@@ -4789,6 +4797,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3905125438883830486, guid: 065de9503e6204e48bfe45feffd5faf0,
         type: 3}
+      propertyPath: evidenceID
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 3905125438883830486, guid: 065de9503e6204e48bfe45feffd5faf0,
+        type: 3}
       propertyPath: evidenceName
       value: Journal
       objectReference: {fileID: 0}
@@ -5508,6 +5521,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3905125438883830486, guid: 065de9503e6204e48bfe45feffd5faf0,
         type: 3}
+      propertyPath: evidenceID
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 3905125438883830486, guid: 065de9503e6204e48bfe45feffd5faf0,
+        type: 3}
       propertyPath: evidenceName
       value: Knife
       objectReference: {fileID: 0}
@@ -5865,7 +5883,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 0
+  m_PresetInfoIsWorld: 1
 --- !u!223 &814097854
 Canvas:
   m_ObjectHideFlags: 0
@@ -6843,6 +6861,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3905125438883830486, guid: 065de9503e6204e48bfe45feffd5faf0,
         type: 3}
+      propertyPath: evidenceID
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3905125438883830486, guid: 065de9503e6204e48bfe45feffd5faf0,
+        type: 3}
       propertyPath: evidenceName
       value: Open Window
       objectReference: {fileID: 0}
@@ -6927,7 +6950,7 @@ PrefabInstance:
     - target: {fileID: 3905125438883830485, guid: 065de9503e6204e48bfe45feffd5faf0,
         type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3905125438883830485, guid: 065de9503e6204e48bfe45feffd5faf0,
         type: 3}
@@ -7018,6 +7041,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3905125438883830486, guid: 065de9503e6204e48bfe45feffd5faf0,
+        type: 3}
+      propertyPath: evidenceID
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 3905125438883830486, guid: 065de9503e6204e48bfe45feffd5faf0,
         type: 3}
@@ -7750,6 +7778,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3905125438883830486, guid: 065de9503e6204e48bfe45feffd5faf0,
         type: 3}
+      propertyPath: evidenceID
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3905125438883830486, guid: 065de9503e6204e48bfe45feffd5faf0,
+        type: 3}
       propertyPath: evidenceName
       value: Dummy
       objectReference: {fileID: 0}
@@ -8278,7 +8311,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 0
+  m_PresetInfoIsWorld: 1
 --- !u!223 &1180907033
 Canvas:
   m_ObjectHideFlags: 0
@@ -10276,7 +10309,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   description: 
-  options: []
   leftImage: {fileID: 0}
   rightImage: {fileID: 0}
   leftName: 
@@ -10625,7 +10657,7 @@ PrefabInstance:
     - target: {fileID: 3905125438883830485, guid: 065de9503e6204e48bfe45feffd5faf0,
         type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3905125438883830485, guid: 065de9503e6204e48bfe45feffd5faf0,
         type: 3}
@@ -10716,6 +10748,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3905125438883830486, guid: 065de9503e6204e48bfe45feffd5faf0,
+        type: 3}
+      propertyPath: evidenceID
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 3905125438883830486, guid: 065de9503e6204e48bfe45feffd5faf0,
         type: 3}
@@ -10934,6 +10971,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3905125438883830486, guid: 065de9503e6204e48bfe45feffd5faf0,
+        type: 3}
+      propertyPath: evidenceID
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 3905125438883830486, guid: 065de9503e6204e48bfe45feffd5faf0,
         type: 3}
@@ -12331,7 +12373,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1825126411
 RectTransform:
   m_ObjectHideFlags: 0
@@ -12368,7 +12410,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectorCanvas: {fileID: 1825126413}
-  GameManagerObject: {fileID: 379323512}
 --- !u!223 &1825126413
 Canvas:
   m_ObjectHideFlags: 0
@@ -12509,7 +12550,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 0
+  m_PresetInfoIsWorld: 1
 --- !u!223 &1834029446
 Canvas:
   m_ObjectHideFlags: 0
@@ -13153,6 +13194,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3905125438883830486, guid: 065de9503e6204e48bfe45feffd5faf0,
         type: 3}
+      propertyPath: evidenceID
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3905125438883830486, guid: 065de9503e6204e48bfe45feffd5faf0,
+        type: 3}
       propertyPath: evidenceName
       value: Unfinished Letter
       objectReference: {fileID: 0}
@@ -13366,6 +13412,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3905125438883830486, guid: 065de9503e6204e48bfe45feffd5faf0,
+        type: 3}
+      propertyPath: evidenceID
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 3905125438883830486, guid: 065de9503e6204e48bfe45feffd5faf0,
         type: 3}
@@ -13944,6 +13995,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3905125438883830486, guid: 065de9503e6204e48bfe45feffd5faf0,
+        type: 3}
+      propertyPath: evidenceID
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3905125438883830486, guid: 065de9503e6204e48bfe45feffd5faf0,
         type: 3}

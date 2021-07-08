@@ -1,26 +1,27 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class VersionSelectorUI : MonoBehaviour
 {
     public Canvas selectorCanvas;
-    public GameObject GameManagerObject;
 
     public void CloseCanvas()
     {
         selectorCanvas.gameObject.SetActive(false);
+        SceneManager.LoadScene(1);
     }
 
     public void ClickRestricted()
     {
-        GameManagerObject.GetComponent<MainQuestManager>().Instantiate(restricted: true);
+        GlobalVersionController.SetRestricted(true);
         CloseCanvas();
     }
 
     public void ClickUnrestricted()
     {
-        GameManagerObject.GetComponent<MainQuestManager>().Instantiate(restricted: false);
+        GlobalVersionController.SetRestricted(false);
         CloseCanvas();
     }
 }

@@ -1,0 +1,54 @@
+{
+  "MagnumShell": {
+    "name": ".44 Magnum",
+    "description": "A common caliber shell. Used. Recently."
+  },
+  "Letter": {
+    "name": "Unfinished Letter",
+    "description": "\"Captain Johnson, forgive me, but I need a little more time. I swear if not for that damned neighbour that keeps showing up and defacing my door, I would have been done with the case days ago. Now I have to deal both with him and the rent collector...\" \n(scribbles show a dropped pen)"
+  },
+  "Pillow": {
+    "name": "Burnt Pillow",
+    "description": "The pillow seems to be burnt briefly on one side. Fairly recently, as the soot still stains my fingers."
+  },
+  "GunInBox": {
+    "name": "Gun in a Box",
+    "description": "AutoMag pistol. Nice gun. Most police officers and PD affiliates have those. Uses magnum .44 ammo. Stored very carefully in the box. Looks like a prized possession."
+  },
+  "Cigarette": {
+    "name": "Half-burnt Cigarette",
+    "description": "This cigarette is very recent. And only half-smoked. Someone stopped earlier than usual, given the rest of the tray contents. Could be the officers or Frank himself."
+  },
+  "FloorMop": {
+    "name": "Floor Mop",
+    "description": "Given the tidiness of the floor here, I wonder why it would be still in the kitchen. Don't people keep mops in the hallways or the storage room? Still slightly wet though."
+  },
+  "CleanFloor": {
+    "name": "Clean Floor",
+    "description": "The floor here is very clean, aside from the blood pool. Either the murderer entered without shoes, or they cleaned the floor afterwards."
+  },
+  "OpenWindow": {
+    "name": "Open Window",
+    "description": "The weather has not been the best for keeping the windows open. Either it's Allen's habit or it wasn't him who opened it."
+  },
+  "Dummy": {
+    "name": "Dummy",
+    "description": "Nice practice target. Has a lot of bullet holes and… bullets stuck in them."
+  },
+  "PackOfCigarettes": {
+    "name": "Pack of Cigarettes",
+    "description": "That's a fairly popular brand."
+  },
+  "BulletInBody": {
+    "name": "Bullet in the Body",
+    "description": "Frank Allen was shot. And then stabbed. I am not sure if he was alive still after the shot."
+  },
+  "Journal": {
+    "name": "Journal",
+    "description": "Ah, like every detective he kept his notebook updated. Although, the latest entry dates back to about a month ago. Something random, and the case is said to be closed."
+  },
+  "Knife": {
+    "name": "Knife",
+    "description": "A bloodied kitchen knife sticking out of Frank's chest. No fingerprints on it."
+  }
+}
